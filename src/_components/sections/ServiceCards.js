@@ -5,7 +5,7 @@ import HeadlineSmall from "../typography/HeadlineSmall";
 import LabelMedium from "../typography/LabelMedium";
 
 
-export default function BigTextBlock({ data }) {
+export default function ServiceCards({ data }) {
 
   return (
     <Box display='flex' background={data.backgroundColor + '.background'}>
@@ -20,11 +20,11 @@ export default function BigTextBlock({ data }) {
           borderTopLeftRadius='2rem'
           borderBottomLeftRadius='2rem'
         >
-          <Box mb='8'>
+          <Box mb='68'>
             <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
           </Box>
           <Box maxW='5xl'>
-            <HeadlineSmall color={data.color + '.on-surface'} thin>{data.Body}</HeadlineSmall>
+            <HeadlineSmall color={data.color + '.on-surface'}>{data.Body}</HeadlineSmall>
           </Box>
         </Box>
       </ContentContainer>

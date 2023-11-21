@@ -29,11 +29,9 @@ export default function NavShippers({ data }) {
         </Box>
       </MenuButton>
       <MenuList>
-        <MenuItem>Download</MenuItem>
-        <MenuItem>Create a Copy</MenuItem>
-        <MenuItem>Mark as Draft</MenuItem>
-        <MenuItem>Delete</MenuItem>
-        <MenuItem>Attend a Workshop</MenuItem>
+        <MenuItem>Refrigerated</MenuItem>
+        <MenuItem>Dry Van</MenuItem>
+        <MenuItem>Flatbed</MenuItem>
       </MenuList>
     </Menu>
 

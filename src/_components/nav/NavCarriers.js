@@ -27,11 +27,10 @@ export default function NavCarriers({ data }) {
           </Box>
         </MenuButton>
         <MenuList>
-          <MenuItem>Download</MenuItem>
-          <MenuItem>Create a Copy</MenuItem>
-          <MenuItem>Mark as Draft</MenuItem>
-          <MenuItem>Delete</MenuItem>
-          <MenuItem>Attend a Workshop</MenuItem>
+          <MenuItem>Find Loads</MenuItem>
+          <MenuItem>Dispatch Services</MenuItem>
+          <MenuItem>Fuel Card</MenuItem>
+          <MenuItem>Factoring</MenuItem>
         </MenuList>
       </Menu>
 
