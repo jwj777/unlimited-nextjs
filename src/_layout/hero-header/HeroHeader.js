@@ -6,13 +6,13 @@ import HeroImage from "./HeroImage";
 
 export default function HeroHeader({ data }) {
 
+  data.data.attributes.pageColor == 'neutralWhite' ? data.data.attributes.pageColor = 'neutralLight' : data.data.attributes.pageColor = data.data.attributes.pageColor
+
   return (
-    <Box>
-      <Header />
+    <Box background={data.data.attributes.pageColor + '.background'}>
+      <Header data={data} />
       <Hero data={data} />
-      <Text>saodjifhsdkjf</Text>
       <HeroImage data={data} />
-      <Text>saodjifhsdkjf</Text>
     </Box>
     
   )

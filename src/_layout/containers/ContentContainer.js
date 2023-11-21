@@ -4,6 +4,7 @@ import { Box } from "@chakra-ui/react";
 export default function ContentContainer({ children }) {
 
   return(
+
     <Box display='flex' justifyContent='center'>
       <Box 
         flex='2'
@@ -12,5 +13,6 @@ export default function ContentContainer({ children }) {
         {children}
       </Box>
     </Box>
+
   )
 }

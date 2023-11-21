@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import { Box, Text } from '@chakra-ui/react'
 import PageContainer from '@/_layout/PageContainer'
-import Hero from '@/_layout/hero-header/Hero'
-import HeadlineLarge from '@/_components/typography/HeadlineLarge'
 
 
 export default async function Page() {
@@ -21,15 +19,13 @@ export default async function Page() {
 
 
 async function getData() {
-  const res = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/homepages/1?populate[1]=heroImage.primaryImage&populate[2]=callToAction')
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+  const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/homepages/1?populate[heroImage][populate]=*
+  &populate[callToAction][populate]=*
+  &populate[Sections][populate]=*`)
  
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
  
   return res.json()
 }
- 

@@ -8,21 +8,18 @@ import BodyXl from "@/_components/typography/BodyXl";
 
 export default function Hero({ data }) {
 
-  console.log('Hero')
-  console.log(data.data.attributes.callToAction)
-
   return (
-    <Box py='20'>
+    <Box py='16'>
       <ContentContainer>
         <Box maxW='6xl'>
-          <DisplaySuper>{data.data.attributes.Headline}</DisplaySuper>
+          <DisplaySuper color={data.data.attributes.pageColor + '.on-surface'}>{data.data.attributes.Headline}</DisplaySuper>
         </Box>
-        <Box maxW='6xl'>
-          <BodyXl>{data.data.attributes.Subheading}</BodyXl>
+        <Box maxW='5xl'>
+          <BodyXl color={data.data.attributes.pageColor + '.on-surface'}>{data.data.attributes.Subheading}</BodyXl>
         </Box>
         {
           data.data.attributes.callToAction ?
-          <Box mt='16'>
+          <Box mt='12'>
             <Button variant="primaryLight" size='lg' href={data.data.attributes.callToAction.buttonUrl}>{data.data.attributes.callToAction.buttonText}</Button>
           </Box> :
           null

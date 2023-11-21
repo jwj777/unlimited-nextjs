@@ -10,20 +10,21 @@ import {
   MenuList,
   MenuItem
 } from '@chakra-ui/react';
-// import MenuItemL2 from './MenuItemL2';
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
 
-export default function NavShippers({ color }) {
+export default function NavShippers({ data }) {
 
   return (
 
-    <Box mr='12' position='relative' zIndex='2'>
+    <Box mr='4' position='relative' zIndex='2'>
 
     <Menu>
-      <MenuButton as={Button} variant='neutralLight' size='lg'>
+      <MenuButton as={Button} variant={data.data.attributes.pageColor + 'Nav'} size='lg'>
         <Box>
-          <Text as='span'>Shippers</Text>
+          <Text as='span'>
+            Shippers
+          </Text>
           <ChevronDownIcon w='6' h='6' ml='1' />
         </Box>
       </MenuButton>

@@ -17,18 +17,18 @@ const sm = defineStyle({
 
 const md = defineStyle({
   fontSize: '1rem',
-  pt: '1.3rem',
+  pt: '1.4rem',
   pr: '1.3rem',
-  pb: '1.3rem',
+  pb: '1.4rem',
   pl: '1.3rem',
 })
 
 const lg = defineStyle({
   fontSize: '1.1rem',
   fontWeight: '500',
-  pt: '1.5rem',
+  pt: '1.6rem',
   pr: '1.6rem',
-  pb: '1.5rem',
+  pb: '1.6rem',
   pl: '1.6rem',
 })
 
@@ -80,6 +80,36 @@ const neutralLight = defineStyle({
   }
 })
 
+const neutralLightNav = defineStyle({
+  bg: 'none',
+  color: 'neutral.10',
+  borderRadius: '10rem',
+  _hover: {
+    bg: 'neutral.90',
+    color: 'neutral.10',
+  }
+})
+
+const neutralDark = defineStyle({
+  bg: 'neutral.90',
+  color: 'neutral.10',
+  borderRadius: '10rem',
+  _hover: {
+    bg: 'neutral.80',
+    color: 'neutral.10',
+  }
+})
+
+const neutralDarkNav = defineStyle({
+  bg: 'none',
+  color: 'neutral.90',
+  borderRadius: '10rem',
+  _hover: {
+    bg: 'neutral.90',
+    color: 'neutral.10',
+  }
+})
+
 export const Button = defineStyleConfig({
   sizes: { xs, sm, md, lg, xl },
   variants: { 
@@ -87,6 +117,9 @@ export const Button = defineStyleConfig({
     primaryLight,
     secondaryLight,
     neutralLight,
+    neutralLightNav,
+    neutralDark,
+    neutralDarkNav,
   },
   defaultProps: {
     size: 'md',

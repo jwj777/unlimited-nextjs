@@ -2,11 +2,11 @@ import { Box, Text } from "@chakra-ui/react";
 import LogoIcon from "./LogoIcon";
 
 
-export default function Logo() {
+export default function Logo({ data }) {
 
   return (
     <Box display='flex' alignItems='center'>
-      <LogoIcon />
+      <LogoIcon data={data} />
     </Box>
     
   )

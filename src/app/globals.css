@@ -14,3 +14,18 @@ body {
 
 
 
+/* logo colors */
+
+.logo-neutralWhite path, .logo-neutralWhite polygon {
+  fill: var(--chakra-colors-neutral-10);
+}
+.logo-neutralWhite text {
+  fill: var(--chakra-colors-neutral-10);
+}
+
+.logo-neutralDark path, .logo-neutralDark polygon {
+  fill: var(--chakra-colors-neutral-90);
+}
+.logo-neutralDark text {
+  fill: var(--chakra-colors-neutral-90);
+}

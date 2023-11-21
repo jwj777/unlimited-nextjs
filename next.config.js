@@ -4,7 +4,7 @@ const nextConfig = {}
 module.exports = nextConfig
 
 
-odule.exports = {
+module.exports = {
   reactStrictMode: true,
   images: {
     loader: "default",
