@@ -5,8 +5,6 @@ import ServiceCards from "./ServiceCards";
 
 export default function Sections({ sections }) {
 
-  console.log(sections)
-
   return (
 
     <Box>
