@@ -14,13 +14,13 @@ export default function BodyMedium({ text, textColor, color, children }) {
       text ?
       <Box 
         dangerouslySetInnerHTML={{ __html: text }} 
-        fontSize={{ base: '1rem', md: '1.1rem' }}
+        fontSize={{ base: '1rem', md: '1rem' }}
         lineHeight={{ base: '152%', md: '154%' }}
         fontWeight='400'
         color={color}
       ></Box> :
       <Box 
-        fontSize={{ base: '1rem', md: '1.1rem' }}
+        fontSize={{ base: '1rem', md: '1rem' }}
         lineHeight={{ base: '152%', md: '154%' }}
         color={color}
         fontWeight='400'

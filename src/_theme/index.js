@@ -161,6 +161,7 @@ const theme = extendTheme({
       'surface-high': 'var(--chakra-colors-neutral-92)',
       'surface-highest': 'var(--chakra-colors-neutral-90)',
       'on-surface': 'var(--chakra-colors-neutral-10)',
+      'on-surface-dim': 'var(--chakra-colors-neutral-20)',
       'outline': 'var(--chakra-colors-neutralVariant-50)',
       'primary': 'var(--chakra-colors-primary-70)',
     },
@@ -173,6 +174,7 @@ const theme = extendTheme({
       'surface-high': 'var(--chakra-colors-neutral-92)',
       'surface-highest': 'var(--chakra-colors-neutral-90)',
       'on-surface': 'var(--chakra-colors-neutral-10)',
+      'on-surface-dim': 'var(--chakra-colors-neutral-20)',
       'outline': 'var(--chakra-colors-neutralVariant-50)',
       'primary': 'var(--chakra-colors-primary-70)',
     },
@@ -185,6 +187,7 @@ const theme = extendTheme({
       'surface-high': 'var(--chakra-colors-neutral-17)',
       'surface-highest': 'var(--chakra-colors-neutral-22)',
       'on-surface': 'var(--chakra-colors-neutral-90)',
+      'on-surface-dim': 'var(--chakra-colors-neutral-80)',
       'outline': 'var(--chakra-colors-neutralVariant-40)',
       'primary': 'var(--chakra-colors-primary-70)'
     },
