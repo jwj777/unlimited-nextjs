@@ -9,50 +9,50 @@ import Sections from '@/_components/sections/Sections'
 export default async function Page() {
 
   const data = await getService()
-
-  // console.log(data)
+  console.log(params)
+  console.log(data)
 
   return (
     <main>
-      <PageContainer data={data}>
+      <Text>data</Text>
+      {/* <PageContainer data={data}> */}
 
         {/* <Sections data={data} /> */}
         
-      </PageContainer>
+      {/* </PageContainer> */}
     </main>
   )
 }
 
-async function getStaticPaths() {
-  const res = await fetch(process.env.API_URL + '/api/services');
-  const data = await res.json();
-  const services = data.data;
+export async function generateStaticParams() {
+  const services = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services/').then((res) => res.json())
 
-  console.log(services)
+  const test3 =  services.data.map((item) => ({
+    slug: item.attributes.slug,
+  }))
+  console.log('test3')
+  console.log(typeof test3)
+  console.log(test3)
+ 
+  return services.data.map((item) => ({
+    slug: item.attributes.slug,
+  }))
 
-  const paths = services.map((item, index) => ( {
-    params: {slug: item.attributes.slug}
-  }));
 
-  console.log(paths)
 
-  return {
-    paths,
-    fallback: false,
-  };
 }
 
-console.log(paths)
+async function getService({params}) {
+  const slug = params.slug
+  const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services/${slug}`)
+  const service = await res.json
 
-// async function getService() {
-//   const slug = paths.slug;
-//   const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services/?filters[slug]=${slug}&populate[heroImage][populate]=*
-//   &populate[callToAction][populate]=*
-//   &populate[Sections][populate]=*`)
+  console.log('service')
+  console.log(service)
  
-//   if (!res.ok) {
-//     throw new Error('Failed to fetch data')
-//   }
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
  
-//   return res.json()
-// }
+  return service
+}
