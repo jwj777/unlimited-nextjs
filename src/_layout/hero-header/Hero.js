@@ -4,23 +4,39 @@ import DisplaySuper from "@/_components/typography/DisplaySuper";
 import HeadlineMedium from "@/_components/typography/HeadlineMedium";
 import HeadlineSmall from "@/_components/typography/HeadlineSmall";
 import BodyXl from "@/_components/typography/BodyXl";
+import LabelMedium from "@/_components/typography/LabelMedium";
+import DisplayLarge from "@/_components/typography/DisplayLarge";
 
 
 export default function Hero({ data }) {
 
+  let buttonColor
+  data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' : buttonColor = 'primaryLight'
+
+  console.log(data.attributes.callToAction)
+
   return (
-    <Box py='16'>
+    <Box pt='20' pb='16'>
       <ContentContainer>
-        <Box maxW='6xl'>
-          <DisplaySuper color={data.data.attributes.pageColor + '.on-surface'}>{data.data.attributes.Headline}</DisplaySuper>
+        {
+          data.attributes.Label ? 
+          <Box mb='8'>
+            <LabelMedium color={data.attributes.pageColor + '.on-surface'}>{data.attributes.Label}</LabelMedium>
+          </Box>
+          : null
+        }
+        <Box maxW='6xl' mb='6'>
+          <DisplaySuper color={data.attributes.pageColor + '.on-surface'} thin>{data.attributes.Headline}</DisplaySuper>
         </Box>
         <Box maxW='5xl'>
-          <BodyXl color={data.data.attributes.pageColor + '.on-surface'}>{data.data.attributes.Subheading}</BodyXl>
+          <BodyXl color={data.attributes.pageColor + '.on-surface'} thin>{data.attributes.Subheading}</BodyXl>
         </Box>
         {
-          data.data.attributes.callToAction ?
+          data.attributes.callToAction.buttonText ?
           <Box mt='12'>
-            <Button variant="primaryLight" size='lg' href={data.data.attributes.callToAction.buttonUrl}>{data.data.attributes.callToAction.buttonText}</Button>
+            <Button variant={buttonColor} size='lg' href={data.attributes.callToAction.buttonUrl}>
+              {data.attributes.callToAction.buttonText}
+            </Button>
           </Box> :
           null
         }

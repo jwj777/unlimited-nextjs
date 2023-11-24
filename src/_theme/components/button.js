@@ -51,12 +51,12 @@ const primaryLight = defineStyle({
   }
 })
 const primaryDark = defineStyle({
-  bg: 'primary.90',
-  color: 'neutral.10',
+  bg: 'primary.40',
+  color: 'neutral.95',
   borderRadius: '10rem',
   _hover: {
-    bg: 'primary.95',
-    color: 'neutral.20',
+    bg: 'primary.30',
+    color: 'neutral.90',
   }
 })
 

@@ -20,7 +20,7 @@ export default function NavCarriers({ data }) {
     <Box mr='4' position='relative' zIndex='2'>
 
       <Menu>
-        <MenuButton as={Button} variant={data.data.attributes.pageColor + 'Nav'} size='lg'>
+        <MenuButton as={Button} variant={data.attributes.pageColor + 'Nav'} size='lg'>
           <Box>
           <Text as='span'>Carriers</Text>
             <ChevronDownIcon w='6' h='6' ml='1' />

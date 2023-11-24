@@ -4,6 +4,8 @@ import { Box, Link, MenuItem, Text, chakra, shouldForwardProp } from '@chakra-ui
 import { useState } from 'react';
 
 import { motion, isValidMotionProp } from 'framer-motion';
+import TitleMedium from '../typography/TitleMedium';
+import TitleSmall from '../typography/TitleSmall';
 
 
 export default function MenuItemL2({ href, children, label }) {
@@ -49,16 +51,17 @@ export default function MenuItemL2({ href, children, label }) {
         onMouseLeave={() => handleMouseLeave()}
       > 
         <Box 
-          width='360px'
+          width='320px'
         >
           <Link href={href} variant='noDeco'>
-            <Text 
-              fontWeight='500' 
-              mr='12' mb='4px' 
-              color={navActive['labelColor']}
-            >
-              {label}
-            </Text>
+            <Box mb='-2px'>
+              <TitleSmall
+                fontWeight='500' 
+                color={navActive['labelColor']}
+              >
+                {label}
+              </TitleSmall>
+            </Box>
             <Text 
               fontSize='sm' 
               color={navActive['textColor']}

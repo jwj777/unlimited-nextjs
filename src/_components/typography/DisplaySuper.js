@@ -8,8 +8,8 @@ export default function DisplaySuper({ children, color }) {
     <Text 
       as='h1'
       color={color}
-      fontSize={{ base: '3.2rem', md: '4.2rem', lg: '5.5rem', lg: '6.4rem' }}
-      lineHeight={{ base: '112%', md: '104%', lg: '104%' }}
+      fontSize={{ base: '3.2rem', md: '4.5rem', lg: '5.5rem', lg: '5.8rem' }}
+      lineHeight={{ base: '112%', md: '100%', lg: '100%' }}
       fontWeight='300'
       letterSpacing={{ base: '-1px', md: '-2px' }}
       mt={{ base: '1rem', md: '0' }}

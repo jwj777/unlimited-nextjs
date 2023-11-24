@@ -12,14 +12,14 @@ export default async function Page() {
 
   return (
     <main>
-      <PageContainer data={data}>
+      <PageContainer data={data.data}>
 
         <BigTextBlock data={data.data.attributes.Sections[0]} />
 
 
-        <Box>
+        {/* <Box>
           <ServiceCards data={data.data.attributes.Sections[1]} services={services} />
-        </Box>
+        </Box> */}
         
       </PageContainer>
     </main>

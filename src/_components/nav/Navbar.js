@@ -6,6 +6,9 @@ import NavCarriers from "./NavCarriers";
 
 export default function Navbar({ data }) {
 
+  let buttonColor
+  data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' : buttonColor = 'primaryLight'
+
   return (
     <Box display='flex' justifyContent='space-between' width='100%'>
 
@@ -13,15 +16,17 @@ export default function Navbar({ data }) {
         <NavShippers data={data} />
         <NavCarriers data={data} />
         <Box mr='4'>
-          <Button variant={data.data.attributes.pageColor + 'Nav'} size='lg'>Resources</Button>
+          <Button variant={data.attributes.pageColor + 'Nav'} size='lg'>Resources</Button>
         </Box>
         <Box>
-          <Button variant={data.data.attributes.pageColor + 'Nav'} size='lg'>About</Button>
+          <Button variant={data.attributes.pageColor + 'Nav'} size='lg'>About</Button>
         </Box>
       </Box>
 
       <Box>
-        <Button>Contact Us</Button>
+        <Button variant={buttonColor} size='md' href={data.attributes.callToAction.buttonUrl}>
+          Contact Us
+        </Button>
       </Box>
 
     </Box>

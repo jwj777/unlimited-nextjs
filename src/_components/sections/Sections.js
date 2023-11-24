@@ -7,6 +7,8 @@ export default function Sections({ sections }) {
 
   return (
 
+    sections ?
+
     <Box>
       {
         sections.map((section, index) => {
@@ -23,6 +25,9 @@ export default function Sections({ sections }) {
         })
       }
     </Box>
+    
+    : null
+    
 
   )
 
