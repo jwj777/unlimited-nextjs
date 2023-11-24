@@ -6,8 +6,12 @@ import NavCarriers from "./NavCarriers";
 
 export default function Navbar({ data }) {
 
+  console.log(data)
+
   let buttonColor
-  data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' : buttonColor = 'primaryLight'
+  data.attributes.pageColor.includes('Light', 'White') ? buttonColor = 'primaryLight'
+  : data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' 
+  : buttonColor = 'primaryDark'
 
   return (
     <Box display='flex' justifyContent='space-between' width='100%'>
