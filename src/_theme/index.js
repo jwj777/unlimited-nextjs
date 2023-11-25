@@ -9,7 +9,7 @@ const breakpoints = {
   md: '768px',
   lg: '960px',
   xl: '1200px',
-  '2xl': '1536px',
+  '2xl': '1464px',
 }
 
 const theme = extendTheme({
@@ -30,7 +30,7 @@ const theme = extendTheme({
       md: '1040px',
       lg: '1160px',
       xl: '1280px',
-      xxl: '1600px',
+      xxl: '1400px',
     },
   },
   colors: {

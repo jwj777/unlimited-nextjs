@@ -18,9 +18,10 @@ export default function NavShippers({ data }) {
 
   return (
 
-    <Box mr='4' position='relative' zIndex='2'>
+    <Box mr='3' position='relative' zIndex='2'>
 
     <Menu>
+
       <MenuButton as={Button} variant={data.attributes.pageColor + 'Nav'} size='lg'>
         <Box>
           <Text as='span'>
@@ -29,21 +30,17 @@ export default function NavShippers({ data }) {
           <ChevronDownIcon w='6' h='6' ml='1' />
         </Box>
       </MenuButton>
-      {/* <MenuList>
-        <MenuItem>Refrigerated</MenuItem>
-        <MenuItem>Dry Van</MenuItem>
-        <MenuItem>Flatbed</MenuItem>
-      </MenuList> */}
+
       <MenuList borderRadius='1rem'>
         <Box py='6' px='8' display='flex'>
           <Box mr='4'>
             <MenuItemL2 href='/service/refrigerated' label='Refrigerated'>For 33 years we have set the benchmark for reliability in refrigerated transportation</MenuItemL2>
             <MenuItemL2 href='/service/dry-van' label='Dry Van'>Our logistics specialists and software ensure your assigned the optimal driver and truck</MenuItemL2>
-            <MenuItemL2 href='/service/flatbed' label='Flatbed'>Our logistics specialists and software ensure your assigned the optimal driver and truck</MenuItemL2>
+            <MenuItemL2 href='/service/flatbed' label='Flatbed'>24/7 support, access to our entire flatbed team and an expansive network of carriers</MenuItemL2>
           </Box>
           <Box>
             <MenuItemL2 href='/service/ltl-services' label='LTL Services'>Our logistics specialists and software ensure your assigned the optimal driver and truck</MenuItemL2>
-            <MenuItemL2 href='/service/softwares' label='Software'>Track our drivers from origin to destination and track trailers by independent GPS tracking units</MenuItemL2>
+            <MenuItemL2 href='/service/software' label='Software'>Track our drivers from origin to destination and track trailers by independent GPS tracking units</MenuItemL2>
           </Box>
         </Box>
       </MenuList>

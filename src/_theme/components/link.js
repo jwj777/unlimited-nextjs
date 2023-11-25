@@ -1,5 +1,37 @@
 import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
 
+
+const sm = defineStyle({
+  field: {
+    fontSize: '0.9rem',
+  }
+})
+
+const md = defineStyle({
+  field: {
+    fontSize: '1rem',
+  }
+})
+
+const lg = defineStyle({
+  field: {
+    fontSize: '1.5rem',
+  }
+})
+
+const xl = defineStyle({
+  field: {
+    fontSize: '2rem',
+  }
+})
+
+const xxl = defineStyle({
+  field: {
+    fontSize: '2.6rem',
+  }
+})
+
+
 const basic = defineStyle({
   textDecoration: 'underline',
   color: 'neutral.10',
@@ -10,10 +42,7 @@ const basic = defineStyle({
   _hover: {
     color: 'primary.70',
     textDecorationColor: 'primary.70',
-  },
-  // _dark: {
-  //   color: 'primary.90',
-  // }
+  }
 })
 
 const noDeco = defineStyle({
@@ -23,17 +52,31 @@ const noDeco = defineStyle({
   },
 })
 
-const linkLight = defineStyle ({
-  color: 'neutral.90',
-  textDecoration: 'none',
-  fontWeight: '400',
-  transition: 'all 0.04s ease',
-  fontSize: '1rem',
-  _hover: {
-    color: 'white',
-    textDecoration: 'underline',
-    fontWeight: '400',
-  },
+const neutralWhiteButton = defineStyle({
+  bg: 'none',
+  color: 'neutral.10',
+  borderRadius: '10rem',
+  fontSize: '1.2rem',
+  py: '14px',
+  px: '22px',
+    _hover: {
+    bg: 'neutral.90',
+    color: 'neutral.10',
+    textDecor: 'none',
+  }
+})
+
+const neutralLightButton = defineStyle({
+  bg: 'none',
+  color: 'neutral.10',
+  borderRadius: '10rem',
+  py: '14px',
+  px: '22px',
+    _hover: {
+    bg: 'neutral.90',
+    color: 'neutral.10',
+    textDecor: 'none',
+  }
 })
 
 const listXl = defineStyle ({
@@ -59,39 +102,15 @@ const basicGray = defineStyle ({
 })
 
 
-const sm = defineStyle({
-  field: {
-    fontSize: '0.9rem',
-  }
-})
-
-const md = defineStyle({
-  field: {
-    fontSize: '1rem',
-  }
-})
-
-const lg = defineStyle({
-  field: {
-    fontSize: '1.4rem',
-  }
-})
-
-const xl = defineStyle({
-  field: {
-    fontSize: '2rem',
-  }
-})
-
-const xxl = defineStyle({
-  field: {
-    fontSize: '2.6rem',
-  }
-})
-
-
 export const Link = defineStyleConfig({
-  variants: { basic, basicGray, listXl, noDeco },
+  variants: { 
+    basic, 
+    basicGray, 
+    listXl, 
+    noDeco,
+    neutralLightButton, 
+    neutralWhiteButton,
+  },
   sizes: { sm, md, lg, xl, xxl },
   defaultProps: { variant: 'basic', size: 'md' }
 })

@@ -8,7 +8,8 @@ export default function ContentContainer({ children }) {
     <Box display='flex' justifyContent='center'>
       <Box 
         flex='2'
-        maxW={{ base: '100%', xl: '1400px' }}
+        maxW={{ base: '100%', '2xl': '1400px' }}
+        px={{ base: '4', '2xl': '0' }}
       >
         {children}
       </Box>

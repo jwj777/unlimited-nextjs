@@ -17,9 +17,9 @@ export default async function Page() {
         <BigTextBlock data={data.data.attributes.Sections[0]} />
 
 
-        {/* <Box>
+        <Box>
           <ServiceCards data={data.data.attributes.Sections[1]} services={services} />
-        </Box> */}
+        </Box>
         
       </PageContainer>
     </main>
@@ -29,8 +29,7 @@ export default async function Page() {
 async function getData() {
   const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/homepages/1?populate[heroImage][populate]=*
   &populate[callToAction][populate]=*
-  &populate[Sections][populate]=*
-  &populate[Sections][service-cards][services]=service`)
+  &populate[Sections][populate]=*`)
  
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -40,7 +39,7 @@ async function getData() {
 }
 
 async function getServices() {
-  const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services/?populate=*`)
+  const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services/?populate[heroImage][populate]=*`)
  
   if (!res.ok) {
     throw new Error('Failed to fetch data')

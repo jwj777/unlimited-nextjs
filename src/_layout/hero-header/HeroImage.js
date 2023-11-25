@@ -5,8 +5,6 @@ import Image from "next/image";
 
 export default function HeroImage({ data }) {
 
-  console.log('hero image')
-
   return (
     <Box py='20'>
       <ContentContainer>

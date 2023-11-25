@@ -29,7 +29,7 @@ export default function ServiceCards({ data, services }) {
             </Box>
           </Box>
 
-          <Box display='flex' flexWrap='wrap' justifyContent='space-between'>
+          <Box display='flex' flexWrap='wrap' mx={{ base: '0', md: '-4' }} alignContent='stretch' alignItems='stretch'>
             {
               services.data.map((service, index) => {
                 return(

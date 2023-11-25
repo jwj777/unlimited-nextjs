@@ -13,8 +13,6 @@ export default function Hero({ data }) {
   let buttonColor
   data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' : buttonColor = 'primaryLight'
 
-  console.log(data.attributes.callToAction)
-
   return (
     <Box pt='20' pb='16'>
       <ContentContainer>
