@@ -3,15 +3,14 @@ import { Box, Text } from '@chakra-ui/react'
 import styles from "./typography.module.css"
 
 
-export default function BodyLarge({ text, textColor, color, children, thin }) {
+export default function BodyLarge({ text, color, children, thin }) {
 
-  textColor ? color = textColor : null
-  color ? color = color : color = 'white'
+  color ? color = color : color = 'neutral.10'
   let weight
   thin ? weight = '300' : weight = '400'
 
   return (
-    <Box color={textColor} className={styles.bodyContent2}>
+    <Box color={color} className={styles.bodyContent2}>
       {
       text ?
       <Box 

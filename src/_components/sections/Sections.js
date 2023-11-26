@@ -1,31 +1,42 @@
 import { Box } from "@chakra-ui/react";
 import BigTextBlock from "./BigTextBlock";
-import ServiceCards from "./ServiceCards";
+import SectionTwoColumns from "./section-two-columns/SectionTwoColumns";
+import SmallCardList from "./SmallCardList";
+import TextCardList from "./TextCardList";
 
 
-export default function Sections({ sections }) {
+export default function Sections({ data }) {
+
+  console.log('Sections')
+  console.log(data.attributes.Sections)
 
   return (
 
-    sections ?
+    data.attributes ?
 
     <Box>
       {
-        sections.map((section, index) => {
+        data.attributes.Sections.map((section, index) => {
           return(
 
             section.__component == 'sections.big-text-block' ?
             <BigTextBlock key={index} data={section} /> :
-        
-            section.__component =='sections.service-cards' ?
-            <ServiceCards key={index} data={section} /> :
+
+            section.__component == 'sections.small-card-list' ?
+            <SmallCardList key={index} data={section} /> :
+
+            section.__component == 'sections.text-card-list' ?
+            <TextCardList key={index} data={section} /> :
+
+            section.__component == 'sections.section-two-columns' ?
+            <SectionTwoColumns key={index} data={section} /> :
             null
 
           )
         })
       }
     </Box>
-    
+
     : null
     
 

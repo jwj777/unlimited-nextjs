@@ -3,13 +3,12 @@ import { Box, Text } from '@chakra-ui/react'
 import styles from "./typography.module.css"
 
 
-export default function BodyMedium({ text, textColor, color, children }) {
+export default function BodyMedium({ text, color, children }) {
 
-  textColor ? color = textColor : null
-  color ? color = color : color = 'white'
+  color ? color = color : color = 'neutral.10'
 
   return (
-    <Box color={textColor} className={styles.bodyContent2}>
+    <Box color={color} className={styles.bodyContent2}>
       {
       text ?
       <Box 

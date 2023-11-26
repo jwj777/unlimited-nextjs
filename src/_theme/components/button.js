@@ -42,12 +42,12 @@ const xl = defineStyle({
 })
 
 const primaryLight = defineStyle({
-  bg: 'primary.80',
-  color: 'neutral.10',
+  bg: 'primary.40',
+  color: 'neutral.90',
   borderRadius: '10rem',
   _hover: {
-    bg: 'primary.80',
-    color: 'neutral.20',
+    bg: 'primary.30',
+    color: 'neutral.80',
   }
 })
 const primaryDark = defineStyle({
@@ -105,8 +105,8 @@ const neutralDarkNav = defineStyle({
   color: 'neutral.90',
   borderRadius: '10rem',
   _hover: {
-    bg: 'neutral.90',
-    color: 'neutral.10',
+    bg: 'neutral.20',
+    color: 'neutral.90',
   }
 })
 

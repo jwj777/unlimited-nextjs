@@ -6,7 +6,7 @@ import NavCarriers from "./NavCarriers";
 
 export default function Navbar({ data }) {
 
-  console.log(data)
+  // console.log('NavBar')
 
   let buttonColor
   data.attributes.pageColor && data.attributes.pageColor.includes('Light', 'White') ? buttonColor = 'primaryLight'
@@ -30,7 +30,7 @@ export default function Navbar({ data }) {
       </Box>
 
       <Box>
-        <Button variant={buttonColor} size='md' href={data.attributes.callToAction.buttonUrl}>
+        <Button variant={buttonColor} size='md'>
           Contact Us
         </Button>
       </Box>

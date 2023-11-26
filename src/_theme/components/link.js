@@ -71,10 +71,23 @@ const neutralLightButton = defineStyle({
   color: 'neutral.10',
   borderRadius: '10rem',
   py: '14px',
-  px: '22px',
+  px: '24px',
     _hover: {
     bg: 'neutral.90',
     color: 'neutral.10',
+    textDecor: 'none',
+  }
+})
+
+const neutralDarkButton = defineStyle({
+  bg: 'none',
+  color: 'neutral.90',
+  borderRadius: '10rem',
+  py: '14px',
+  px: '24px',
+    _hover: {
+    bg: 'neutral.20',
+    color: 'neutral.90',
     textDecor: 'none',
   }
 })
@@ -110,6 +123,7 @@ export const Link = defineStyleConfig({
     noDeco,
     neutralLightButton, 
     neutralWhiteButton,
+    neutralDarkButton
   },
   sizes: { sm, md, lg, xl, xxl },
   defaultProps: { variant: 'basic', size: 'md' }
