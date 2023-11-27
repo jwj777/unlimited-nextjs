@@ -92,6 +92,19 @@ const neutralDarkButton = defineStyle({
   }
 })
 
+const primaryDarkButton = defineStyle({
+  bg: 'primary.40',
+  color: 'neutral.95',
+  borderRadius: '10rem',
+  py: '14px',
+  px: '24px',
+    _hover: {
+    bg: 'neutral.20',
+    color: 'neutral.99',
+    textDecor: 'none',
+  }
+})
+
 const listXl = defineStyle ({
   color: 'neutral.10',
   textDecoration: 'none',
@@ -123,7 +136,8 @@ export const Link = defineStyleConfig({
     noDeco,
     neutralLightButton, 
     neutralWhiteButton,
-    neutralDarkButton
+    neutralDarkButton,
+    primaryDarkButton
   },
   sizes: { sm, md, lg, xl, xxl },
   defaultProps: { variant: 'basic', size: 'md' }

@@ -1,6 +1,7 @@
 'use client'
 import { Box } from "@chakra-ui/react";
 import HeroHeader from "./hero-header/HeroHeader";
+import Footer from "./footer/Footer";
 
 
 export default function PageContainer({ data, children }) {
@@ -12,6 +13,7 @@ export default function PageContainer({ data, children }) {
 
       {children}
 
+      <Footer data={data} />
     </Box>
 
   )

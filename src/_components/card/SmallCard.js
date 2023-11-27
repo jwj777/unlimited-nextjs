@@ -17,12 +17,15 @@ export default function SmallCard({ data, color }) {
         borderTopEndRadius='1.5rem' 
         overflow='hidden'
       >
-        <Image
-          src={data.Image.data.attributes.url}
-          width={240}
-          height={180}
-          alt=""
-        />
+        {
+          data.Image.data ?
+          <Image
+            src={data.Image.data.attributes.url}
+            width={240}
+            height={180}
+            alt=""
+          /> : null
+        }
       </Box>
       <Box 
         bg={color + '.surface'} 
