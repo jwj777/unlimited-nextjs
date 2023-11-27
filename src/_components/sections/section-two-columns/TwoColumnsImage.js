@@ -9,10 +9,10 @@ import Image from "next/image";
 import BodyLarge from "../../typography/BodyLarge";
 
 
-export default function TwoColumnsImageRight({ data }) {
+export default function TwoColumnsImage({ data }) {
 
-  // console.log('two col right')
-  // console.log(data)
+  console.log('two columns right / left')
+  console.log(data.Image.data.attributes.url)
 
   return (
 
@@ -20,8 +20,13 @@ export default function TwoColumnsImageRight({ data }) {
       <SectionPadding data={data}>
         <ContentContainer>
 
-          <Box display='flex'>
-            <Box pr='16'>
+          <Box display='flex' flexDirection={ data.type == 'imageLeft' ? "row-reverse" : "row" } >
+
+            <Box 
+              flex='3'
+              mr={ data.type == 'imageRight' ? '24' : '0' }
+              ml={ data.type == 'imageLeft' ? '24' : '0' }
+            >
               <Box mb='6'>
                 <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
               </Box>
@@ -32,23 +37,24 @@ export default function TwoColumnsImageRight({ data }) {
                 <BodyLarge color={data.color + '.on-surface'} thin text={data.Body}></BodyLarge>
               </Box>
             </Box>
+
             <Box 
-              // height={{ base: '280px', md: '264px', lg: '264px', xl: '400px' }} 
-              height='500px'
-              width='680px'
-              maxW='480px' 
+              flex='2'
+              height='520px'
+              width='520px'
               overflow='hidden' 
               borderRadius='1.5rem' 
             >
               <Image
-                src={data.Image.data.attributes.formats.medium.url}
+                src={data.Image.data.attributes.url}
                 alt=""
-                width={500}
-                height={800}
+                width={520}
+                height={520}
    
-                // sizes="(max-width: 768px 480px, max-width: 1200px 480px, 480px)"
+                sizes="(max-width: 768px 480px, max-width: 1200px 720px, 720px)"
               />
             </Box>
+
           </Box>
 
         </ContentContainer>

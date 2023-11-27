@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { Box, Text } from '@chakra-ui/react'
 import PageContainer from '@/_layout/PageContainer'
 import Sections from '@/_components/sections/Sections'
+import LtlServiceTypes from '@/_components/sections/single-sections/LtlServiceTypes';
+import TextCard from '@/_components/card/TextCard';
 
 
 export default async function Page({params}) {
@@ -19,6 +21,22 @@ export default async function Page({params}) {
         {
           data.attributes.Sections ?
             <Sections data={data} />
+          : null
+        }
+
+        {
+          data.attributes.slug == 'ltl-services' ? 
+          <Box>
+            <LtlServiceTypes data={data} />
+          </Box>
+          : null
+        }
+
+        {
+          data.attributes.slug == 'ltl-services' ? 
+          <Box>
+            
+          </Box>
           : null
         }
         
@@ -44,7 +62,8 @@ async function getServiceBySlug(params) {
     &populate[Sections][on][sections.section-two-columns][populate]=Image
     &populate[Sections][on][sections.big-text-block][populate]=*
     &populate[Sections][on][sections.small-card-list][populate][smallCard][populate]=*
-    &populate[Sections][on][sections.text-card-list][populate][textCard][populate]=*`);
+    &populate[Sections][on][sections.text-card-list][populate][textCard][populate]=*
+    &populate[Sections][on][sections.metrics][populate][metric][populate]=*`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch data');

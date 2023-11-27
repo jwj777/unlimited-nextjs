@@ -11,7 +11,8 @@ import DisplayLarge from "@/_components/typography/DisplayLarge";
 export default function Hero({ data }) {
 
   let buttonColor
-  data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' : buttonColor = 'primaryLight'
+  data.attributes.pageColor && data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' 
+  : buttonColor = 'primaryLight'
 
   return (
     <Box pt='20' pb='16'>
@@ -30,7 +31,7 @@ export default function Hero({ data }) {
           <BodyXl color={data.attributes.pageColor + '.on-surface'} thin>{data.attributes.Subheading}</BodyXl>
         </Box>
         {
-          data.attributes.callToAction.buttonText ?
+          data.attributes.callToAction ?
           <Box mt='12'>
             <Button variant={buttonColor} size='lg' href={data.attributes.callToAction.buttonUrl}>
               {data.attributes.callToAction.buttonText}

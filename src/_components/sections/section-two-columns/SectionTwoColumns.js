@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import TwoColumnsImageRight from "./TwoColumnsImageRight";
+import TwoColumnsImage from "./TwoColumnsImage";
 import TwoColumnsImageLeftAlt from "./TwoColumnsImageLeftAlt";
 
 export default function SectionTwoColumns({ data }) {
@@ -12,15 +12,14 @@ export default function SectionTwoColumns({ data }) {
     <Box>
       {
         data.type == 'imageRight' ?
-        <TwoColumnsImageRight data={data} /> :
+        <TwoColumnsImage data={data} /> :
 
         // section.__component == 'imageRightAlt' ?
         // <SectionTwoColumns data={data} /> :
         // null  
 
-        // section.__component == 'imageRightAlt' ?
-        // <SectionTwoColumns data={data} /> :
-        // null  
+        data.type == 'imageLeft' ?
+        <TwoColumnsImage data={data} /> :
 
         data.type == 'imageLeftAlt' ?
         <TwoColumnsImageLeftAlt data={data} /> :

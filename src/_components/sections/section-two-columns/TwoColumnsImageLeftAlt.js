@@ -27,14 +27,13 @@ export default function TwoColumnsImageLeftAlt({ data }) {
               <Box mb='6'>
                 <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
               </Box>
-              <Box mb='24'>
+              <Box mb='24' maxW='5xl'>
                 <HeadlineLarge color={data.color + '.on-surface'}>{data.Heading}</HeadlineLarge>
               </Box>
               <Box>
                 <Box
                   height='300px'
-                  width='600px'
-                  maxW='480px' 
+                  width='520px'
                   overflow='hidden' 
                   borderRadius='1.5rem' 
                   position='relative'
@@ -44,16 +43,16 @@ export default function TwoColumnsImageLeftAlt({ data }) {
                   <Image
                     src={data.Image.data.attributes.formats.medium.url}
                     alt=""
-                    width={600}
-                    height={300}
+                    width={520}
+                    height={340}
                     // sizes="(max-width: 768px 480px, max-width: 1200px 480px, 480px)"
                   />
                 </Box>
                 <Box
                   width='300px'
-                  height='240px'
+                  height='260px'
                   position='relative'
-                  bottom='330px'
+                  bottom='230px'
                   zIndex='1'
                   sx={{
                     'background-image': `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='rgb(145, 144, 148)' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e")`,
@@ -64,7 +63,7 @@ export default function TwoColumnsImageLeftAlt({ data }) {
             </Box>
             <Box>
               <Box maxW='7xl' bg={data.color + '.surface'} py='12' px='12' borderRadius='2rem' position='relative' zIndex='2'>
-                <BodyMedium color={data.color + '.on-surface'} thin text={data.Body}></BodyMedium>
+                <BodyLarge color={data.color + '.on-surface'} thin text={data.Body}></BodyLarge>
               </Box>
             </Box>
           </Box>
@@ -73,8 +72,8 @@ export default function TwoColumnsImageLeftAlt({ data }) {
             width='840px'
             height='300px'
             position='relative'
-            bottom='440px'
-            left='400px'
+            bottom='600px'
+            left='460px'
             zIndex='1'
             sx={{
               'background-image': `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='28' ry='28' stroke='rgb(145, 144, 148)' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e")`,

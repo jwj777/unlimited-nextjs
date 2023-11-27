@@ -24,16 +24,19 @@ export default function TextCardList({ data }) {
               <Box mb='16'>
                 {
                   data.Label ?
-                  <Box mb='8'>
-                    <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
-                  </Box> : null 
+                <Box mb='8'>
+                  <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
+                </Box> : null
                 }
                 <Box maxW='3xl'>
                   <HeadlineLarge color={data.color + '.on-surface'}>{data.Heading}</HeadlineLarge>
                 </Box>
+                {
+                  data.Subheading ?
                 <Box maxW='5xl'>
                   <BodyLarge color={data.color + '.on-surface'} thin>{data.Subheading}</BodyLarge>
-                </Box>
+                </Box> : null
+                }
               </Box>
 
               <Box display='flex' flexWrap='wrap'>

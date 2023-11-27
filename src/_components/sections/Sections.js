@@ -3,6 +3,8 @@ import BigTextBlock from "./BigTextBlock";
 import SectionTwoColumns from "./section-two-columns/SectionTwoColumns";
 import SmallCardList from "./SmallCardList";
 import TextCardList from "./TextCardList";
+import Metrics from "./Metrics";
+import BasicText from "./BasicText";
 
 
 export default function Sections({ data }) {
@@ -27,6 +29,12 @@ export default function Sections({ data }) {
 
             section.__component == 'sections.text-card-list' ?
             <TextCardList key={index} data={section} /> :
+
+            section.__component == 'sections.metrics' ?
+            <Metrics key={index} data={section} /> :
+
+            section.__component == 'sections.basic-text' ?
+            <BasicText key={index} data={section} /> :
 
             section.__component == 'sections.section-two-columns' ?
             <SectionTwoColumns key={index} data={section} /> :

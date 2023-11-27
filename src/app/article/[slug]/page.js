@@ -9,20 +9,17 @@ export default async function Page({params}) {
   const serviceBySlug = await getServiceBySlug(params);
   const data = serviceBySlug?.[0];
 
-  console.log('Basic Page')
   console.log(data)
   
   return (
     <main>
       <PageContainer data={data}>
-
+{/* 
         {
-          data.attributes.Sections?
-            data.attributes.Sections[0] ?
-              <Sections data={data} />
-            : null
+          data.attributes.Sections[0] ?
+            <Sections data={data} />
           : null
-        }
+        } */}
         
       </PageContainer>
     </main>
@@ -40,10 +37,8 @@ export async function generateStaticParams() {
 async function getServiceBySlug(params) {
   try {
     const slug = params.slug;
-    const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=${slug}&populate[heroImage][populate]=*
-    &populate[callToAction][populate]=*
-    &populate[Sections][populate]=*
-    &populate[Sections][on][sections.basic-text][populate]=*`);
+    const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?filters[slug][$eq]=${slug}&populate[heroImage][populate]=*
+    &populate[Sections][populate]=*`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch data');

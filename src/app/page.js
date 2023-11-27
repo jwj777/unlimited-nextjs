@@ -4,7 +4,7 @@ import PageContainer from '@/_layout/PageContainer'
 import BigTextBlock from '@/_components/sections/BigTextBlock'
 import ServiceCards from '@/_components/sections/ServiceCards'
 import Sections from '@/_components/sections/Sections'
-import SectionTwoColumns from '@/_components/sections/section-two-columns/TwoColumnsImageRight'
+import SectionTwoColumns from '@/_components/sections/section-two-columns/TwoColumnsImage'
 
 
 export default async function Page() {

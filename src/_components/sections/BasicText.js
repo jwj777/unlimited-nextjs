@@ -1,14 +1,13 @@
 import { Box } from "@chakra-ui/react";
 import ContentContainer from "@/_layout/containers/ContentContainer";
-import HeadlineSmall from "../typography/HeadlineSmall";
-import LabelMedium from "../typography/LabelMedium";
 import SectionPadding from "@/_layout/containers/SectionPadding";
+import BodyLarge from "../typography/BodyLarge";
 
 
-export default function BigTextBlock({ data }) {
+export default function BasicText({ data }) {
 
-  console.log('BigTextBlock')
-  console.log(data)
+  console.log('BasicText')
+  console.log(data.Body.children)
 
   return (
 
@@ -20,19 +19,10 @@ export default function BigTextBlock({ data }) {
       
           <ContentContainer>
             <Box 
-              background={data.color + '.surface'} 
-              width='8xl'
-              py='16'
-              px='20'
               borderTopLeftRadius='2rem'
               borderBottomLeftRadius='2rem'
             >
-              <Box mb='8'>
-                <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
-              </Box>
-              <Box maxW='5xl'>
-                <HeadlineSmall color={data.color + '.on-surface'} thin>{data.Body}</HeadlineSmall>
-              </Box>
+              <BodyLarge text={data.Body} />
             </Box>
           </ContentContainer>
         
