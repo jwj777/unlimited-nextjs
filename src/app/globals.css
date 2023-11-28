@@ -29,3 +29,10 @@ body {
 .logo-neutralDark text {
   fill: var(--chakra-colors-neutral-90);
 }
+
+.logo-primaryDark path, .logo-primaryDark polygon {
+  fill: var(--chakra-colors-primary-95);
+}
+.logo-primaryDark text {
+  fill: var(--chakra-colors-primary-95);
+}

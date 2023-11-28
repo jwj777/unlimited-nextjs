@@ -2,19 +2,22 @@
 import { Box, Button, Link } from "@chakra-ui/react";
 import NavShippers from "./NavShippers";
 import NavCarriers from "./NavCarriers";
+import NavCompany from "./NavCompany";
 
 
 export default function Navbar({ data }) {
 
-  // console.log('NavBar')
+  console.log('NavBar')
 
   let buttonColor
   data.attributes.pageColor && data.attributes.pageColor.includes('Light', 'White') ? buttonColor = 'primaryLight'
   : data.attributes.pageColor && data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' 
   : buttonColor = 'primaryDark'
 
+  console.log(buttonColor)
+
   return (
-    <Box display='flex' justifyContent='space-between' width='100%'>
+    <Box display='flex' justifyContent='space-between' alignItems='center' width='100%'>
 
       <Box display='flex' flex='2'>
         <NavShippers data={data} />
@@ -23,10 +26,8 @@ export default function Navbar({ data }) {
           <Box mr='5'>
             <Link variant={data.attributes.pageColor + 'Button'} fontSize='lg'>Resources</Link>
           </Box>
-          <Box>
-            <Link href={"/page/about"} variant={data.attributes.pageColor + 'Button'} fontSize='lg'>About</Link>
-          </Box>
         </Box>
+        <NavCompany data={data} />
       </Box>
 
       <Box>

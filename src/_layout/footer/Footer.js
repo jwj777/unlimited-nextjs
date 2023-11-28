@@ -1,5 +1,5 @@
 'use-client'
-import { Box, Link } from '@chakra-ui/react';
+import { Box, Button, Link } from '@chakra-ui/react';
 import FooterLink from './FooterLink';
 import Logo from '@/_components/brand/Logo';
 import TitleSmall from '@/_components/typography/TitleSmall';
@@ -68,7 +68,10 @@ export default function Footer({ data }) {
           </Box>
 
           <Box mt='16'>
-            <Link href='/page/contact' variant='primaryDarkButton'>Contact Us Today</Link>
+            <Link href='/page/contact' variant='noDeco'>
+              <Button variant={data.attributes.pageColor}>Contact Us Today
+              </Button>
+              </Link>
           </Box>
 
 

@@ -93,14 +93,13 @@ const neutralDarkButton = defineStyle({
 })
 
 const primaryDarkButton = defineStyle({
-  bg: 'primary.40',
-  color: 'neutral.95',
+  color: 'primary.90',
   borderRadius: '10rem',
   py: '14px',
   px: '24px',
     _hover: {
-    bg: 'neutral.20',
-    color: 'neutral.99',
+    bg: 'primaryDark.surface-highest',
+    color: 'primary.95',
     textDecor: 'none',
   }
 })
