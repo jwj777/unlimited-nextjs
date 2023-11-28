@@ -4,7 +4,7 @@ import Hero from "./Hero";
 import HeroImage from "./HeroImage";
 
 
-export default function HeroHeader({ data }) {
+export default function HeroHeader({ data, noHero }) {
 
   data.attributes.pageColor && data.attributes.pageColor == 'neutralWhite' ? 
   data.attributes.pageColor && data.attributes.pageColor == 'neutralLight' 
@@ -13,9 +13,15 @@ export default function HeroHeader({ data }) {
   return (
     <Box background={data.attributes.pageColor + '.background'}>
       <Header data={data} />
-      <Hero data={data} />
+
       {
-        data.attributes.heroImage ?
+        noHero ? null
+        : <Hero data={data} />
+      }
+      
+
+      {
+        data.attributes.heroImage && !noHero ?
         <HeroImage data={data} /> 
         : null
       }

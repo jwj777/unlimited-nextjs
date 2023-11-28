@@ -4,15 +4,19 @@ import HeroHeader from "./hero-header/HeroHeader";
 import Footer from "./footer/Footer";
 
 
-export default function PageContainer({ data, children }) {
+export default function PageContainer({ data, children, noHero }) {
 
   return (
 
     <Box width='100%'>
-      <HeroHeader data={data} />
-
+      {
+        noHero ?
+        <HeroHeader data={data} noHero />
+        : <HeroHeader data={data} />
+      }
+      
         {children}
-        
+
       <Footer data={data} />
     </Box>
 

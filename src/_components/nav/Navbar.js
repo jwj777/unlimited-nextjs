@@ -24,7 +24,7 @@ export default function Navbar({ data }) {
         <NavCarriers data={data} />
         <Box mt='12px' display='flex'>
           <Box mr='5'>
-            <Link variant={data.attributes.pageColor + 'Button'} fontSize='lg'>Resources</Link>
+            <Link href='/page/resources' variant={data.attributes.pageColor + 'Button'} fontSize='lg'>Resources</Link>
           </Box>
         </Box>
         <NavCompany data={data} />

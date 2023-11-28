@@ -6,8 +6,8 @@ import BodyMedium from "../typography/BodyMedium";
 
 export default function FeaturedEmployee({ data, color }) {
 
-  console.log('Featured Employee')
-  console.log(data, color)
+  // console.log('Featured Employee')
+  // console.log(data, color)
 
   return(
     

@@ -69,7 +69,7 @@ export default function Footer({ data }) {
 
           <Box mt='16'>
             <Link href='/page/contact' variant='noDeco'>
-              <Button variant={data.attributes.pageColor}>Contact Us Today
+              <Button variant={data.attributes.pageColor} size='lg'>Contact Us Today
               </Button>
               </Link>
           </Box>

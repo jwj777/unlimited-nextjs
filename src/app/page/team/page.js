@@ -54,13 +54,13 @@ export default async function Team({params}) {
   )
 }
 
-export async function generateStaticParams() {
-  const services = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages').then((res) => res.json())
+// export async function generateStaticParams() {
+//   const services = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages').then((res) => res.json())
 
-  return services.data.map((item) => ({
-    slug: item.attributes.slug
-  }))
-}
+//   return services.data.map((item) => ({
+//     slug: item.attributes.slug
+//   }))
+// }
 
 async function getServiceBySlug(params) {
   try {
