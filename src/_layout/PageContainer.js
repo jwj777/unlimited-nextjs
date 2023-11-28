@@ -11,8 +11,8 @@ export default function PageContainer({ data, children }) {
     <Box width='100%'>
       <HeroHeader data={data} />
 
-      {children}
-
+        {children}
+        
       <Footer data={data} />
     </Box>
 

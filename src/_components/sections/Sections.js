@@ -10,7 +10,7 @@ import BasicText from "./BasicText";
 export default function Sections({ data }) {
 
   console.log('Sections')
-  console.log(data.attributes.Sections)
+  console.log(data.attributes)
 
   return (
 
