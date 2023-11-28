@@ -10,6 +10,8 @@ import DisplayLarge from "@/_components/typography/DisplayLarge";
 
 export default function Hero({ data }) {
 
+  console.log(data)
+
   let buttonColor
   data.attributes.pageColor && data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' 
   : buttonColor = 'primaryLight'

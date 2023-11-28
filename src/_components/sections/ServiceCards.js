@@ -11,11 +11,6 @@ import HeadlineLarge from "../typography/HeadlineLarge";
 
 export default function ServiceCards({ data, services }) {
 
-  console.log('ServiceCards')
-  services.data.map((service, index) => {
-    console.log(service)
-  })
-
   return (
     <Box background={data.color + '.background'}>
   

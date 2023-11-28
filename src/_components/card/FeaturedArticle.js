@@ -10,8 +10,8 @@ import LabelLarge from "../typography/LabelLarge";
 
 export default function FeaturedArticle({ data, color }) {
 
-  console.log('ArticleCard')
-  console.log(data.attributes.heroImage)
+  // console.log('ArticleCard')
+  // console.log(data.attributes.heroImage)
 
   // createdAt short dates
   let date = new Date(data.attributes.createdAt)

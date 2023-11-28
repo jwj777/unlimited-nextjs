@@ -19,9 +19,9 @@ export default async function Resources({params}) {
   /* articles */
   const resources = await getPageData();
 
-  console.log('Resources')
-  console.log(resources[0].attributes.pageColor)
-  console.log(data)
+  // console.log('Resources')
+  // console.log(resources[0].attributes.pageColor)
+  // console.log(data)
   
   return (
     <main>

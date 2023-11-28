@@ -12,8 +12,8 @@ import LabelMedium from '@/_components/typography/LabelMedium';
 
 export default function Footer({ data }) {
 
-  console.log('Footer')
-  console.log(data)
+  // console.log('Footer')
+  // console.log(data)
 
   return (
 

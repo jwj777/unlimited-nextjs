@@ -4,8 +4,8 @@ import LogoIcon from "./LogoIcon";
 
 export default function Logo({ data }) {
 
-  console.log('Logo')
-  console.log(data)
+  // console.log('Logo')
+  // console.log(data)
 
   return (
     <LinkBox>

@@ -1,8 +1,5 @@
-import { Box } from '@chakra-ui/react'
-import PageContainer from '@/_layout/PageContainer'
-import ContentColor from '@/_layout/containers/ContentColor';
-import FeaturedEmployee from '@/_components/card/FeaturedEmployee';
-import Employee from '@/_components/card/Employee';
+import { Box } from '@chakra-ui/react';
+import PageContainer from '@/_layout/PageContainer';
 import ContentContainer from '@/_layout/containers/ContentContainer';
 import HeadlineLarge from '@/_components/typography/HeadlineLarge';
 import HeadlineMedium from '@/_components/typography/HeadlineMedium';
@@ -10,30 +7,29 @@ import HeadlineMedium from '@/_components/typography/HeadlineMedium';
 
 export default async function Careers({params}) {
 
-    /* resource page data */
-    const articles = await getJobs(params);
-    const data = articles;
-  
-    /* articles */
-    const resources = await getPageData();
-  
-    console.log('Resources')
-    console.log(resources[0].attributes.pageColor)
-    console.log(data)
+  /* resource page data */
+  const jobs = await getJobs(params);
+  const data = jobs;
+
+  /* articles */
+  const careers = await getPageData();
   
   return (
+
     <main>
-      <PageContainer data={data}>
-   
-          <ContentContainer>
+      <PageContainer data={careers[0]} jobs={data}>
+        <ContentContainer>
 
-           
+        <Box mt='8'>
+          <HeadlineMedium>Current Job Openings</HeadlineMedium>
+        </Box>
 
-          </ContentContainer>
-     
+        </ContentContainer>
       </PageContainer>
     </main>
+
   )
+
 }
 
 
@@ -63,9 +59,9 @@ async function getPageData() {
       throw new Error('Failed to fetch data');
     }
 
-    const resources = await response.json();
+    const careers = await response.json();
 
-    return resources?.data;
+    return careers?.data;
   } catch (error) {
     console.error('Error fetching service data:', error);
     throw new Error('Failed to fetch data');

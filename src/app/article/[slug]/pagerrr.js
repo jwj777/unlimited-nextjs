@@ -4,17 +4,17 @@ import PageContainer from '@/_layout/PageContainer'
 import Sections from '@/_components/sections/Sections'
 
 
-export default async function Page({params}) {
+export default async function Articles({params}) {
 
   const serviceBySlug = await getServiceBySlug(params);
   const data = serviceBySlug?.[0];
 
-  console.log(data)
+  // console.log(data)
   
   return (
     <main>
       <PageContainer data={data}>
-{/* 
+        {/* 
         {
           data.attributes.Sections[0] ?
             <Sections data={data} />
