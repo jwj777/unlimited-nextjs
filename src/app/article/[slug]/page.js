@@ -14,12 +14,12 @@ export default async function Articles({params}) {
   return (
     <main>
       <PageContainer data={data}>
-        {/* 
+        
         {
           data.attributes.Sections[0] ?
             <Sections data={data} />
           : null
-        } */}
+        }
         
       </PageContainer>
     </main>
@@ -27,7 +27,7 @@ export default async function Articles({params}) {
 }
 
 export async function generateStaticParams() {
-  const services = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages').then((res) => res.json())
+  const services = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles').then((res) => res.json())
 
   return services.data.map((item) => ({
     slug: item.attributes.slug

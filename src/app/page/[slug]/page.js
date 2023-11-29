@@ -9,8 +9,8 @@ export default async function Page({params}) {
   const serviceBySlug = await getServiceBySlug(params);
   const data = serviceBySlug?.[0];
 
-  console.log('Basic Page')
-  console.log(data)
+  // console.log('Basic Page')
+  // console.log(data)
   
   return (
     <main>

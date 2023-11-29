@@ -6,8 +6,8 @@ import HeroImage from "./HeroImage";
 
 export default function HeroHeader({ data, noHero }) {
 
-  console.log('HeroHeader')
-  console.log(data)
+  // console.log('HeroHeader')
+  // console.log(data)
 
   data.attributes.pageColor && data.attributes.pageColor == 'neutralWhite' ? 
   data.attributes.pageColor && data.attributes.pageColor == 'neutralLight' 

@@ -20,7 +20,7 @@ export default async function Resources({params}) {
   const resources = await getPageData();
 
   // console.log('Resources')
-  // console.log(resources[0].attributes.pageColor)
+  // console.log(resources[0])
   // console.log(data)
   
   return (
@@ -28,44 +28,45 @@ export default async function Resources({params}) {
       <PageContainer data={resources[0]} noHero>
         <ContentColor data={resources[0]}>
           <ContentContainer>
+            <Box pb='24'>
 
-            <Box display='flex' alignItems='center' mt='24' mb='24'>
-              <Box 
-                borderTop='2px' 
-                borderColor={resources[0].attributes.pageColor + '.outline'} 
-                height='2px'
-                width='180px'
-                mr='8'
-                mb='4'
-              ></Box>
-              <Box>
-                <HeadlineLarge color={resources[0].attributes.pageColor + '.on-surface'} thin>{resources[0].attributes.Headline}</HeadlineLarge>
+              <Box display='flex' alignItems='center' mt='24' mb='24'>
+                <Box 
+                  borderTop='2px' 
+                  borderColor={resources[0].attributes.pageColor + '.outline'} 
+                  height='2px'
+                  width='180px'
+                  mr='8'
+                  mb='4'
+                ></Box>
+                <Box>
+                  <HeadlineLarge color={resources[0].attributes.pageColor + '.on-surface'} thin>{resources[0].attributes.Headline}</HeadlineLarge>
+                </Box>
               </Box>
-            </Box>
 
-            {
-              data.map((article, index) => {
-                return(
-                  index == '0' ?
-                  <FeaturedArticle key={index} data={article} color={resources[0].attributes.pageColor} />
-                  : null
-                )
-              })
-            }
-
-            <Box display='flex' justifyContent='space-between' alignItems='stretch'>
               {
                 data.map((article, index) => {
                   return(
-                    index > 0 ?
-                    <ArticleCard key={index} data={article} color={resources[0].attributes.pageColor} />
+                    index == '0' ?
+                    <FeaturedArticle key={index} data={article} color={resources[0].attributes.pageColor} />
                     : null
                   )
                 })
               }
+
+              <Box display='flex' justifyContent='space-between' alignItems='stretch'>
+                {
+                  data.map((article, index) => {
+                    return(
+                      index > 0 ?
+                      <ArticleCard key={index} data={article} color={resources[0].attributes.pageColor} />
+                      : null
+                    )
+                  })
+                }
+              </Box>
+
             </Box>
-
-
           </ContentContainer>
         </ContentColor>
       </PageContainer>

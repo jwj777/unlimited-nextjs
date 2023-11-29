@@ -4,17 +4,12 @@ import NavShippers from "./NavShippers";
 import NavCarriers from "./NavCarriers";
 import NavCompany from "./NavCompany";
 
-
 export default function Navbar({ data }) {
-
-  console.log('NavBar')
 
   let buttonColor
   data.attributes.pageColor && data.attributes.pageColor.includes('Light', 'White') ? buttonColor = 'primaryLight'
   : data.attributes.pageColor && data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' 
   : buttonColor = 'primaryDark'
-
-  console.log(buttonColor)
 
   return (
     <Box display='flex' justifyContent='space-between' alignItems='center' width='100%'>

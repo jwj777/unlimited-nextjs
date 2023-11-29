@@ -23,9 +23,9 @@ export default function FeaturedArticle({ data, color }) {
 
   return(
     
-    <Box mb='20'>
+    <Box mb='24'>
 
-      <Box mb='10'>
+      <Box mb='12'>
         <Box mb='8'>
           <LabelLarge color={color + '.on-surface'}>{createdAtShort}</LabelLarge>
         </Box>
