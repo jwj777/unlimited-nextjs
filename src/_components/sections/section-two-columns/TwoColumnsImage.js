@@ -12,7 +12,7 @@ import BodyLarge from "../../typography/BodyLarge";
 export default function TwoColumnsImage({ data }) {
 
   // console.log('two columns right / left')
-  // console.log(data.Image.data.attributes.url)
+  // console.log(data)
 
   return (
 
