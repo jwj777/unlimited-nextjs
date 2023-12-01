@@ -19,8 +19,14 @@ export default function BasicText({ data }) {
             <Box mb='8'>
               <HeadlineLarge color={data.color + '.on-surface'}>{data.Headline}</HeadlineLarge>
             </Box>
-            <Box maxW='6xl'>
-              <BodyLarge text={data.Body} />
+            <Box maxW='5xl'>
+            <Box 
+              dangerouslySetInnerHTML={{ __html: data.Body }} 
+              // fontSize={{ base: '1.2rem', md: '1.4rem' }}
+              // lineHeight={{ base: '152%', md: '158%' }}
+              // fontWeight={weight}
+              // color={color}
+            ></Box>
             </Box>
           </ContentContainer>
         

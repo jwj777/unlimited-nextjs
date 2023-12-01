@@ -9,18 +9,23 @@ export default async function Articles({params}) {
   const serviceBySlug = await getServiceBySlug(params);
   const data = serviceBySlug?.[0];
 
-  // console.log(data)
+  const contentType = 'article'
+
+  console.log('Articles')
+  console.log(data)
   
   return (
     <main>
-      <PageContainer data={data}>
+      <PageContainer data={data} contentType={contentType}>
+        <Box className='articleContent'>
         
-        {
-          data.attributes.Sections[0] ?
-            <Sections data={data} />
-          : null
-        }
-        
+          {
+            data.attributes.Sections[0] ?
+              <Sections data={data} />
+            : null
+          }
+
+        </Box>
       </PageContainer>
     </main>
   )

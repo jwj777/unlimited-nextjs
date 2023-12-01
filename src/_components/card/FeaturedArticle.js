@@ -25,8 +25,7 @@ export default function FeaturedArticle({ data, color }) {
     
     <Box mb='24'>
       <LinkBox>
-
-        <LinkOverlay href={data.attributes.slug} />
+        <LinkOverlay href={'/article/' + data.attributes.slug} />
 
           <Box mb='12'>
             <Box mb='8'>

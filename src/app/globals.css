@@ -36,3 +36,31 @@ body {
 .logo-primaryDark text {
   fill: var(--chakra-colors-primary-95);
 }
+
+/* article content */
+
+.articleContent p {
+  font-size: 1.4rem;
+  line-height: 156%;
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+}
+
+.articleContent h2 {
+  font-size: 2.6rem;
+  line-height: 124%;
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+
+.articleContent h3 {
+  font-size: 1.8rem;
+  line-height: 156%;
+  font-weight: 400;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  max-width: 720px;
+}
