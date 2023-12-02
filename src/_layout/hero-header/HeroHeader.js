@@ -3,6 +3,7 @@ import Header from "./Header";
 import Hero from "./Hero";
 import HeroImage from "./HeroImage";
 import HeroArticle from "./HeroArticle";
+import HeaderMobile from "./HeaderMobile";
 
 
 export default function HeroHeader({ data, noHero, contentType }) {
@@ -16,7 +17,14 @@ export default function HeroHeader({ data, noHero, contentType }) {
 
   return (
     <Box background={data.attributes.pageColor + '.background'}>
-      <Header data={data} />
+      
+      <Box display={{ base: 'none', xl: 'block' }}>
+        <Header data={data} />
+      </Box>      
+      
+      <Box display={{ base: 'block', xl: 'none' }}>
+        <HeaderMobile data={data} />
+      </Box>
 
       {
         noHero || contentType == 'article' ? null

@@ -41,6 +41,18 @@ const xl = defineStyle({
   pl: '1.9rem',
 })
 
+const menuLight = defineStyle({
+  bg: 'none',
+  color: 'neutral.10',
+  py: '6',
+  px: '0',
+  fontSize: '1.7rem',
+  borderRadius: '10rem',
+  _hover: {
+     color: 'primary.70',
+  }
+})
+
 const primaryLight = defineStyle({
   bg: 'primary.40',
   color: 'neutral.90',
@@ -50,6 +62,7 @@ const primaryLight = defineStyle({
     color: 'neutral.80',
   }
 })
+
 const primaryDark = defineStyle({
   bg: 'primary.40',
   color: 'neutral.95',
@@ -125,6 +138,7 @@ const primaryDarkNav = defineStyle({
 export const Button = defineStyleConfig({
   sizes: { xs, sm, md, lg, xl },
   variants: { 
+    menuLight,
     primaryDark, 
     primaryLight,
     secondaryLight,
