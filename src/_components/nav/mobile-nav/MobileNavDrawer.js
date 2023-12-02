@@ -21,8 +21,8 @@ export default function MobileNavDrawer({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
-  console.log('MobileNavDrawer')
-  console.log(data)
+  // console.log('MobileNavDrawer')
+  // console.log(data)
 
   return (
     <Box>

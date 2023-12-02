@@ -7,8 +7,8 @@ import SectionPadding from "@/_layout/containers/SectionPadding";
 
 export default function BigTextBlock({ data }) {
 
-  console.log('BigTextBlock')
-  console.log(data)
+  // console.log('BigTextBlock')
+  // console.log(data)
 
   return (
 

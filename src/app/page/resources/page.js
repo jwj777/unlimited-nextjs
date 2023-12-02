@@ -21,7 +21,8 @@ export default async function Resources({params}) {
 
   // console.log('Resources')
   // console.log(resources[0])
-  // console.log(data)
+  console.log('Resources - Articles')
+  console.log(data)
   
   return (
     <main>

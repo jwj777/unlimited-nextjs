@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function HeroImage({ data }) {
 
-  console.log('hero image')
-  console.log(data)
+  // console.log('hero image')
+  // console.log(data)
 
   return (
 

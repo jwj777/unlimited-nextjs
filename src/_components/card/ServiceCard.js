@@ -5,9 +5,8 @@ import BodyMedium from "../typography/BodyMedium";
 
 export default function ServiceCard({ service, color }) {
 
-  console.log('service card')
-  // console.log(service.attributes.heroImage.primaryImage.data.attributes.formats.large)
-  console.log(service.attributes.heroImage.primaryImage.data.attributes.formats.medium.url)
+  // console.log('service card')
+  // console.log(service.attributes.heroImage.primaryImage.data.attributes.formats.medium.url)
 
   return(
     
