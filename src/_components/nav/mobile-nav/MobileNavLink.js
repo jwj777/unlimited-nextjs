@@ -6,7 +6,7 @@ import { Box, Link, MenuItem, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 
 
-export default function MobileNavLink({ href, children, label, data }) {
+export default function MobileNavLink({ href, children, label, color }) {
 
   // const initialValues = {           
   //   labelColor: 'black',
@@ -42,14 +42,14 @@ export default function MobileNavLink({ href, children, label, data }) {
       <Box 
         display='flex'
         bg='none'
-        mb='4'
+        mb='7'
         // onMouseEnter={() => handleMouseEnter()}
         // onMouseLeave={() => handleMouseLeave()}
       > 
         <Box>
-          <Link href={href} variant='noDeco' color={data.attributes.pageColor + '.on-surface'}>
+          <Link href={href} variant='noDeco' color={'neutral.90'}>
       
-              <BodyMedium color={data.attributes.pageColor + '.on-surface'}>
+              <BodyMedium color={'neutral.90'}>
                 {label}
               </BodyMedium>
       

@@ -8,8 +8,8 @@ import HeaderMobile from "./HeaderMobile";
 
 export default function HeroHeader({ data, noHero, contentType }) {
 
-  // console.log('HeroHeader')
-  // console.log(data)
+  console.log('HeroHeader')
+  console.log(data)
 
   data.attributes.pageColor && data.attributes.pageColor == 'neutralWhite' ? 
   data.attributes.pageColor && data.attributes.pageColor == 'neutralLight' 
@@ -39,7 +39,7 @@ export default function HeroHeader({ data, noHero, contentType }) {
       
 
       {
-        data.attributes.heroImage && !noHero && !contentType == 'article' ?
+        data.attributes.heroImage && !noHero && (!contentType || !contentType == 'article') ?
         <HeroImage data={data} /> 
         : null
       }

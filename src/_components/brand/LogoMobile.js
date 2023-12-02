@@ -2,7 +2,7 @@ import { Box, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
 import LogoIconMobile from "./LogoIconMobile";
 
 
-export default function LogoMobile({ data }) {
+export default function LogoMobile({ data, color }) {
 
   // console.log('Logo')
   // console.log(data)
@@ -11,7 +11,7 @@ export default function LogoMobile({ data }) {
     <LinkBox>
       <LinkOverlay href='/'>
         <Box display='flex' alignItems='center'>
-          <LogoIconMobile data={data} />
+          <LogoIconMobile data={data} color={color} />
         </Box>
       </LinkOverlay>
     </LinkBox>

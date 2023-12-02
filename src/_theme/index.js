@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 
+import { Accordion } from "./components/Accordion";
 import { Button } from "./components/button";
 import { Input } from "./components/input";
 import { Link } from "./components/link";
@@ -15,6 +16,7 @@ const breakpoints = {
 const theme = extendTheme({
   breakpoints,
   components: {
+    Accordion,
     Button, 
     Input, 
     Link,

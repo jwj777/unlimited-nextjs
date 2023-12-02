@@ -5,9 +5,11 @@ import Image from "next/image";
 
 export default function HeroImage({ data }) {
 
-  // console.log('hero image')
+  console.log('hero image')
+  console.log(data)
 
   return (
+
     <Box 
       py='20'
       sx={{
