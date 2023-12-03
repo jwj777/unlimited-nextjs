@@ -1,11 +1,8 @@
 import { Box } from '@chakra-ui/react'
 import PageContainer from '@/_layout/PageContainer'
 import ContentColor from '@/_layout/containers/ContentColor';
-import FeaturedEmployee from '@/_components/card/FeaturedEmployee';
-import Employee from '@/_components/card/Employee';
 import ContentContainer from '@/_layout/containers/ContentContainer';
 import HeadlineLarge from '@/_components/typography/HeadlineLarge';
-import HeadlineMedium from '@/_components/typography/HeadlineMedium';
 import ArticleCard from '@/_components/card/ArticleCard';
 import FeaturedArticle from '@/_components/card/FeaturedArticle';
 
@@ -79,7 +76,7 @@ async function getArticles() {
   try {
     const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?populate[heroImage][populate]=*
     &populate[Sections][populate]=*`, { 
-      next: { revalidate: 1 }
+      cache: 'no-store'
     });
     
     if (!response.ok) {
