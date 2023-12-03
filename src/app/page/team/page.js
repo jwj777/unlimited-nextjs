@@ -67,7 +67,9 @@ async function getPageData() {
     const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=team&populate[heroImage][populate]=*
     &populate[callToAction][populate]=*
     &populate[Sections][populate]=*
-    &populate[Sections][on][sections.employee][populate]=*`);
+    &populate[Sections][on][sections.employee][populate]=*`, { 
+      next: { revalidate: 30 }
+    });
     
     if (!response.ok) {
       throw new Error('Failed to fetch data');
