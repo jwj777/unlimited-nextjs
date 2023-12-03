@@ -76,7 +76,7 @@ async function getArticles() {
   try {
     const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?populate[heroImage][populate]=*
     &populate[Sections][populate]=*`, { 
-      cache: 'no-store'
+      next: { revalidate: 1 }
     });
     
     if (!response.ok) {
