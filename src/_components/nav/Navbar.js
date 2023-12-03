@@ -27,7 +27,9 @@ export default function Navbar({ data }) {
 
       <Box>
         <Button variant={buttonColor} size='md'>
-          Contact Us
+          <Link href='/page/contact' variant='noDeco'>
+            Contact Us
+          </Link>
         </Button>
       </Box>
 

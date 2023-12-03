@@ -24,10 +24,15 @@ export default function MobileNavDrawer({ data }) {
   // console.log('MobileNavDrawer')
   // console.log(data)
 
+  let color
+  data.attributes.pageColor.includes('Dark') ? color = 'mobileDark'
+  : data.attributes.pageColor.includes('White', 'Light') ? color = 'mobileLight'
+  : color = 'mobileLight'
+
   return (
     <Box>
 
-      <Button ref={btnRef} onClick={onOpen} variant='mobileLight'>
+      <Button ref={btnRef} onClick={onOpen} variant={color}>
         <FiMenu />
       </Button>
 

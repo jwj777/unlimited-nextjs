@@ -7,34 +7,6 @@ import { useState } from 'react';
 
 
 export default function MobileNavLink({ href, children, label, color }) {
-
-  // const initialValues = {           
-  //   labelColor: 'black',
-  //   textColor: 'gray.500',
-  //   border: '0px',
-  //   };
-
-  // const [navActive, setNavActive] = useState(initialValues)
-
-  // const handleMouseEnter = () => {
-  //   setNavActive({
-  //     ...navActive,
-  //     labelColor: 'primary.70',
-  //     textColor: 'primary.70',
-  //     border: '1px',
-  //     display: 'block'
-  //   })
-  // }
-
-  // const handleMouseLeave = () => {
-  //   setNavActive({
-  //     ...navActive,
-  //     labelColor: 'neutralVariant.10',
-  //     textColor: 'neutralVariant.60',
-  //     border: '0px',
-  //     display: 'none'
-  //   })
-  // }
   
 
   return(

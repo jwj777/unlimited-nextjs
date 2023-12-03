@@ -28,9 +28,10 @@ export default async function Careers({params}) {
     <main>
       <PageContainer data={careers[0]} jobs={data}>
         <ContentContainer>
+          <Box mb='40'>
 
-            <Box mt='8' mb='16'>
-              <HeadlineMedium>Current Job Openings</HeadlineMedium>
+            <Box mt='8' mb='12'>
+              <HeadlineSmall>Current Job Openings</HeadlineSmall>
             </Box>
 
             {
@@ -89,7 +90,7 @@ export default async function Careers({params}) {
                 )
               })
             }
-
+          </Box>
         </ContentContainer>
       </PageContainer>
     </main>

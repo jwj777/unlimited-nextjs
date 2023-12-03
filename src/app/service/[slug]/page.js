@@ -4,6 +4,7 @@ import PageContainer from '@/_layout/PageContainer'
 import Sections from '@/_components/sections/Sections'
 import LtlServiceTypes from '@/_components/sections/single-sections/LtlServiceTypes';
 import TextCard from '@/_components/card/TextCard';
+import HeadlineLarge from '@/_components/typography/HeadlineLarge';
 
 
 export default async function Page({params}) {
@@ -19,12 +20,6 @@ export default async function Page({params}) {
       <PageContainer data={data}>
 
         {
-          data.attributes.Sections ?
-            <Sections data={data} />
-          : null
-        }
-
-        {
           data.attributes.slug == 'ltl-services' ? 
           <Box>
             <LtlServiceTypes data={data} />
@@ -33,12 +28,11 @@ export default async function Page({params}) {
         }
 
         {
-          data.attributes.slug == 'ltl-services' ? 
-          <Box>
-            
-          </Box>
+          data.attributes.Sections ?
+            <Sections data={data} />
           : null
         }
+
         
       </PageContainer>
     </main>
@@ -59,6 +53,7 @@ async function getServiceBySlug(params) {
     const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services?filters[slug][$eq]=${slug}&populate[heroImage][populate]=*
     &populate[callToAction][populate]=*
     &populate[Sections][populate]=*
+    &populate[Sections][on][sections.basic-text][populate]=*
     &populate[Sections][on][sections.section-two-columns][populate]=Image
     &populate[Sections][on][sections.big-text-block][populate]=*
     &populate[Sections][on][sections.small-card-list][populate][smallCard][populate]=*
