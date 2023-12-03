@@ -9,7 +9,6 @@ import HeadlineMedium from '@/_components/typography/HeadlineMedium';
 import ArticleCard from '@/_components/card/ArticleCard';
 import FeaturedArticle from '@/_components/card/FeaturedArticle';
 
-
 export default async function Resources({params}) {
 
   /* resource page data */
@@ -79,7 +78,9 @@ export default async function Resources({params}) {
 async function getArticles() {
   try {
     const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?populate[heroImage][populate]=*
-    &populate[Sections][populate]=*`);
+    &populate[Sections][populate]=*`, { 
+      next: { revalidate: 30 }
+    });
     
     if (!response.ok) {
       throw new Error('Failed to fetch data');

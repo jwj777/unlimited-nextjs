@@ -63,7 +63,7 @@ export default async function Team() {
 
 async function getPageData() {
   try {
-    const slug = params.slug;
+    // const slug = params.slug;
     const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=team&populate[heroImage][populate]=*
     &populate[callToAction][populate]=*
     &populate[Sections][populate]=*
