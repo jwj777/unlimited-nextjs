@@ -1,14 +1,18 @@
 import React from "react";
 import { Heading, Text } from '@chakra-ui/react'
 
-export default function HeadlineLarge({ children, color, thin }) {
+export default function HeadlineLarge({ children, color, thin, as }) {
 
   color ? color : color = 'black'
   let weight
   thin ? weight = '300' : weight = '400'
 
+  console.log('HeadlineLarge')
+  console.log(as)
+
   return (
-    <Text 
+    <Text
+      as={as}
       color={color}
       fontSize={{ base: '2.4rem', md: '2.8rem', lg: '3rem' }}
       lineHeight={{ base: '108%', md: '104%', lg: '112%' }}

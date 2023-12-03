@@ -68,7 +68,7 @@ async function getPageData() {
     &populate[callToAction][populate]=*
     &populate[Sections][populate]=*
     &populate[Sections][on][sections.employee][populate]=*`, { 
-      next: { revalidate: 30 }
+      next: { revalidate: 1 }
     });
     
     if (!response.ok) {

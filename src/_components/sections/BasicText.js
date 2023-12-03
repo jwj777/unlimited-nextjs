@@ -12,13 +12,16 @@ export default function BasicText({ data }) {
 
   return (
 
-    <Box background={data.color + '.background'}>
+    <Box background={data.color + '.background'} className='basicTextSection'>
       <SectionPadding data={data}>
 
           <ContentContainer>
-            <Box mb='8'>
-              <HeadlineLarge color={data.color + '.on-surface'}>{data.Headline}</HeadlineLarge>
-            </Box>
+            { data.Headline ?
+              <Box mb='8'>
+                <HeadlineLarge as='h2' color={data.color + '.on-surface'}>{data.Headline}</HeadlineLarge>
+              </Box>
+              : null
+            }
             <Box maxW='5xl'>
             <Box 
               dangerouslySetInnerHTML={{ __html: data.Body }} 

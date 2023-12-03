@@ -39,14 +39,30 @@ body {
 
 /* article content */
 
-.articleContent p {
+.articleContent p,
+.basicTextSection p {
   font-size: 1.4rem;
   line-height: 156%;
   margin-bottom: 1.2rem;
   font-weight: 300;
 }
 
-.articleContent h2 {
+.articleContent ul,
+.basicTextSection ul {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.articleContent li,
+.basicTextSection li {
+  font-size: 1.4rem;
+  line-height: 156%;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+  font-weight: 300;
+}
+
+.articleContent h2, .basicTextSection h2 {
   font-size: 2.6rem;
   line-height: 124%;
   font-weight: 400;
@@ -55,8 +71,11 @@ body {
   max-width: 800px;
 }
 
+.basicTextSection h2:first-child {
+  margin-top: 0rem;
+}
 
-.articleContent h3 {
+.articleContent h3, .basicTextSection h3 {
   font-size: 1.8rem;
   line-height: 156%;
   font-weight: 400;

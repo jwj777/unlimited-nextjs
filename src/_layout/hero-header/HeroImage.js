@@ -11,7 +11,8 @@ export default function HeroImage({ data }) {
   return (
 
     <Box 
-      py='20'
+      pt='20'
+      pb='16'
       sx={{
         background:
         `linear-gradient(
