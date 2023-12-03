@@ -21,7 +21,7 @@ export default async function Resources({params}) {
   // console.log('Resources')
   // console.log(resources[0])
   console.log('Resources - Articles')
-  console.log(data)
+  // console.log(data)
   
   return (
     <main>
@@ -78,13 +78,14 @@ export default async function Resources({params}) {
 async function getArticles() {
   try {
     const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?populate[heroImage][populate]=*
-    &populate[Sections][populate]=*`, { 
-      next: { revalidate: 1 }
-    });
+    &populate[Sections][populate]=*`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch data');
     }
+
+    console.log('getArticles')
+    // console.log(response)
 
     const article = await response.json();
 
