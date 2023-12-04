@@ -37,11 +37,13 @@ export default function Hero({ data }) {
           <BodyXl color={data?.attributes.pageColor + '.on-surface'} thin>{data?.attributes.Subheading}</BodyXl>
         </Box>
         {
+          data?.attributes.callToAction ? 
           <Box mt='12'>
             <Button variant={buttonColor} size='lg' href={data?.attributes.callToAction?.buttonUrl}>
               {data?.attributes.callToAction?.buttonText}
             </Button>
           </Box> 
+          : null
         }
       </ContentContainer>
     </Box>

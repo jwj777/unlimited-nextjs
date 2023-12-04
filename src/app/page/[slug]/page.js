@@ -16,13 +16,13 @@ export default async function BasicPage({params}) {
     <main>
       <PageContainer data={data}>
 
-        {/* {
-          data.attributes.Sections ?
+        {
+          data?.attributes.Sections ?
             data.attributes.Sections[0] ?
               <Sections data={data} />
             : null
           : null
-        } */}
+        }
         
       </PageContainer>
     </main>
