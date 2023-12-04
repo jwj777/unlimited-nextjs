@@ -8,16 +8,16 @@ import HeaderMobile from "./HeaderMobile";
 
 export default function HeroHeader({ data, noHero, contentType }) {
 
-  console.log('HeroHeader')
-  console.log(data)
+  // console.log('HeroHeader')
+  // console.log(data)
 
-//   data.attributes.pageColor && data.attributes.pageColor == 'neutralWhite' ? 
-//   data.attributes.pageColor && data.attributes.pageColor == 'neutralLight' 
-// : data.attributes.pageColor = data.attributes.pageColor
+  data?.attributes.pageColor == 'neutralWhite' ? 
+  data?.attributes.pageColor == 'neutralLight' 
+  : data?.attributes.pageColor
 
   return (
     <Box 
-      // background={ data.attributes.pageColor + '.background' }
+      background={ data?.attributes.pageColor + '.background' }
     >
       
       <Box display={{ base: 'none', xl: 'block' }}>
