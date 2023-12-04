@@ -47,6 +47,14 @@ body {
   font-weight: 300;
 }
 
+@media screen and (max-width: 768px) {
+  .articleContent p,
+  .basicTextSection p {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .articleContent ul,
 .basicTextSection ul {
   margin-top: 2rem;
@@ -62,6 +70,14 @@ body {
   font-weight: 300;
 }
 
+@media screen and (max-width: 768px) {
+  .articleContent li,
+  .basicTextSection li {
+    font-size: 1.15rem;
+    margin-left: 1.5rem;
+  }
+}
+
 .articleContent h2, .basicTextSection h2 {
   font-size: 2.6rem;
   line-height: 124%;
@@ -71,15 +87,31 @@ body {
   max-width: 800px;
 }
 
+@media screen and (max-width: 768px) {
+  .articleContent h2, .basicTextSection h2 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .basicTextSection h2:first-child {
   margin-top: 0rem;
 }
 
 .articleContent h3, .basicTextSection h3 {
   font-size: 1.8rem;
-  line-height: 156%;
+  line-height: 130%;
   font-weight: 400;
   margin-top: 3rem;
   margin-bottom: 1.2rem;
   max-width: 720px;
+}
+
+@media screen and (max-width: 768px) {
+  .articleContent h3, .basicTextSection h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+  }
 }

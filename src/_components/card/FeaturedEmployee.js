@@ -3,6 +3,7 @@ import Image from "next/image";
 import TitleMedium from "../typography/TitleMedium";
 import TitleSmall from "../typography/TitleSmall";
 import BodyMedium from "../typography/BodyMedium";
+import LabelLarge from "../typography/LabelLarge";
 
 export default function FeaturedEmployee({ data, color }) {
 
@@ -40,7 +41,7 @@ export default function FeaturedEmployee({ data, color }) {
         borderBottomLeftRadius={{ base: '1.5rem', md: '0' }}
         borderBottomRightRadius={{ base: '1.5rem', md: '1.5rem' }}
       >
-        <TitleMedium color={color + '.on-surface'}>{data.Name}</TitleMedium>
+        <LabelLarge color={color + '.on-surface'}>{data.Name}</LabelLarge>
         <Box opacity='72%'> 
           <BodyMedium color={color + '.on-surface'} thin>
             <Link href={'mailto: ' + data.emailAddress} variant='noDeco'>{data.Title}</Link>

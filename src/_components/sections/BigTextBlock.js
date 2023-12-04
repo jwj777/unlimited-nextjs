@@ -16,16 +16,23 @@ export default function BigTextBlock({ data }) {
       <SectionPadding data={data}>
         <Box display='flex'>
 
-          <Box className='topblock' background='none' width='100%'></Box>
+          <Box 
+            className='topblock' 
+            display={{ base: 'none', xl: 'block' }} 
+            background='none' 
+            width='100%'
+          ></Box>
       
           <ContentContainer>
             <Box 
               background={data.color + '.surface'} 
-              width='8xl'
-              py='16'
-              px='20'
+              width={{ base: '100%', lg: '5xl', xl: '8xl' }}
+              maxW={{ base: '100%', md: 'auto' }}
+              py={{ base: '12', md: '16' }}
+              px={{ base: '8', md: '20' }}
               borderTopLeftRadius='2rem'
               borderBottomLeftRadius='2rem'
+              borderRadius={{ base: '1rem', md: '1.5rem', xl: '2rem' }}
             >
               <Box mb='8'>
                 <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
@@ -36,7 +43,12 @@ export default function BigTextBlock({ data }) {
             </Box>
           </ContentContainer>
         
-          <Box className='rightblock' background={data.color + '.surface'} width='100%'></Box>
+          <Box 
+            className='rightblock' 
+            display={{ base: 'none', xl: 'block' }}
+            background={data.color + '.surface'} 
+            width='100%'
+          ></Box>
           
         </Box>
       </SectionPadding>

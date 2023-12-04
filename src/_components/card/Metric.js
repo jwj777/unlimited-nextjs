@@ -13,7 +13,7 @@ export default function Metric({ data, color }) {
 
   return(
   
-    <Box flex='2' mr='8' mb='8'>
+    <Box>
       <Box 
         bg={color + '.surface'} 
         py='12' px='12' pr='24'

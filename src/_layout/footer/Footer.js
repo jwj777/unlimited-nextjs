@@ -23,16 +23,16 @@ export default function Footer({ data }) {
     >
       <ContentContainer>
 
-        <Box display='flex' justifyContent='space-between'>
+        <Box display='flex' flexWrap='wrap' justifyContent='space-between'>
 
           <Box>
             <Box mb='8'>
               <Logo data={data} />
             </Box>
 
-            <Box display='flex'>
+            <Box display='flex' flexWrap='wrap'>
 
-              <Box mr='24'>
+              <Box mr={{ base: '0', sm: '16', md: '24' }} mb='12'>
                 <LabelMedium color={data.attributes.pageColor + '.on-surface'}>Shippers</LabelMedium>      
                 <Box mt='6' >
                   <FooterLink href='/service/refrigerated' label='Refrigerated' data={data} />
@@ -43,7 +43,7 @@ export default function Footer({ data }) {
                 </Box>
               </Box>
 
-              <Box mr='24'>
+              <Box mr='24' mb='12'>
                 <LabelMedium color={data.attributes.pageColor + '.on-surface'}>Carriers</LabelMedium>      
                 <Box mt='6'>
                   <FooterLink href='/service/refrigerated' label='Refrigerated' data={data} />

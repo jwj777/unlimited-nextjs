@@ -18,7 +18,7 @@ export default function Hero({ data }) {
   : buttonColor = 'primaryLight'
 
   return (
-    <Box pt='20' pb='16'>
+    <Box pt={{ base: '12', md: '20' }} pb={{ base: '4', md: '16' }}>
       <ContentContainer>
         {
           data.attributes.Label ? 

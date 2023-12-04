@@ -24,12 +24,13 @@ export default async function Contact() {
         <ContentColor data={data}>
           <ContentContainer>
 
-          <Box display='flex' flexWrap='wrap'>
+          <Box display='flex' flexWrap='wrap' pb='32'>
 
             <Box 
               background={data.attributes.pageColor + '.surface'} 
               maxW='3xl'
               p='12'
+              pb='20'
               mr={{ base: '0', md: '12' }}
               borderRadius='1.5rem'
               >
@@ -52,34 +53,35 @@ export default async function Contact() {
             >
 
               <Box mb='8'>
+                <Text color={data.attributes.pageColor + '.on-surface'} fontSize='lg' fontWeight='600'>Unlimited Logistics</Text>
                 <Text color={data.attributes.pageColor + '.on-surface'}>1800 W 91 Place</Text>
                 <Text color={data.attributes.pageColor + '.on-surface'}> Kansas City, MO 64114</Text>
               </Box>
 
 
               <Box>
-                <Box>
-                  <Text color={data.attributes.pageColor + '.on-surface'}>
+                <Box mb='2'>
+                  <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
                     <Text as='span' fontWeight='600'>Phone:</Text> (913) 851-4900
                     </Text>
                 </Box>
                 <Box>
-                  <Text color={data.attributes.pageColor + '.on-surface'}>
+                  <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
                   <Text as='span' fontWeight='600'>Fax:</Text> (913) 851-4902
                     </Text>
                 </Box>
               </Box>
 
               <Box mt='8'>
-                <Box>
-                  <Text color={data.attributes.pageColor + '.on-surface'}>
+                <Box mb='2'>
+                  <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
                   <Text as='span' fontWeight='600'>Email:</Text> info@unlimitedlogistics.net
                     </Text>
                 </Box>
         
 
                 <Box>
-                  <Text color={data.attributes.pageColor + '.on-surface'}>
+                  <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
                   <Text as='span' fontWeight='600'>Billing:</Text> billing@unlimitedlogistics.net
                     </Text>
                 </Box>
