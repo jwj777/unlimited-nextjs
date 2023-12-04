@@ -27,7 +27,7 @@ export default function Hero({ data }) {
       <ContentContainer>
         {
           <Box mb='8'>
-            <LabelMedium color={data.attributes.pageColor + '.on-surface'}>{data?.attributes.Label}</LabelMedium>
+            <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>{data?.attributes.Label}</LabelMedium>
           </Box>
         }
         <Box maxW='6xl' mb='6'>
@@ -37,13 +37,11 @@ export default function Hero({ data }) {
           <BodyXl color={data?.attributes.pageColor + '.on-surface'} thin>{data?.attributes.Subheading}</BodyXl>
         </Box>
         {
-          data.attributes.callToAction ?
           <Box mt='12'>
-            <Button variant={buttonColor} size='lg' href={data?.attributes.callToAction.buttonUrl}>
-              {data?.attributes.callToAction.buttonText}
+            <Button variant={buttonColor} size='lg' href={data?.attributes.callToAction?.buttonUrl}>
+              {data?.attributes.callToAction?.buttonText}
             </Button>
-          </Box> :
-          null
+          </Box> 
         }
       </ContentContainer>
     </Box>

@@ -18,7 +18,7 @@ export default function Footer({ data }) {
   return (
 
     <Box 
-      background={data.attributes.pageColor + '.background'}
+      background={data?.attributes.pageColor + '.background'}
       pt='16' pb='12'
     >
       <ContentContainer>
@@ -33,7 +33,7 @@ export default function Footer({ data }) {
             <Box display='flex' flexWrap='wrap'>
 
               <Box mr={{ base: '0', sm: '16', md: '24' }} mb='12'>
-                <LabelMedium color={data.attributes.pageColor + '.on-surface'}>Shippers</LabelMedium>      
+                <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>Shippers</LabelMedium>      
                 <Box mt='6' >
                   <FooterLink href='/service/refrigerated' label='Refrigerated' data={data} />
                   <FooterLink href='/service/dry-van' label='Dry Van' data={data} />
@@ -44,7 +44,7 @@ export default function Footer({ data }) {
               </Box>
 
               <Box mr='24' mb='12'>
-                <LabelMedium color={data.attributes.pageColor + '.on-surface'}>Carriers</LabelMedium>      
+                <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>Carriers</LabelMedium>      
                 <Box mt='6'>
                   <FooterLink href='/service/refrigerated' label='Refrigerated' data={data} />
                   <FooterLink href='/service/dry-van' label='Dry Van' data={data} />
@@ -55,7 +55,7 @@ export default function Footer({ data }) {
               </Box>
 
               <Box>
-                <LabelMedium color={data.attributes.pageColor + '.on-surface'}>Our Company</LabelMedium>      
+                <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>Our Company</LabelMedium>      
                 <Box mt='6'>
                   <FooterLink href='/page/about' label='About' data={data} />
                   <FooterLink href='/page/resources' label='Resources' data={data} />
@@ -69,7 +69,7 @@ export default function Footer({ data }) {
 
           <Box mt='16'>
             <Link href='/page/contact' variant='noDeco'>
-              <Button variant={data.attributes.pageColor} size='lg'>Contact Us Today
+              <Button variant={data?.attributes.pageColor} size='lg'>Contact Us Today
               </Button>
               </Link>
           </Box>

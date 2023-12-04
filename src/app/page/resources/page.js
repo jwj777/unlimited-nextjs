@@ -30,14 +30,14 @@ export default async function Resources({params}) {
               <Box display='flex' alignItems='center' mt='24' mb='24'>
                 <Box 
                   borderTop='2px' 
-                  borderColor={resources[0].attributes.pageColor + '.outline'} 
+                  borderColor={resources[0]?.attributes.pageColor + '.outline'} 
                   height='2px'
                   width='180px'
                   mr='8'
                   mb='4'
                 ></Box>
                 <Box>
-                  <HeadlineLarge color={resources[0].attributes.pageColor + '.on-surface'} thin>{resources[0].attributes.Headline}</HeadlineLarge>
+                  <HeadlineLarge color={resources[0]?.attributes.pageColor + '.on-surface'} thin>{resources[0].attributes.Headline}</HeadlineLarge>
                 </Box>
               </Box>
 

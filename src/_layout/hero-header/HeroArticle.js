@@ -35,13 +35,13 @@ export default function HeroArticle({ data }) {
       <ContentContainer>
         <Box mb='16'>
           <Box mb='8'>
-            <LabelMedium color={data.attributes.pageColor + '.on-surface'}>{createdAtShort}</LabelMedium>
+            <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>{createdAtShort}</LabelMedium>
           </Box>
           <Box maxW='6xl' mb='6'>
-            <DisplaySuper color={data.attributes.pageColor + '.on-surface'} thin>{data.attributes.Headline}</DisplaySuper>
+            <DisplaySuper color={data?.attributes.pageColor + '.on-surface'} thin>{data?.attributes.Headline}</DisplaySuper>
           </Box>
           <Box maxW='5xl'>
-            <BodyXl color={data.attributes.pageColor + '.on-surface'} thin>{data.attributes.Subheading}</BodyXl>
+            <BodyXl color={data?.attributes.pageColor + '.on-surface'} thin>{data?.attributes.Subheading}</BodyXl>
           </Box>
         </Box>
 
@@ -49,7 +49,7 @@ export default function HeroArticle({ data }) {
           <ContentContainer>
             <Box borderRadius="2rem" overflow='hidden' maxH='560px'>
               <Image 
-                src={data.attributes.heroImage.primaryImage.data.attributes.url}
+                src={data?.attributes.heroImage.primaryImage.data.attributes.url}
                 width={1400}
                 height={560}
                 alt=""

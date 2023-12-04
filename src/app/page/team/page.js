@@ -32,7 +32,7 @@ export default async function Team() {
             }
 
             <Box mt='24' mb='16'>
-              <HeadlineMedium color={data.attributes.pageColor + '.on-surface'}>Management Team</HeadlineMedium>
+              <HeadlineMedium color={data?.attributes.pageColor + '.on-surface'}>Management Team</HeadlineMedium>
             </Box>
 
             <Box display='flex' flexWrap='wrap'>

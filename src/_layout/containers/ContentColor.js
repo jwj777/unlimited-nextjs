@@ -8,7 +8,7 @@ export default function ContentColor({ data, children }) {
 
   return(
 
-      <Box background={data.attributes.pageColor + '.background'}>
+      <Box background={data?.attributes.pageColor + '.background'}>
   
           {children}
   
