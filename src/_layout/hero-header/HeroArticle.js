@@ -12,17 +12,15 @@ import Image from "next/image";
 export default function HeroArticle({ data }) {
 
   console.log('HeroArticle')
-  console.log(data)
+  // console.log(data)
 
   let buttonColor
-  if (data.attributes.pageColor && data.attributes.pageColor.includes('Dark')) {
-    buttonColor = 'primaryDark'
-  } else {
-    buttonColor = 'primaryLight'
-  }
-
-  data.attributes.pageColor && data.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' 
-  : buttonColor = 'primaryLight'
+  buttonColor = 'primaryLight'
+  // if (data.attributes.pageColor.includes('Dark')) {
+  //   buttonColor = 'primaryDark'
+  // } else {
+  //   buttonColor = 'primaryLight'
+  // }
 
   // createdAt short dates
   let date = new Date(data.attributes.createdAt)

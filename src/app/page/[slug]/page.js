@@ -4,25 +4,25 @@ import PageContainer from '@/_layout/PageContainer'
 import Sections from '@/_components/sections/Sections'
 
 
-export default async function Page({params}) {
+export default async function BasicPage({params}) {
 
   const serviceBySlug = await getServiceBySlug(params);
   const data = serviceBySlug?.[0];
 
-  // console.log('Basic Page')
-  // console.log(data)
+  console.log('Basic Page')
+  console.log(data)
   
   return (
     <main>
       <PageContainer data={data}>
 
-        {
-          data.attributes.Sections?
+        {/* {
+          data.attributes.Sections ?
             data.attributes.Sections[0] ?
               <Sections data={data} />
             : null
           : null
-        }
+        } */}
         
       </PageContainer>
     </main>
@@ -30,9 +30,9 @@ export default async function Page({params}) {
 }
 
 export async function generateStaticParams() {
-  const services = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages').then((res) => res.json())
+  const basicpages = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages').then((res) => res.json())
 
-  return services.data.map((item) => ({
+  return basicpages.data.map((item) => ({
     slug: item.attributes.slug
   }))
 }
@@ -49,11 +49,11 @@ async function getServiceBySlug(params) {
       throw new Error('Failed to fetch data');
     }
 
-    const service = await response.json();
+    const basicpages = await response.json();
 
-    return service?.data;
+    return basicpages?.data;
   } catch (error) {
-    console.error('Error fetching service data:', error);
+    console.error('Error fetching basic pages data:', error);
     throw new Error('Failed to fetch data');
   }
 }

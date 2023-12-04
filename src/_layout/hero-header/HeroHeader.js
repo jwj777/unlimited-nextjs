@@ -11,12 +11,14 @@ export default function HeroHeader({ data, noHero, contentType }) {
   console.log('HeroHeader')
   console.log(data)
 
-  data.attributes.pageColor && data.attributes.pageColor == 'neutralWhite' ? 
-  data.attributes.pageColor && data.attributes.pageColor == 'neutralLight' 
-: data.attributes.pageColor = data.attributes.pageColor
+//   data.attributes.pageColor && data.attributes.pageColor == 'neutralWhite' ? 
+//   data.attributes.pageColor && data.attributes.pageColor == 'neutralLight' 
+// : data.attributes.pageColor = data.attributes.pageColor
 
   return (
-    <Box background={data.attributes.pageColor + '.background'}>
+    <Box 
+      // background={ data.attributes.pageColor + '.background' }
+    >
       
       <Box display={{ base: 'none', xl: 'block' }}>
         <Header data={data} />
@@ -39,10 +41,13 @@ export default function HeroHeader({ data, noHero, contentType }) {
       
 
       {
-        data.attributes.heroImage && !noHero && (!contentType || !contentType == 'article') ?
-        <HeroImage data={data} /> 
-        : null
+        // data.attributes.heroImage ?
+          data?.attributes.heroImage && !noHero && (!contentType || !contentType == 'article') ?
+          <HeroImage data={data} /> 
+          : null
+        // : null
       }
+
     </Box>
     
   )

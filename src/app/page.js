@@ -5,7 +5,7 @@ import ServiceCards from '@/_components/sections/ServiceCards'
 import SectionTwoColumns from '@/_components/sections/section-two-columns/TwoColumnsImage'
 
 
-export default async function Page() {
+export default async function Home() {
 
   const data = await getData()
   const services = await getServices()

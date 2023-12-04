@@ -11,8 +11,8 @@ import Metric from "../card/Metric";
 
 export default function Metrics({ data }) {
 
-  console.log('Metrics')
-  console.log(data)
+  // console.log('Metrics')
+  // console.log(data)
 
   return (
 

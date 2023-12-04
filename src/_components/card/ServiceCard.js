@@ -30,7 +30,7 @@ export default function ServiceCard({ service, color }) {
               }
               </Box>
               <Box px='8' pt='6' pb='8' bg={color + '.surface'} borderBottomEndRadius='1.5rem' borderBottomLeftRadius='1.5rem' alignSelf='stretch' minH='146px'>
-                <TitleLarge color={color + '.on-surface'}>{service.attributes.Label}</TitleLarge>
+                <TitleLarge color={color + '.on-surface'}>{service?.attributes.Label}</TitleLarge>
                 <BodyMedium color={color + '.on-surface-dim'}>{service.attributes.Headline}</BodyMedium>
               </Box>
             </Box>

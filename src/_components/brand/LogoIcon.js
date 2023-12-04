@@ -3,11 +3,14 @@ import styles from "./brand.module.css"
 
 export default function LogoIcon({ data }) {
 
+  // console.log('LogoIcon')
+  // console.log(data?.attributes.pageColor)
+
   return (
     <Box 
       className={styles.logoIcon}
     >
-      <Box className={'logo-' + data.attributes.pageColor}>
+      <Box className={'logo-' + data?.attributes.pageColor}>
         <svg viewBox="0 0 422 104.23">
             <g>
               <path d="M132.68,48.3V21.47h8.37V48.3H132.68z M150.03,65.1c-3.54,0-6.62-0.69-9.23-2.08c-2.61-1.38-4.61-3.33-6.02-5.84

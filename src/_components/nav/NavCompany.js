@@ -22,7 +22,7 @@ export default function NavCompany({ data }) {
 
       <Menu>
 
-        <MenuButton as={Button} variant={data.attributes.pageColor + 'Nav'} size='lg'>
+        <MenuButton as={Button} variant={data?.attributes.pageColor + 'Nav'} size='lg'>
           <Box>
             <Text as='span'>
               Our Company

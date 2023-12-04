@@ -7,8 +7,8 @@ import HeadlineLarge from "../typography/HeadlineLarge";
 
 export default function BasicText({ data }) {
 
-  console.log('BasicText')
-  console.log(data)
+  // console.log('BasicText')
+  // console.log(data)
 
   return (
 

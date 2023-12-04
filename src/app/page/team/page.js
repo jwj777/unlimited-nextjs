@@ -12,8 +12,8 @@ export default async function Team() {
   const pagedata = await getPageData();
   const data = pagedata?.[0];
 
-  console.log('Meet The Team')
-  console.log(data)
+  // console.log('Meet The Team')
+  // console.log(data)
   
   return (
     <main>

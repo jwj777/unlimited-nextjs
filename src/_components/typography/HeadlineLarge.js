@@ -7,8 +7,8 @@ export default function HeadlineLarge({ children, color, thin, as }) {
   let weight
   thin ? weight = '300' : weight = '400'
 
-  console.log('HeadlineLarge')
-  console.log(as)
+  // console.log('HeadlineLarge')
+  // console.log(as)
 
   return (
     <Text

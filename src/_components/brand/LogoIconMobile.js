@@ -3,9 +3,9 @@ import styles from "./brand.module.css"
 
 export default function LogoIconMobile({ data, color }) {
 
-  color ? color : color = data.attributes.pageColor
+  color ? color : color = data?.attributes.pageColor
 
-  console.log(color)
+  // console.log(color)
 
   return (
     <Box 

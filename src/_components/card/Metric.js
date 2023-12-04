@@ -8,8 +8,8 @@ import BodyLarge from "../typography/BodyLarge";
 
 export default function Metric({ data, color }) {
 
-  console.log('TextCard')
-  console.log(data)
+  // console.log('Metric')
+  // console.log(data)
 
   return(
   

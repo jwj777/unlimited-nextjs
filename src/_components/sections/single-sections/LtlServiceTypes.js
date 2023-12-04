@@ -10,8 +10,8 @@ import TitleLarge from "@/_components/typography/TitleLarge";
 
 export default function LtlServiceTypes({ data }) {
 
-  console.log('LTL Service Types')
-  console.log(data)
+  // console.log('LTL Service Types')
+  // console.log(data)
 
   return (
 

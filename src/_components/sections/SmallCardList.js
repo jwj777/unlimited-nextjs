@@ -9,8 +9,8 @@ import SmallCard from "../card/SmallCard";
 
 export default function SmallCardList({ data }) {
 
-  console.log('SmallCardList')
-  console.log(data)
+  // console.log('SmallCardList')
+  // console.log(data)
 
   return (
 

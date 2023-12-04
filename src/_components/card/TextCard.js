@@ -6,8 +6,8 @@ import TitleLarge from "../typography/TitleLarge";
 
 export default function TextCard({ data, color }) {
 
-  console.log('TextCard')
-  console.log(data)
+  // console.log('TextCard')
+  // console.log(data)
 
   return(
     

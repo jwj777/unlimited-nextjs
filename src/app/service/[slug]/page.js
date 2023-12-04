@@ -7,7 +7,7 @@ import TextCard from '@/_components/card/TextCard';
 import HeadlineLarge from '@/_components/typography/HeadlineLarge';
 
 
-export default async function Page({params}) {
+export default async function Service({params}) {
 
   const serviceBySlug = await getServiceBySlug(params);
   const data = serviceBySlug?.[0];

@@ -21,13 +21,17 @@ export default function MobileNavDrawer({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
-  // console.log('MobileNavDrawer')
+  console.log('MobileNavDrawer')
   // console.log(data)
 
   let color
-  data.attributes.pageColor.includes('Dark') ? color = 'mobileDark'
-  : data.attributes.pageColor.includes('White', 'Light') ? color = 'mobileLight'
-  : color = 'mobileLight'
+  if (data?.attributes.pageColor) {
+    if (data.attributes.pageColor.includes('Dark')) {
+      color = 'mobileDark'
+    } else {
+      color = 'mobileLight'
+    }
+  }
 
   return (
     <Box>

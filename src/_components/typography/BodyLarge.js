@@ -5,8 +5,8 @@ import styles from "./typography.module.css"
 
 export default function BodyLarge({ text, color, children, thin }) {
 
-  console.log('BodyLarge')
-  console.log(text)
+  // console.log('BodyLarge')
+  // console.log(text)
 
   color ? color = color : color = 'neutral.10'
   let weight

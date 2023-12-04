@@ -11,8 +11,8 @@ import LabelMedium from "../typography/LabelMedium";
 
 export default function ArticleCard({ data, color }) {
 
-  console.log('ArticleCard')
-  console.log(data.attributes)
+  // console.log('ArticleCard')
+  // console.log(data.attributes)
 
   // createdAt short dates
   let date = new Date(data.attributes.createdAt)
