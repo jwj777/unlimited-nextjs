@@ -26,16 +26,17 @@ export default function LtlServiceTypes({ data }) {
           <Box display='flex'>
         
             
-              <Box display='flex'>
+              <Box display='flex' flexDirection={{ base: 'column', lg: 'row' }}>
 
                 <Box 
-                  background={'neutralDark.surface-low'} 
+                  background={'neutralDark.surface'} 
                   flex='2'
-                  py='10'
-                  pr='24'
-                  pl='12'
-                  borderRadius='2rem'
-                  mr={{ base: '0', xl: '12' }}
+                  py={{ base: '10', lg: '10' }}
+                  pr={{ base: '8', lg: '12', xl: '24' }}
+                  pl={{ base: '7', lg: '12' }}
+                  borderRadius={{ base: '1rem', lg: '2rem' }}
+                  mr={{ base: '0', lg: '12' }}
+                  mb='12'
                 >
                   <Box mb='8'>
                     <TitleLarge color={'primary.80'}>Platinum</TitleLarge>
@@ -56,10 +57,11 @@ export default function LtlServiceTypes({ data }) {
                 <Box 
                   background={'neutralDark.surface-low'} 
                   flex='2' 
-                  py='10'
-                  pr='24'
-                  pl='12'
-                  borderRadius='2rem'
+                  py={{ base: '10', lg: '10' }}
+                  pr={{ base: '8', lg: '12', xl: '24' }}
+                  pl={{ base: '7', lg: '12' }}
+                  borderRadius={{ base: '1rem', lg: '2rem' }}
+                  mb='12'
                 >
                   <Box mb='8'>
                     <TitleLarge color='#F9BC48'>Gold</TitleLarge>

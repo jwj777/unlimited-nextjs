@@ -20,11 +20,9 @@ export default function Metrics({ data }) {
       <SectionPadding data={data}>
           <ContentContainer>
 
-            <Box display='flex'>
+            <Box display='flex' flexWrap='wrap' flexDirection={{ base: 'column', lg: 'row' }}>
 
-           
-
-                <Box flex='3' mb='16' mr='24'>
+                <Box flex='3' mb={{ base: '6', lg: '16' }} mr={{ base: '0', md: '24' }}>
                   <Box mb='8'>
                     <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
                   </Box>
@@ -55,7 +53,7 @@ export default function Metrics({ data }) {
          
               {
                 data.metric.length == 1 ?
-                  <Box flex='2' mt='16' mr='8' mb='8'>
+                  <Box flex='2' mt={{ base: '6', lg: '16' }} mr={{ base: '0', md: '8' }} mb='8'>
                     <Metric data={data.metric[0]} color={data.color} /> 
                   </Box>
                 : null

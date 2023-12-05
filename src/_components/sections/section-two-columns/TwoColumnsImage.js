@@ -33,7 +33,7 @@ export default function TwoColumnsImage({ data }) {
               <Box mb='8'>
                 <DisplaySmall color={data.color + '.on-surface'}>{data.Heading}</DisplaySmall>
               </Box>
-              <Box maxW='5xl'>
+              <Box className='basicTextSection' maxW='5xl'>
                 <BodyLarge color={data.color + '.on-surface'} thin text={data.Body}></BodyLarge>
               </Box>
             </Box>

@@ -11,11 +11,13 @@ export default function TextCard({ data, color }) {
 
   return(
     
-    <Box maxW='40%'>
-      <Box mr='8' mb='8'>
+    <Box maxW={{ base: '100%', md: '46%' }}>
+      <Box mr={{ base: '0', md: '8' }} mb='8'>
         <Box 
           bg={color + '.surface'} 
-          py='8' px='8' pr='16'
+          py={{ base: '6', sm: '8' }}
+          px={{ base: '6', sm: '8' }} 
+          pr={{ base: '8', sm: '16' }}
           borderRadius='1rem'
         >
           <Box mb='3'>

@@ -28,11 +28,12 @@ export default function BigTextBlock({ data }) {
               background={data.color + '.surface'} 
               width={{ base: '100%', lg: '5xl', xl: '8xl' }}
               maxW={{ base: '100%', md: 'auto' }}
-              py={{ base: '12', md: '16' }}
-              px={{ base: '8', md: '20' }}
-              borderTopLeftRadius='2rem'
-              borderBottomLeftRadius='2rem'
-              borderRadius={{ base: '1rem', md: '1.5rem', xl: '2rem' }}
+              py={{ base: '12', md: '14', lg: '16' }}
+              px={{ base: '8', md: '14', lg: '20' }}
+              borderTopLeftRadius={{ base: '1rem', md: '1.5rem', xl: '1.5' }}
+              borderTopEndRadius={{ base: '1rem', md: '1.5rem', xl: '0' }}
+              borderBottomLeftRadius={{ base: '1rem', md: '1.5rem', xl: '1.5' }}
+              borderBottomEndRadius={{ base: '1rem', md: '1.5rem', xl: '0' }}
             >
               <Box mb='8'>
                 <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>

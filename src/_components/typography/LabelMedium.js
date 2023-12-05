@@ -12,6 +12,7 @@ export default function LabelMedium({ children, textColor, color }) {
     <Text 
       className="overline"
       fontSize={{ base: '1rem', md: '1.05rem' }}
+      lineHeight={{ base: '180%', md: '180%' }}
       fontWeight='400'
       textTransform='uppercase'
       letterSpacing='8px'

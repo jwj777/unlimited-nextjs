@@ -19,13 +19,13 @@ export default function BodyLarge({ text, color, children, thin }) {
         text ?
         <Box 
           dangerouslySetInnerHTML={{ __html: text }} 
-          fontSize={{ base: '1.2rem', md: '1.4rem' }}
+          fontSize={{ base: '1.1rem', sm: '1.2rem', md: '1.4rem' }}
           lineHeight={{ base: '152%', md: '158%' }}
           fontWeight={weight}
           color={color}
         ></Box> :
         <Box 
-          fontSize={{ base: '1.2rem', md: '1.4rem' }}
+          fontSize={{ base: '1.1rem', sm: '1.2rem', md: '1.4rem' }}
           lineHeight={{ base: '152%', md: '158%' }}
           color={color}
           fontWeight={weight}

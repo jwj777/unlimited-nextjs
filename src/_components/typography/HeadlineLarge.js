@@ -15,7 +15,7 @@ export default function HeadlineLarge({ children, color, thin, as }) {
       as={as}
       color={color}
       fontSize={{ base: '2.4rem', md: '2.8rem', lg: '3rem' }}
-      lineHeight={{ base: '108%', md: '104%', lg: '112%' }}
+      lineHeight={{ base: '124%', md: '120%', lg: '112%' }}
       fontWeight={weight}
       letterSpacing='-1px' 
       mt={{ base: '1rem', md: '0' }}

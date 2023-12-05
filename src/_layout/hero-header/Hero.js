@@ -10,8 +10,8 @@ import DisplayLarge from "@/_components/typography/DisplayLarge";
 
 export default function Hero({ data }) {
 
-  console.log('Hero')
-  console.log(data)
+  // console.log('Hero')
+  // console.log(data)
 
   let buttonColor
   if (data?.attributes.pageColor) {

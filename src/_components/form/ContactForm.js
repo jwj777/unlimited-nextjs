@@ -19,15 +19,14 @@ export default function ContactForm() {
       lastName: e.target.lastName.value,
       company: e.target.company.value,
       email: e.target.email.value,
-      phone: e.target.phone.value,
-      website: e.target.website.value
+      phone: e.target.phone.value
     }
 
     // Send the data to the server in JSON format.
     const JSONdata = JSON.stringify(data);
 
     // API endpoint where we send form data.
-    const endpoint = 'https://hooks.zapier.com/hooks/catch/8026392/okavgmr/';
+    const endpoint = 'https://hooks.zapier.com/hooks/catch/8026392/3fi7xo8/';
 
     // Form the request for sending data to the server.
     const options = {
@@ -68,9 +67,9 @@ export default function ContactForm() {
           </form>
         </Box> :
         <Box pt='8' pb='12'>
-          <Text fontSize='2xl' mb='6' fontWeight='500'>Thank you for your interest in Demand Stack!</Text>
+          <Text fontSize='3xl' mb='6' fontWeight='500' color={'primary.90'}>Thank you for contacting us!</Text>
           
-          <Text fontSize='2xl' fontWeight='500'>We have received your information and 
+          <Text fontSize='2xl' fontWeight='500' color={'primary.90'}>We have received your information and 
           will review your message and respond as quickly as possible.</Text>
         </Box>
         }

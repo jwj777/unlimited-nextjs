@@ -21,7 +21,7 @@ export default function MobileNavDrawer({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
-  console.log('MobileNavDrawer')
+  // console.log('MobileNavDrawer')
   // console.log(data)
 
   let color

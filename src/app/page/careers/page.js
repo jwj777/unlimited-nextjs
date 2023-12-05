@@ -22,9 +22,9 @@ export default async function Careers() {
   let careers = await getPageData();
   careers = careers[0]
 
-  // console.log('Careers Page ----')
-  // console.log(careers[0])
-  // console.log(jobs)
+  console.log('Careers Page ----')
+  console.log(careers[0])
+  console.log(jobs)
   
   return (
 

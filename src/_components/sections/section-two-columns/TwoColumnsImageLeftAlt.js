@@ -18,27 +18,28 @@ export default function TwoColumnsImageLeftAlt({ data }) {
 
   return (
 
-    <Box background={data.color + '.background'} mb='-360px'>
+    <Box background={data.color + '.background'} mb={{ base: '0', xl: '-360px' }}>
       <SectionPadding data={data}>
         <ContentContainer>
 
-          <Box display='flex'>
-            <Box pr='16'>
+          <Box display='flex' flexDirection={{ base: 'column', xl: 'row' }}>
+            <Box pr={{ base: '0', xl: '16' }}>
               <Box mb='6'>
                 <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
               </Box>
-              <Box mb='24' maxW='5xl'>
+              <Box mb={{ base: '12', xl: '24' }} maxW='5xl'>
                 <HeadlineLarge color={data.color + '.on-surface'}>{data.Heading}</HeadlineLarge>
               </Box>
               <Box>
                 <Box
-                  height='300px'
-                  width='520px'
+                  height={{ base: '180px', sm: '180px', md: '300px' }}
+                  width={{ base: '100%', sm: '70%', md: '520px' }}
                   overflow='hidden' 
-                  borderRadius='1.5rem' 
+                  borderRadius={{ base: '1rem', md: '1.5rem' }}
                   position='relative'
                   zIndex='2'
-                  ml='8'
+                  ml={{ base: '0', md: '8' }}
+                  mb={{ base: '12', md: '0' }}
                 >
                   <Image
                     src={data.Image.data.attributes.formats.medium.url}
@@ -49,10 +50,12 @@ export default function TwoColumnsImageLeftAlt({ data }) {
                   />
                 </Box>
                 <Box
+                  display={{ base: 'none', md: 'block' }}
                   width='300px'
                   height='260px'
                   position='relative'
-                  bottom='230px'
+                  bottom={{ base: '0', md: '230px' }}
+                  mb={{ base: '-132px', xl: '0' }}
                   zIndex='1'
                   sx={{
                     'background-image': `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='rgb(145, 144, 148)' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e")`,
@@ -61,14 +64,25 @@ export default function TwoColumnsImageLeftAlt({ data }) {
                 ></Box>
               </Box>
             </Box>
+
             <Box>
-              <Box maxW='7xl' bg={data.color + '.surface'} py='12' px='12' borderRadius='2rem' position='relative' zIndex='2'>
+              <Box 
+                className='basicTextSection' 
+                maxW='7xl' 
+                bg={data.color + '.surface'} 
+                p={{ base: '8', md: '12' }}
+                mb='16' 
+                borderRadius={{ base: '1rem', md: '1.5rem' }}
+                position='relative' 
+                zIndex='2'
+              >
                 <BodyLarge color={data.color + '.on-surface'} thin text={data.Body}></BodyLarge>
               </Box>
             </Box>
           </Box>
 
           <Box
+            display={{ base: 'none', xl: 'block' }}
             width='840px'
             height='300px'
             position='relative'

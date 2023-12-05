@@ -16,7 +16,7 @@ export default function Metric({ data, color }) {
     <Box>
       <Box 
         bg={color + '.surface'} 
-        py='12' px='12' pr='24'
+        p='12' pt={{ base: '6', lg: '12' }} pr={{ base: '0', lg: '24' }}
         borderRadius='1rem'
       >
         <Box display='flex' mb='-16px'>
