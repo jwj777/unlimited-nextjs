@@ -46,11 +46,10 @@ export default function Footer({ data }) {
               <Box mr='24' mb='12'>
                 <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>Carriers</LabelMedium>      
                 <Box mt='6'>
-                  <FooterLink href='/service/refrigerated' label='Refrigerated' data={data} />
-                  <FooterLink href='/service/dry-van' label='Dry Van' data={data} />
-                  <FooterLink href='/service/flatbed' label='Flatbed' data={data} />
-                  <FooterLink href='/service/ltl-services' label='LTL Services' data={data} />
-                  <FooterLink href='/service/software' label='Software' data={data} />
+                  <FooterLink href='/service/fuel-card-program' label='Fuel Card Program' data={data} />
+                  <FooterLink href='/service/factoring' label='Factoring Services' data={data} />
+                  {/* <FooterLink href='/service/dispatch-services' label='Dispatch Services' data={data} /> */}
+  
                 </Box>
               </Box>
 

@@ -49,21 +49,25 @@ export default function MobileNavDrawer({ data }) {
         <DrawerOverlay />
         <DrawerContent background='neutral.4' maxW={{ base: '84%', lg: '440px' }} px='4'>
             <DrawerCloseButton color='neutral.90' fontSize='lg' mt='8' mr='6' />
-          <DrawerBody>
+          <DrawerBody 
+            className='mobileDrawerBody'
+            pb='8'
+          >
 
             <Box>
-              <Box mb='8' ml='-6px'>
+              <Box mb='4' ml='-2px'>
                 <LogoMobile data={data} color='neutralDark' />
               </Box>
 
               <Box>
-                <MobileShippers color='neutralDark' />
+                <MobileShippers data={data} />
                 <MobileCarriers data={data} />
                 <Box>
-                  <Box mt='6'>
+                  <Box mt='6' ml='8'>
                     <MobileNavLink href='/page/about' label='About' color={'neutral.90'} />
                     <MobileNavLink href='/page/resources' label='Resources' color={'neutral.90'} />
                     <MobileNavLink href='/page/careers' label='Careers' color={'neutral.90'} />
+                    <MobileNavLink href='/page/contact' label='Contact Us' color={'neutral.90'} />
                   </Box>
                 </Box>
               </Box>

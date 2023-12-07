@@ -45,6 +45,14 @@ body {
   background: none !important;
 }
 
+
+/* mobile drawer*/
+
+.mobileDrawerBody::-webkit-scrollbar {
+  display: none;
+}
+
+
 /* article content */
 
 .articleContent p,

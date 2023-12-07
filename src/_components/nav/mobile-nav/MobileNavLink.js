@@ -15,16 +15,13 @@ export default function MobileNavLink({ href, children, label, color }) {
         display='flex'
         bg='none'
         mb='7'
-        // onMouseEnter={() => handleMouseEnter()}
-        // onMouseLeave={() => handleMouseLeave()}
       > 
         <Box>
-          <Link href={href} variant='noDeco' color={'neutral.90'}>
-      
-              <BodyMedium color={'neutral.90'}>
-                {label}
-              </BodyMedium>
-      
+          <Link 
+            href={href} 
+            variant='mobileLink' 
+          >
+            {label}
           </Link>
         </Box>
       </Box>

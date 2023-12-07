@@ -30,13 +30,16 @@ export default function TwoColumnsImage({ data }) {
               flex='3'
               mr={{ base: '0', md: '16', xl: data.type == 'imageRight' ? '24' : '0' }}
               ml={{ base: '0', md: '16', xl: data.type == 'imageLeft' ? '24' : '0' }}
-              mb={{ base: '8', md: '0' }}
+              mb={{ base: '16', xl: '0' }}
             >
               <Box mb='6'>
                 <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
               </Box>
               <Box mb='8'>
                 <DisplaySmall color={data.color + '.on-surface'}>{data.Heading}</DisplaySmall>
+              </Box>
+              <Box mb='8'>
+                <HeadlineSmall color={data.color + '.on-surface'} thin>{data.Subheading}</HeadlineSmall>
               </Box>
               <Box className={'basicTextSection ' + data.color} maxW='5xl'>
                 <BodyLarge color={data.color + '.on-surface'} thin text={data.Body}></BodyLarge>
@@ -45,7 +48,7 @@ export default function TwoColumnsImage({ data }) {
 
             <Box 
               flex='2'
-              height={{ base: '100%', sm: '348px', md: '420px', lg: '320px', xl: '480px' }}
+              height={{ base: '100%', sm: '348px', md: '420px', lg: '320px', xl: '440px', '2xl': '480px' }}
               width={{ base: '100%', sm: '340px', md: '440px', lg: '520px' }}
               overflow='hidden' 
               position='relative'

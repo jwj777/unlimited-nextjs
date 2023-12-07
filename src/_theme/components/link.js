@@ -52,6 +52,16 @@ const noDeco = defineStyle({
   },
 })
 
+const mobileLink = defineStyle({
+  textDecoration: 'none',
+  color: 'neutral.90',
+  borderRadius: '10rem',
+  _hover: {
+    textDecoration: 'none',
+    color: 'neutral.95',
+  },
+})
+
 const neutralWhiteButton = defineStyle({
   bg: 'none',
   color: 'neutral.10',
@@ -147,6 +157,7 @@ export const Link = defineStyleConfig({
     basicGray, 
     listXl, 
     noDeco,
+    mobileLink,
     neutralLightButton, 
     neutralWhiteButton,
     neutralDarkButton,
