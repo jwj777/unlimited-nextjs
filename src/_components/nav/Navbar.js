@@ -20,10 +20,8 @@ export default function Navbar({ data }) {
       <Box display='flex' flex='2'>
         <NavShippers data={data} />
         <NavCarriers data={data} />
-        <Box mt='12px' display='flex'>
-          <Box mr='5'>
-            <Link href='/page/resources' variant={data?.attributes.pageColor + 'Button'} fontSize='lg'>Resources</Link>
-          </Box>
+        <Box mt='12px' mr='5' display='block'>
+          <Link href='/page/resources' variant={data?.attributes.pageColor + 'Button'} fontSize='lg'>Resources</Link>
         </Box>
         <NavCompany data={data} />
       </Box>

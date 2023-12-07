@@ -92,6 +92,20 @@ const neutralDarkButton = defineStyle({
   }
 })
 
+const primaryWhiteButton = defineStyle({
+  color: 'primary.10',
+  borderRadius: '10rem',
+  py: '14px',
+  px: '24px',
+    _hover: {
+    bg: 'primaryLight.surface-low',
+    color: 'primary.20',
+    textDecor: 'none',
+  }
+})
+
+const primaryLightButton = primaryWhiteButton
+
 const primaryDarkButton = defineStyle({
   color: 'primary.90',
   borderRadius: '10rem',
@@ -136,7 +150,9 @@ export const Link = defineStyleConfig({
     neutralLightButton, 
     neutralWhiteButton,
     neutralDarkButton,
-    primaryDarkButton
+    primaryLightButton,
+    primaryWhiteButton,
+    primaryDarkButton,
   },
   sizes: { sm, md, lg, xl, xxl },
   defaultProps: { variant: 'basic', size: 'md' }

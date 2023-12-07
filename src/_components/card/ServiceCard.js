@@ -23,7 +23,6 @@ export default function ServiceCard({ service, color }) {
                   src={service.attributes.heroImage.primaryImage.data.attributes.formats.medium.url}
                   alt=""
                   fill
-                  objectFit="cover"
                   sizes="(max-width: 768px 100%, max-width: 1200px 46%, 31%)"
                 /> 
                 : null

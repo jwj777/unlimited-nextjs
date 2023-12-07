@@ -3,8 +3,17 @@ import { Box, Text } from '@chakra-ui/react'
 import PageContainer from '@/_layout/PageContainer'
 import Sections from '@/_components/sections/Sections'
 import LtlServiceTypes from '@/_components/sections/single-sections/LtlServiceTypes';
-import TextCard from '@/_components/card/TextCard';
-import HeadlineLarge from '@/_components/typography/HeadlineLarge';
+
+
+export async function generateMetadata({ params, searchParams }, parent) {
+
+  const slug = params.slug
+  let serviceMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services?filters[slug][$eq]=${slug}&populate[heroImage][populate]=*`).then((res) => res.json())
+ 
+  return {
+    title: serviceMeta.data[0].attributes?.seoPageTitle,
+  }
+}
 
 
 export default async function Service({params}) {

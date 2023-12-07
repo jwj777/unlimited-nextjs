@@ -11,6 +11,9 @@ import ContentContainer from '@/_layout/containers/ContentContainer';
 import HeadlineSmall from '@/_components/typography/HeadlineSmall';
 import BodyMedium from '@/_components/typography/BodyMedium';
 
+export const metadata = {
+  title: 'Freight Broker and Logistics Careers',
+}
 
 export default async function Careers() {
 

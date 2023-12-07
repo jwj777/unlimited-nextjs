@@ -24,7 +24,7 @@ export default function TextCard({ data, color }) {
             <TitleLarge color={color + '.on-surface'}>{data.Title}</TitleLarge>
           </Box>
           <Box opacity='80%'>
-            <BodyMedium color={color + '.on-surface'} >{data.Body}</BodyMedium>
+            <BodyMedium color={color + '.on-surface'} text={data.Body}></BodyMedium>
           </Box>
         </Box>
       </Box>

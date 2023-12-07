@@ -9,6 +9,7 @@ export default function PageContainer({ data, children, contentType, noHero }) {
   return (
 
     <Box width='100%'>
+
       {
         noHero ?
         <HeroHeader data={data} noHero contentType={contentType} />

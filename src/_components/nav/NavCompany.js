@@ -35,7 +35,7 @@ export default function NavCompany({ data }) {
         <Box py='6' px='8' display='flex'>
           <Box mr='4'>
             <MenuItemL2 href='/page/about' label='About Us'>For 33 years we have set the benchmark for reliability in refrigerated transportation</MenuItemL2>
-            <MenuItemL2 href='/page/team' label='Meet Our Team'>24/7 support, access to our entire flatbed team and an expansive network of carriers</MenuItemL2>
+            {/* <MenuItemL2 href='/page/team' label='Meet Our Team'>24/7 support, access to our entire flatbed team and an expansive network of carriers</MenuItemL2> */}
             <MenuItemL2 href='/page/careers' label='Careers'>24/7 support, access to our entire flatbed team and an expansive network of carriers</MenuItemL2>
           </Box>
         </Box>

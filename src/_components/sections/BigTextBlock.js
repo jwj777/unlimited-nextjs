@@ -1,14 +1,15 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import ContentContainer from "@/_layout/containers/ContentContainer";
 import HeadlineSmall from "../typography/HeadlineSmall";
 import LabelMedium from "../typography/LabelMedium";
 import SectionPadding from "@/_layout/containers/SectionPadding";
+import BodyLarge from "../typography/BodyLarge";
 
 
 export default function BigTextBlock({ data }) {
 
-  // console.log('BigTextBlock')
-  // console.log(data)
+  console.log('BigTextBlock')
+  console.log(data)
 
   return (
 
@@ -30,17 +31,27 @@ export default function BigTextBlock({ data }) {
               maxW={{ base: '100%', md: 'auto' }}
               py={{ base: '12', md: '14', lg: '16' }}
               px={{ base: '8', md: '14', lg: '20' }}
-              borderTopLeftRadius={{ base: '1rem', md: '1.5rem', xl: '1.5' }}
+              borderTopLeftRadius={{ base: '1rem', md: '1.5rem', xl: '2rem' }}
               borderTopEndRadius={{ base: '1rem', md: '1.5rem', xl: '0' }}
-              borderBottomLeftRadius={{ base: '1rem', md: '1.5rem', xl: '1.5' }}
+              borderBottomLeftRadius={{ base: '1rem', md: '1.5rem', xl: '2rem' }}
               borderBottomEndRadius={{ base: '1rem', md: '1.5rem', xl: '0' }}
             >
               <Box mb='8'>
                 <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
               </Box>
-              <Box maxW='5xl'>
-                <HeadlineSmall color={data.color + '.on-surface'} thin>{data.Body}</HeadlineSmall>
-              </Box>
+
+              {
+                data.Body ? 
+                <Box maxW='5xl'>
+                  <HeadlineSmall color={data.color + '.on-surface'} thin>{data.Body}</HeadlineSmall>
+                </Box>
+                : data.BodyCk ?
+                <Box className='basicTextSection' maxW='5xl'>
+                  <BodyLarge color={data.color + '.on-surface'} text={data.BodyCk} thin />
+                </Box>
+                : null
+              }
+
             </Box>
           </ContentContainer>
         

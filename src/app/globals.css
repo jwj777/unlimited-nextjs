@@ -13,9 +13,7 @@ body {
 }
 
 
-
 /* logo colors */
-
 .logo-neutralWhite path, .logo-neutralWhite polygon {
   fill: var(--chakra-colors-neutral-10);
 }
@@ -37,10 +35,20 @@ body {
   fill: var(--chakra-colors-primary-95);
 }
 
+/* wysiwyg text colors */
+
+.basicTextSection.neutralDark p span {
+  color: var(--chakra-colors-neutral-90);
+}
+
+.basicTextSection p span {
+  background: none !important;
+}
+
 /* article content */
 
 .articleContent p,
-.basicTextSection p {
+.basicTextSection p, .basicTextSection p span {
   font-size: 1.4rem;
   line-height: 156%;
   margin-bottom: 1.2rem;

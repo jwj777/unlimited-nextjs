@@ -4,6 +4,10 @@ import BigTextBlock from '@/_components/sections/BigTextBlock'
 import ServiceCards from '@/_components/sections/ServiceCards'
 import SectionTwoColumns from '@/_components/sections/section-two-columns/TwoColumnsImage'
 
+export const metadata = {
+  title: 'Best 3PL Company in Kansas City',
+  description: 'We offer a complete range of logistics services, proprietary software, and industry leading customer service',
+}
 
 export default async function Home() {
 
@@ -12,6 +16,7 @@ export default async function Home() {
 
   return (
     <main>
+
       <PageContainer data={data.data}>
 
         <BigTextBlock data={data.data.attributes.Sections[0]} />
@@ -39,6 +44,7 @@ async function getData() {
   return res.json()
 }
 
+
 async function getServices() {
   const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services/?populate[0]=heroImage.primaryImage&populate[1]=Sections.Image`)
  
@@ -48,3 +54,4 @@ async function getServices() {
  
   return res.json()
 }
+

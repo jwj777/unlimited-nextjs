@@ -32,8 +32,8 @@ export default function TwoColumnsImageLeftAlt({ data }) {
               </Box>
               <Box>
                 <Box
-                  height={{ base: '180px', sm: '180px', md: '300px' }}
-                  width={{ base: '100%', sm: '70%', md: '520px' }}
+                  height={{ base: '180px', sm: '210px', md: '300px' }}
+                  width={{ base: '100%', sm: '360px', md: '520px' }}
                   overflow='hidden' 
                   borderRadius={{ base: '1rem', md: '1.5rem' }}
                   position='relative'

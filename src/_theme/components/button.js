@@ -139,6 +139,18 @@ const neutralDarkNav = defineStyle({
   }
 })
 
+const primaryWhiteNav = defineStyle({
+  bg: 'none',
+  color: 'primary.10',
+  borderRadius: '10rem',
+  _hover: {
+    bg: 'primaryLight.surface-low',
+    color: 'primary.20',
+  }
+})
+
+const primaryLightNav = primaryWhiteNav
+
 const primaryDarkNav = defineStyle({
   bg: 'none',
   color: 'primary.90',
@@ -162,6 +174,8 @@ export const Button = defineStyleConfig({
     neutralLightNav,
     neutralDark,
     neutralDarkNav,
+    primaryLightNav, 
+    primaryWhiteNav,
     primaryDarkNav,
   },
   defaultProps: {

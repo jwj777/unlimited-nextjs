@@ -10,7 +10,7 @@ export default function HeroImage({ data }) {
 
   const imageStyle = {
     objectFit: 'cover',
-    height: '440px',
+    height: '540px',
   }
 
   return (
@@ -29,7 +29,7 @@ export default function HeroImage({ data }) {
       }}
     >
       <ContentContainer>
-        <Box borderRadius={{ base: '1rem', md: "2rem" }} overflow='hidden' position='relative' maxH={{ base: '300px', sm: '340px', md: '100%' }}>
+        <Box borderRadius={{ base: '1rem', md: "2rem" }} overflow='hidden' position='relative' maxH={{ base: '300px', sm: '340px', md: imageStyle.height }}>
           <Image 
             src={data.attributes.heroImage.primaryImage.data.attributes.url}
             width={1400}

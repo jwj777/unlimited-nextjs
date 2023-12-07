@@ -5,20 +5,21 @@ import styles from "./typography.module.css"
 
 export default function BodyLarge({ text, color, children, thin }) {
 
-  // console.log('BodyLarge')
-  // console.log(text)
+  console.log('BodyLarge')
+  console.log(color)
 
   color ? color = color : color = 'neutral.10'
   let weight
   thin ? weight = '300' : weight = '400'
 
   return (
-    <Box color={color}>
+    <Box>
       
       {
         text ?
         <Box 
           dangerouslySetInnerHTML={{ __html: text }} 
+          className='on-surface'
           fontSize={{ base: '1.1rem', sm: '1.2rem', md: '1.4rem' }}
           lineHeight={{ base: '152%', md: '158%' }}
           fontWeight={weight}

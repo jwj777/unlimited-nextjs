@@ -11,6 +11,9 @@ import HeadlineLarge from "../typography/HeadlineLarge";
 
 export default function ServiceCards({ data, services }) {
 
+  console.log('Service Cards')
+  console.log(services.data[0].attributes)
+
   return (
     <Box background={data.color + '.background'}>
   
@@ -33,7 +36,9 @@ export default function ServiceCards({ data, services }) {
             {
               services.data.map((service, index) => {
                 return(
+                  service.attributes.pageCategory == 'shippers' ?
                   <ServiceCard key={index} service={service} color={data.color} />
+                  : null
                 )
               })
             }
