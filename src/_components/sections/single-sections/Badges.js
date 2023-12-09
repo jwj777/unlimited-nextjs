@@ -21,9 +21,9 @@ export default function Badges({ data, paddingSize }) {
           <Box 
             bg={data.attributes.pageColor + '.surface-high'} 
             borderRadius='2rem' 
-            // px={{ base: '6', md: '12' }} 
-            // pt='12' 
-            // pb='16'
+            px={{ base: '6', md: '12' }} 
+            pt='12' 
+            pb='16'
             p='12'
           >
             <Box mb='12'>
@@ -31,7 +31,7 @@ export default function Badges({ data, paddingSize }) {
             </Box>
             <Box 
               display='flex' 
-              // flexWrap='wrap'
+              flexWrap='wrap'
               alignItems='center'
               justifyContent='space-between'
               position='relative' 

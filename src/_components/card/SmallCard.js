@@ -29,7 +29,7 @@ export default function SmallCard({ data, color }) {
       </Box>
       <Box 
         bg={color + '.surface-high'} 
-        pt='6' pb='4' pl='6' pr='3'
+        pt='6' pb='4' pl='8' pr='3'
         borderBottomLeftRadius={{ base: '1rem', md: '1.5rem' }}
         borderBottomEndRadius={{ base: '1rem', md: '1.5rem' }}
       >
