@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import MenuItemL2 from './MenuItemL2';
+import MenuItemShort from './MenuItemShort';
 
 
 export default function NavCompany({ data }) {
@@ -32,11 +33,11 @@ export default function NavCompany({ data }) {
         </MenuButton>
 
         <MenuList borderRadius='1rem'>
-        <Box py='6' px='8' display='flex'>
+        <Box pt='5' pb='2' px='6' display='flex'>
           <Box mr='4'>
-            <MenuItemL2 href='/page/about' label='About Us'>For 33 years we have set the benchmark for reliability in refrigerated transportation</MenuItemL2>
-            {/* <MenuItemL2 href='/page/team' label='Meet Our Team'>24/7 support, access to our entire flatbed team and an expansive network of carriers</MenuItemL2> */}
-            <MenuItemL2 href='/page/careers' label='Careers'>24/7 support, access to our entire flatbed team and an expansive network of carriers</MenuItemL2>
+            <MenuItemShort href='/page/about' label='About Us'></MenuItemShort>
+            {/* <MenuItemL2 href='/page/team' label='Meet Our Team'></MenuItemL2> */}
+            <MenuItemShort href='/page/careers' label='Careers'></MenuItemShort>
           </Box>
         </Box>
       </MenuList>

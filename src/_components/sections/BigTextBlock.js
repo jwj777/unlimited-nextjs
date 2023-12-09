@@ -8,8 +8,8 @@ import BodyLarge from "../typography/BodyLarge";
 
 export default function BigTextBlock({ data }) {
 
-  console.log('BigTextBlock')
-  console.log(data)
+  // console.log('BigTextBlock')
+  // console.log(data)
 
   return (
 

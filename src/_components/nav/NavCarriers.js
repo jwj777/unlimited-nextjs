@@ -2,13 +2,10 @@
 import { 
   Box, 
   Button,
-  Icon, 
-  Link,
   Text,
   Menu,
   MenuButton,
   MenuList,
-  MenuItem
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import MenuItemL2 from './MenuItemL2';
@@ -33,8 +30,9 @@ export default function NavCarriers({ data }) {
 
       <MenuList borderRadius='1rem'>
         <Box py='6' px='8' mr='4'>
-          <MenuItemL2 href='/service/fuel-card-program' label='Fuel Card Program'>For 33 years we have set the benchmark for reliability in refrigerated transportation</MenuItemL2>
-          <MenuItemL2 href='/service/factoring' label='Invoice Factoring'>Our logistics specialists and software ensure your assigned the optimal driver and truck</MenuItemL2>
+          <MenuItemL2 href='/service/fuel-card-program' label='Fuel Card Program'>Substantial fuel savings at thousands of fuel stations.</MenuItemL2>
+          <MenuItemL2 href='/service/factoring' label='Invoice Factoring'>Sell your invoices to Unlimited Logistics for an advance of up to 97%.</MenuItemL2>
+          <MenuItemL2 href='/page/carrier-setup' label='Carrier Setup'>Start hauling loads for Unlimited Logistidcs</MenuItemL2>
           {/* <MenuItemL2 href='/service/dispatch-services' label='Dispatch Services'>24/7 support, access to our entire flatbed team and an expansive network of carriers</MenuItemL2> */}
         </Box>
       </MenuList>

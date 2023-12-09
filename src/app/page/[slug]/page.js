@@ -41,9 +41,10 @@ async function getServiceBySlug(params) {
   try {
     const slug = params.slug;
     const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=${slug}&populate[heroImage][populate]=*
-    &populate[callToAction][populate]=*
+    &populate[callToAction][buttonType][populate]=*
     &populate[Sections][populate]=*
-    &populate[Sections][on][sections.basic-text][populate]=*`);
+    &populate[Sections][on][sections.basic-text][populate]=*
+    &populate[Sections][on][sections.section-two-columns][populate]=Image`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch data');

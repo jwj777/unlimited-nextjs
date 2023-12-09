@@ -8,6 +8,7 @@ import HeadlineMedium from '@/_components/typography/HeadlineMedium';
 import ContactForm from '@/_components/form/ContactForm';
 import BodyLarge from '@/_components/typography/BodyLarge';
 import BodyMedium from '@/_components/typography/BodyMedium';
+import Badges from '@/_components/sections/single-sections/Badges';
 
 
 export default async function Contact() {
@@ -24,14 +25,16 @@ export default async function Contact() {
         <ContentColor data={data}>
           <ContentContainer>
 
-          <Box display='flex' flexWrap='wrap' pb='32'>
+          <Box display='flex' flexWrap='wrap' alignItems='flex-start' pb='32' mt='12'>
 
             <Box 
               background={data.attributes.pageColor + '.surface'} 
               maxW='3xl'
-              p='12'
-              pb='20'
+              px={{ base: '8', lg: '12' }}
+              pt={{ base: '12', lg: '12' }}
+              pb={{ base: '12', lg: '20' }}
               mr={{ base: '0', md: '12' }}
+              mb='12'
               borderRadius='1.5rem'
               >
               <Box mb='12' maxW='2xl'>
@@ -47,7 +50,8 @@ export default async function Contact() {
 
             <Box 
               background={data.attributes.pageColor + '.surface'} 
-              p='12'
+              p={{ base: '8', lg: '12' }}
+              pb={{ base: '12', lg: '20' }}
               borderRadius='1.5rem'
               minW='320px'
             >
@@ -92,6 +96,9 @@ export default async function Contact() {
             </Box>
 
           </Box>
+
+
+          <Badges data={data} paddingSize='md' />
 
 
 

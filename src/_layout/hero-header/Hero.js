@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Link } from "@chakra-ui/react";
 import ContentContainer from "../containers/ContentContainer";
 import DisplaySuper from "@/_components/typography/DisplaySuper";
 import HeadlineMedium from "@/_components/typography/HeadlineMedium";
@@ -10,8 +10,8 @@ import DisplayLarge from "@/_components/typography/DisplayLarge";
 
 export default function Hero({ data }) {
 
-  // console.log('Hero')
-  // console.log(data)
+  console.log('Hero')
+  console.log(data)
 
   let buttonColor
   if (data?.attributes.pageColor) {
@@ -22,8 +22,16 @@ export default function Hero({ data }) {
     }
   }
 
+  let buttonUrl
+  data.attributes.callToAction?.buttonType == 'contactCarrier' ? buttonUrl = '/page/carrier-setup'
+  : data.attributes.callToAction?.buttonType == 'contactShipper' ? buttonUrl = '/page/contact'
+  : null
+
+  console.log(buttonUrl)
+  
+
   return (
-    <Box pt={{ base: '12', md: '20' }} pb={{ base: '4', md: '16' }}>
+    <Box pt={{ base: '12', md: '20' }} pb={{ base: '4', md: '12' }}>
       <ContentContainer>
         {
           <Box mb='8'>
@@ -37,10 +45,12 @@ export default function Hero({ data }) {
           <BodyXl color={data?.attributes.pageColor + '.on-surface'} thin>{data?.attributes.Subheading}</BodyXl>
         </Box>
         {
-          data?.attributes.callToAction ? 
+          data?.attributes.callToAction?.buttonType ? 
           <Box mt='12'>
-            <Button variant={buttonColor} size='lg' href={data?.attributes.callToAction?.buttonUrl}>
-              {data?.attributes.callToAction?.buttonText}
+            <Button variant={buttonColor} size='lg'>
+              <Link variant='noDeco' href={buttonUrl}>
+                {data?.attributes.callToAction?.buttonText}
+              </Link>
             </Button>
           </Box> 
           : null

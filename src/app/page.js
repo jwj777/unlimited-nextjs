@@ -3,6 +3,8 @@ import PageContainer from '@/_layout/PageContainer'
 import BigTextBlock from '@/_components/sections/BigTextBlock'
 import ServiceCards from '@/_components/sections/ServiceCards'
 import SectionTwoColumns from '@/_components/sections/section-two-columns/TwoColumnsImage'
+import Badges from '@/_components/sections/single-sections/Badges'
+import ContentContainer from '@/_layout/containers/ContentContainer'
 
 export const metadata = {
   title: 'Best 3PL Company in Kansas City',
@@ -27,8 +29,8 @@ export default async function Home() {
 
         <SectionTwoColumns data={data.data.attributes.Sections[2]} />
 
-        <Box></Box>
-
+        <Badges data={data.data} paddingSize='lg' />
+     
       </PageContainer>
     </main>
   )
