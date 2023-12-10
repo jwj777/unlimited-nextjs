@@ -9,6 +9,7 @@ import ContactForm from '@/_components/form/ContactForm';
 import BodyLarge from '@/_components/typography/BodyLarge';
 import BodyMedium from '@/_components/typography/BodyMedium';
 import Badges from '@/_components/sections/single-sections/Badges';
+import TrackShipments from '@/_components/form/TrackShipments';
 
 
 export default async function Contact() {
@@ -28,7 +29,7 @@ export default async function Contact() {
             <Box display='flex' flexWrap='wrap' alignItems='flex-start' pb='32' mt='12'>
 
 
-
+              <TrackShipments />
 
 
             </Box>
