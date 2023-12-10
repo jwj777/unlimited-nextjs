@@ -17,7 +17,7 @@ export default async function Resources({params}) {
 
   // console.log('Resources')
   // console.log(resources[0])
-  console.log('Resources - Articles')
+  // console.log('Resources - Articles')
   // console.log(data)
   
   return (
@@ -37,7 +37,7 @@ export default async function Resources({params}) {
                   mb='4'
                 ></Box>
                 <Box>
-                  <HeadlineLarge color={resources[0]?.attributes.pageColor + '.on-surface'} thin>{resources[0].attributes.Headline}</HeadlineLarge>
+                  <HeadlineLarge color={resources[0]?.attributes.pageColor + '.on-surface'} thin>{resources[0]?.attributes.Headline}</HeadlineLarge>
                 </Box>
               </Box>
 
@@ -45,7 +45,7 @@ export default async function Resources({params}) {
                 data.map((article, index) => {
                   return(
                     index == '0' ?
-                    <FeaturedArticle key={index} data={article} color={resources[0].attributes.pageColor} />
+                    <FeaturedArticle key={index} data={article} color={resources[0]?.attributes.pageColor} />
                     : null
                   )
                 })
@@ -56,7 +56,7 @@ export default async function Resources({params}) {
                   data.map((article, index) => {
                     return(
                       index > 0 ?
-                      <ArticleCard key={index} data={article} color={resources[0].attributes.pageColor} />
+                      <ArticleCard key={index} data={article} color={resources[0]?.attributes.pageColor} />
                       : null
                     )
                   })

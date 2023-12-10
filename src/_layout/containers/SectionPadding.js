@@ -16,8 +16,6 @@ export default function SectionPadding({ data, children }) {
   : data?.paddingBottom == 'small' ? paddingBottom = '8' 
   : paddingBottom = '20'
 
-  console.log(paddingTop)
-
   return(
 
     <Box pt={paddingTop} pb={paddingBottom}>
