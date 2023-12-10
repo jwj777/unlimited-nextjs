@@ -11,8 +11,8 @@ export default async function Article({params}) {
 
   const contentType = 'article'
 
-  // console.log('Articles')
-  // console.log(data)
+  console.log('Articles')
+  console.log(data)
   
   return (
     <main>
