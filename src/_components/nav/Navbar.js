@@ -26,8 +26,15 @@ export default function Navbar({ data }) {
         <NavCompany data={data} />
       </Box>
 
-      <Box>
-        <Button variant={buttonColor} size='md'>
+      <Box display='flex'>
+        <Box mr='6'>
+          <Button variant={data?.attributes.pageColor + 'Outline'} size='md'>
+            <Link href='/page/track-shipments' variant='noDeco'>
+              Track Shipments
+            </Link>
+          </Button>
+        </Box>
+        <Button variant={data?.attributes.pageColor} size='md'>
           <Link href='/page/contact' variant='noDeco'>
             Contact Us
           </Link>

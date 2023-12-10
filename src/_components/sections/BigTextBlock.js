@@ -27,10 +27,11 @@ export default function BigTextBlock({ data }) {
           <ContentContainer>
             <Box 
               background={data.color + '.surface'} 
-              width={{ base: '100%', lg: '5xl', xl: '8xl' }}
+              width={{ base: '100%', lg: '5xl', xl: '8xl', '2xl': '8xl' }}
               maxW={{ base: '100%', md: 'auto' }}
               py={{ base: '12', md: '14', lg: '16' }}
               px={{ base: '8', md: '14', lg: '20' }}
+              pr={{ base: '8', md: '16', lg: '40' }}
               borderTopLeftRadius={{ base: '1rem', md: '1.5rem', xl: '2rem' }}
               borderTopEndRadius={{ base: '1rem', md: '1.5rem', xl: '0' }}
               borderBottomLeftRadius={{ base: '1rem', md: '1.5rem', xl: '2rem' }}

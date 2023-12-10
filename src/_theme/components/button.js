@@ -73,9 +73,23 @@ const primaryLight = defineStyle({
   borderRadius: '10rem',
   _hover: {
     bg: 'primary.30',
-    color: 'neutral.80',
+    color: 'primary.95',
   }
 })
+
+const primaryWhite = primaryLight
+
+const primaryLightOutline = defineStyle({
+  color: 'primary.40',
+  borderRadius: '10rem',
+  border: '1px',
+  borderColor: 'primary.40',
+  _hover: {
+    bg: 'primary.90',
+  }
+})
+
+const primaryWhiteOutline = primaryLightOutline
 
 const primaryDark = defineStyle({
   bg: 'primary.40',
@@ -84,6 +98,16 @@ const primaryDark = defineStyle({
   _hover: {
     bg: 'primary.30',
     color: 'neutral.90',
+  }
+})
+
+const primaryDarkOutline = defineStyle({
+  color: 'primary.90',
+  borderRadius: '10rem',
+  border: '1px',
+  borderColor: 'primary.40',
+  _hover: {
+    bg: 'primary.40',
   }
 })
 
@@ -109,6 +133,16 @@ const neutralLight = defineStyle({
 
 const neutralWhite = neutralLight
 
+const neutralLightOutline = defineStyle({
+  color: 'neutral.10',
+  borderRadius: '10rem',
+  border: '1px',
+  borderColor: 'neutral.70',
+  _hover: {
+    bg: 'neutral.90',
+  }
+})
+
 const neutralLightNav = defineStyle({
   bg: 'none',
   color: 'neutral.10',
@@ -124,8 +158,18 @@ const neutralDark = defineStyle({
   color: 'neutral.10',
   borderRadius: '10rem',
   _hover: {
-    bg: 'neutral.80',
-    color: 'neutral.10',
+    bg: 'neutral.99',
+    color: 'neutral.0',
+  }
+})
+
+const neutralDarkOutline = defineStyle({
+  color: 'neutral.90',
+  borderRadius: '10rem',
+  border: '1px',
+  borderColor: 'neutral.40',
+  _hover: {
+    bg: 'neutral.20',
   }
 })
 
@@ -166,13 +210,19 @@ export const Button = defineStyleConfig({
   variants: { 
     mobileLight,
     mobileDark,
+    primaryWhite,
+    primaryWhiteOutline,
+    primaryLightOutline,
     primaryDark, 
     primaryLight,
+    primaryDarkOutline,
     secondaryLight,
     neutralWhite,
     neutralLight,
     neutralLightNav,
+    neutralLightOutline,
     neutralDark,
+    neutralDarkOutline,
     neutralDarkNav,
     primaryLightNav, 
     primaryWhiteNav,
