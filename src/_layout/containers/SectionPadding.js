@@ -3,8 +3,8 @@ import { Box } from "@chakra-ui/react";
 
 export default function SectionPadding({ data, children }) {
 
-  console.log('SectionPadding')
-  console.log(data)
+  // console.log('SectionPadding')
+  // console.log(data)
 
   let paddingTop
   let paddingBottom

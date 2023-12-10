@@ -10,8 +10,8 @@ import DisplayLarge from "@/_components/typography/DisplayLarge";
 
 export default function Hero({ data }) {
 
-  console.log('Hero')
-  console.log(data)
+  // console.log('Hero')
+  // console.log(data)
 
   let buttonColor
   if (data?.attributes.pageColor) {
@@ -26,9 +26,6 @@ export default function Hero({ data }) {
   data.attributes.callToAction?.buttonType == 'contactCarrier' ? buttonUrl = '/page/carrier-setup'
   : data.attributes.callToAction?.buttonType == 'contactShipper' ? buttonUrl = '/page/contact'
   : null
-
-  console.log(buttonUrl)
-  
 
   return (
     <Box pt={{ base: '12', md: '20' }} pb={{ base: '4', md: '12' }}>
