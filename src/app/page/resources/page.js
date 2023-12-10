@@ -15,10 +15,10 @@ export default async function Resources({params}) {
   /* articles */
   const resources = await getPageData();
 
-  // console.log('Resources')
-  // console.log(resources[0])
-  // console.log('Resources - Articles')
-  // console.log(data)
+  console.log('Resources')
+  console.log(resources[0])
+  console.log('Resources - Articles')
+  console.log(data)
   
   return (
     <main>
@@ -42,7 +42,7 @@ export default async function Resources({params}) {
               </Box>
 
               {
-                data.map((article, index) => {
+                data?.map((article, index) => {
                   return(
                     index == '0' ?
                     <FeaturedArticle key={index} data={article} color={resources[0]?.attributes.pageColor} />

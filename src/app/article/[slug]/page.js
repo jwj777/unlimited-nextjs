@@ -20,7 +20,7 @@ export default async function Article({params}) {
         <Box className='articleContent'>
         
           {
-            data.attributes.Sections[0] ?
+            data?.attributes.Sections[0] ?
               <Sections data={data} />
             : null
           }
