@@ -3,8 +3,8 @@ import Navbar from "@/_components/nav/Navbar";
 import { Box } from "@chakra-ui/react";
 
 
-export default function Header({ data }) {
-  
+export default function Header({ data, contentType }) {
+
 
   return (
     <Box
@@ -18,7 +18,7 @@ export default function Header({ data }) {
         <Logo data={data} />
       </Box>
       <Box mt='1' flex='2'>
-        <Navbar data={data} />
+        <Navbar data={data} contentType={contentType} />
       </Box>
     </Box>
     

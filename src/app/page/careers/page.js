@@ -5,7 +5,8 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Button, } from '@chakra-ui/react';
+  Button,
+  Link, } from '@chakra-ui/react';
 import PageContainer from '@/_layout/PageContainer';
 import ContentContainer from '@/_layout/containers/ContentContainer';
 import HeadlineSmall from '@/_components/typography/HeadlineSmall';
@@ -91,7 +92,11 @@ export default async function Careers() {
                             
                       
                               <Box mt='12'>
-                                <Button size='lg'>Apply For This Position</Button>
+                                <Link 
+                                  href='https://tally.so/r/n97YZ1'
+                                  variant='primaryLightButton' 
+                                  size='lg'
+                                >Apply For This Position</Link>
                               </Box>
                             </AccordionPanel>
                           </Box>

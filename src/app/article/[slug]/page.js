@@ -10,6 +10,7 @@ export default async function Article({params}) {
   const data = articles?.[0];
 
   const contentType = 'article'
+  data.attributes.pageColor = 'neutralWhite'
 
   // console.log('Articles')
   // console.log(data)

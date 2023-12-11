@@ -4,7 +4,7 @@ import NavShippers from "./NavShippers";
 import NavCarriers from "./NavCarriers";
 import NavCompany from "./NavCompany";
 
-export default function Navbar({ data }) {
+export default function Navbar({ data, contentType }) {
 
   // console.log('Navbar')
   // console.log(data)
@@ -12,7 +12,9 @@ export default function Navbar({ data }) {
   let buttonColor
   data?.attributes.pageColor && data?.attributes.pageColor?.includes('Light', 'White') ? buttonColor = 'primaryLight'
   : data?.attributes.pageColor && data?.attributes.pageColor?.includes('Dark') ? buttonColor = 'primaryDark' 
-  : buttonColor = 'primaryDark'
+  : null
+
+  console.log(buttonColor)
 
   return (
     <Box display='flex' justifyContent='space-between' alignItems='center' width='100%'>
@@ -20,8 +22,10 @@ export default function Navbar({ data }) {
       <Box display='flex' flex='2'>
         <NavShippers data={data} />
         <NavCarriers data={data} />
-        <Box mt='12px' mr='5' display='block'>
-          <Link href='/page/resources' variant={data?.attributes.pageColor + 'Button'} fontSize='lg'>Resources</Link>
+        <Box mr='4' position='relative' bottom='1px' display='block'>
+          <Button variant={data?.attributes.pageColor + 'Nav'} size='lg'>
+            <Link href='/page/resources' variant={'noDeco'}>Resources</Link>
+          </Button>
         </Box>
         <NavCompany data={data} />
       </Box>

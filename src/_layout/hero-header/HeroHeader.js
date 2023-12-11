@@ -21,7 +21,7 @@ export default function HeroHeader({ data, noHero, contentType }) {
     >
       
       <Box display={{ base: 'none', xl: 'block' }}>
-        <Header data={data} />
+        <Header data={data} contentType={contentType} />
       </Box>      
       
       <Box display={{ base: 'block', xl: 'none' }}>

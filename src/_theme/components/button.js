@@ -143,6 +143,8 @@ const neutralLightOutline = defineStyle({
   }
 })
 
+const neutralWhiteOutline = neutralLightOutline
+
 const neutralLightNav = defineStyle({
   bg: 'none',
   color: 'neutral.10',
@@ -152,6 +154,8 @@ const neutralLightNav = defineStyle({
     color: 'neutral.10',
   }
 })
+
+const neutralWhiteNav = neutralLightNav
 
 const neutralDark = defineStyle({
   bg: 'neutral.90',
@@ -218,9 +222,11 @@ export const Button = defineStyleConfig({
     primaryDarkOutline,
     secondaryLight,
     neutralWhite,
+    neutralWhiteNav,
     neutralLight,
     neutralLightNav,
     neutralLightOutline,
+    neutralWhiteOutline,
     neutralDark,
     neutralDarkOutline,
     neutralDarkNav,

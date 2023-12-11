@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Link, Text } from '@chakra-ui/react'
 import PageContainer from '@/_layout/PageContainer'
 import ContentColor from '@/_layout/containers/ContentColor';
 import ContentContainer from '@/_layout/containers/ContentContainer';
@@ -62,7 +62,8 @@ export default async function Contact() {
               <Box>
                 <Box mb='2'>
                   <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
-                    <Text as='span' fontWeight='600'>Phone:</Text> (913) 851-4900
+                    <Text as='span' fontWeight='600' mr='2'>Phone:</Text> 
+                    <Link href="tel:19138514900" color='primary.90'>(913) 851-4900</Link>
                     </Text>
                 </Box>
                 <Box>

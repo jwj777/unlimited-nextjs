@@ -18,7 +18,7 @@ export default function NavShippers({ data }) {
 
   return (
 
-    <Box mr='3' position='relative' zIndex='2'>
+    <Box mr='2' position='relative' zIndex='2'>
 
     <Menu>
 
