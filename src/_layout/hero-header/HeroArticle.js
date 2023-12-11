@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function HeroArticle({ data }) {
 
-  console.log('HeroArticle')
+  // console.log('HeroArticle')
   // console.log(data)
 
   let buttonColor
