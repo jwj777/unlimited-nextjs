@@ -67,7 +67,7 @@ async function getServiceBySlug(params) {
     &populate[Sections][on][sections.big-text-block][populate]=*
     &populate[Sections][on][sections.small-card-list][populate][smallCard][populate]=*
     &populate[Sections][on][sections.text-card-list][populate][textCard][populate]=*
-    &populate[Sections][on][sections.metrics][populate][metric][populate]=*`);
+    &populate[Sections][on][sections.metrics][populate][metric][populate]=*`, { next: { revalidate: 60 } });
     
     if (!response.ok) {
       throw new Error('Failed to fetch data');
