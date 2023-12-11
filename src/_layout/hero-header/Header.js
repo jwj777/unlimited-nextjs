@@ -4,6 +4,7 @@ import { Box } from "@chakra-ui/react";
 
 
 export default function Header({ data }) {
+  
 
   return (
     <Box
