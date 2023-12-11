@@ -11,6 +11,7 @@ export default function Header({ data }) {
       alignItems='center'
       py='0' 
       px='8'
+      height='96px'
     >
       <Box mr='12'>
         <Logo data={data} />
