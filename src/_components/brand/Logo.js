@@ -15,11 +15,11 @@ export default function Logo({ data }) {
         <Box display='flex' alignItems='center'>
 
           {
-            data.attributes?.pageColor?.includes('Dark') ?
+            data?.attributes.pageColor?.includes('Dark') ?
             <LogoImageDark />
-            : data.attributes?.pageColor?.includes('Light') ?
+            : data?.attributes.pageColor?.includes('Light') ?
             <LogoImageLight />
-            : data.attributes?.pageColor?.includes('White') ?
+            : data?.attributes.pageColor?.includes('White') ?
             <LogoImageLight />
             : <LogoImageLight />
           }

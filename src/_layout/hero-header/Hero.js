@@ -16,7 +16,7 @@ export default function Hero({ data }) {
 
   let buttonColor
   if (data?.attributes.pageColor) {
-    if (data?.attributes.pageColor.includes('Dark')) { 
+    if (data?.attributes.pageColor?.includes('Dark')) { 
     buttonColor = 'primaryDark' 
     } else {
       buttonColor = 'primaryLight'

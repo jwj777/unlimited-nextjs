@@ -10,8 +10,8 @@ export default function Navbar({ data }) {
   // console.log(data)
 
   let buttonColor
-  data?.attributes.pageColor && data?.attributes.pageColor.includes('Light', 'White') ? buttonColor = 'primaryLight'
-  : data?.attributes.pageColor && data?.attributes.pageColor.includes('Dark') ? buttonColor = 'primaryDark' 
+  data?.attributes.pageColor && data?.attributes.pageColor?.includes('Light', 'White') ? buttonColor = 'primaryLight'
+  : data?.attributes.pageColor && data?.attributes.pageColor?.includes('Dark') ? buttonColor = 'primaryDark' 
   : buttonColor = 'primaryDark'
 
   return (

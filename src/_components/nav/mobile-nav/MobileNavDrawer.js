@@ -26,7 +26,7 @@ export default function MobileNavDrawer({ data }) {
 
   let color
   if (data?.attributes.pageColor) {
-    if (data.attributes.pageColor.includes('Dark')) {
+    if (data?.attributes.pageColor?.includes('Dark')) {
       color = 'mobileDark'
     } else {
       color = 'mobileLight'
