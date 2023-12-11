@@ -18,20 +18,20 @@ module.exports = {
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: '/flatbed/',
-        destination: '/service/flatbed',
-        permanent: true,
-      },
-      {
-        source: '/category/industry-news/',
-        destination: '/page/resources',
-        permanent: true,
-      },
-    ]
-  }
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/flatbed/',
+  //       destination: '/service/flatbed',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/category/industry-news/',
+  //       destination: '/page/resources',
+  //       permanent: true,
+  //     },
+  //   ]
+  // }
 }
 
 
