@@ -8,7 +8,7 @@ module.exports = {
   reactStrictMode: true,
   images: {
     loader: "default",
-    domains: ["localhost", 'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com'],
+    domains: ["localhost", 'unlimited-logistics-media.s3.us-east-2.amazonaws.com'],
     minimumCacheTTL: 60,
     remotePatterns: [
       {
