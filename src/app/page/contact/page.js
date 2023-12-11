@@ -41,7 +41,7 @@ export default async function Contact() {
                   Get in touch with one of our specialists and we	&apos;ll provide a solution to your logistics challenges
                 </BodyLarge>
               </Box>  
-              <ContactForm data={data} />
+              <ContactForm />
             </Box>
 
             <Box 

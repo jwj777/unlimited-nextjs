@@ -53,16 +53,6 @@ export default function ContactForm() {
         <Box>
           <form onSubmit={handleSubmit}>
             <Box>
-              {/* <Box mb='12' maxW='md'>
-                <Box mb='2'>
-                  <BodyMedium color='neutral.90'>Select Your Company Type</BodyMedium>
-                </Box>
-                <SelectWrapper id={'companyType'} required={true}>
-                  <option value='shipper'>Shipper</option>
-                  <option value='carrier'>Carrier</option>
-                  <option value='other'>Other</option>
-                </SelectWrapper>
-              </Box> */}
               <Box display='flex' alignItems='center' flexDirection={{ base: 'column', md: 'row' }} required={true}>
                 <InputFloat width='96%' label="First Name" id={"firstName"} type={"text"} pattern={"^[A-Za-z]+$"} required={true} />
                 <InputFloat label="Last Name" id={"lastName"} type={"text"} pattern={"^[A-Za-z]+$"} required={true} />
