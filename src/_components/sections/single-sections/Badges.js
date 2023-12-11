@@ -50,17 +50,17 @@ export default function Badges({ data, paddingSize }) {
               <BadgeItem
                 color={data.attributes.pageColor}
                 size='md'
-                imageUrl='unlimited-logistics-media.s3.us-east-2.amazonaws.com/pma_7d4403b47b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3WRIPB2UL2GMNZ5J%2F20231208%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20231208T180610Z&X-Amz-Expires=900&X-Amz-Signature=02c7500680bca8c6a562128a0b1fb7e93936053458c95995576fb5680d35db06&X-Amz-SignedHeaders=host&x-id=GetObject'
+                imageUrl='https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/pma_7d4403b47b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3WRIPB2UL2GMNZ5J%2F20231208%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20231208T180610Z&X-Amz-Expires=900&X-Amz-Signature=02c7500680bca8c6a562128a0b1fb7e93936053458c95995576fb5680d35db06&X-Amz-SignedHeaders=host&x-id=GetObject'
               />
               <BadgeItem
                 color={data.attributes.pageColor}
                 size='md'
-                imageUrl='unlimited-logistics-media.s3.us-east-2.amazonaws.com/Smart_Waytransparent_1440x960_6eca3a6810.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3WRIPB2UL2GMNZ5J%2F20231208%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20231208T180610Z&X-Amz-Expires=900&X-Amz-Signature=bd123bb2f2a797852f0b07307296942ef5efc8214d46876c440103c2176baf1e&X-Amz-SignedHeaders=host&x-id=GetObject'
+                imageUrl='https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/Smart_Waytransparent_1440x960_6eca3a6810.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3WRIPB2UL2GMNZ5J%2F20231208%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20231208T180610Z&X-Amz-Expires=900&X-Amz-Signature=bd123bb2f2a797852f0b07307296942ef5efc8214d46876c440103c2176baf1e&X-Amz-SignedHeaders=host&x-id=GetObject'
               />
               <BadgeItem
                 color={data.attributes.pageColor}
                 size='md'
-                imageUrl='/TI_Alogo_d59c4ad28f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3WRIPB2UL2GMNZ5J%2F20231208%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20231208T180610Z&X-Amz-Expires=900&X-Amz-Signature=27ffcf865e76df6d3a90240a80c6560855d56e5fd44415fb459aa225babb1866&X-Amz-SignedHeaders=host&x-id=GetObject'
+                imageUrl='https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/TI_Alogo_d59c4ad28f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3WRIPB2UL2GMNZ5J%2F20231208%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20231208T180610Z&X-Amz-Expires=900&X-Amz-Signature=27ffcf865e76df6d3a90240a80c6560855d56e5fd44415fb459aa225babb1866&X-Amz-SignedHeaders=host&x-id=GetObject'
               />       
             </Box>
           </Box>
@@ -96,7 +96,7 @@ export default function Badges({ data, paddingSize }) {
               <BadgeItem
                 color={data.attributes.pageColor}
                 size='lg'
-                imageUrl='/jackms_9afc451635.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3WRIPB2UL2GMNZ5J%2F20231208%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20231208T223055Z&X-Amz-Expires=900&X-Amz-Signature=b076a82ebad053fa031aef74798701f9a2989c6729969bb89cdd7bc591403152&X-Amz-SignedHeaders=host&x-id=GetObject'
+                imageUrl='https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/jackms_9afc451635.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3WRIPB2UL2GMNZ5J%2F20231208%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20231208T223055Z&X-Amz-Expires=900&X-Amz-Signature=b076a82ebad053fa031aef74798701f9a2989c6729969bb89cdd7bc591403152&X-Amz-SignedHeaders=host&x-id=GetObject'
               />  
             </Box>
           </Box>
