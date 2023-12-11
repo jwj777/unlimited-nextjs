@@ -1,9 +1,8 @@
 'use client'
-import { Box, Button, Select, Text } from '@chakra-ui/react';
+import { Box, Button, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import InputFloat from './input/inputFloat';
 import SelectWrapper from './input/SelectWrapper';
-import LabelMedium from '../typography/LabelMedium';
 import BodyMedium from '../typography/BodyMedium';
 
 
