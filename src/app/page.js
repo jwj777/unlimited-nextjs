@@ -37,7 +37,9 @@ export default async function Home() {
 }
 
 async function getData() {
-  const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/homepages/1?populate[heroImage][populate]=primaryImage&populate[callToAction][populate]=true&populate[Sections][populate]=Image`)
+  const res = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/homepages/1?populate[heroImage][populate]=primaryImage&populate[callToAction][populate]=true&populate[Sections][populate]=Image`, { 
+    next: { revalidate: 10 }
+  })
  
   if (!res.ok) {
     throw new Error('Failed to fetch data')
