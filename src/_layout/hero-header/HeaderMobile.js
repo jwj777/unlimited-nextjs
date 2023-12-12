@@ -1,6 +1,7 @@
 import { Box, Menu, MenuIcon } from "@chakra-ui/react";
 import LogoMobile from "@/_components/brand/LogoMobile";
 import MobileNavDrawer from "@/_components/nav/mobile-nav/MobileNavDrawer";
+import Logo from "@/_components/brand/Logo";
 
 export default function HeaderMobile({ data }) {
 
@@ -11,6 +12,7 @@ export default function HeaderMobile({ data }) {
     <Box
       display='flex' 
       alignItems='center'
+      height='80px'
       py='0' 
       px={{ base: '2', md: '4', lg: '8' }}
     >
@@ -20,7 +22,7 @@ export default function HeaderMobile({ data }) {
       </Box>
 
       <Box mr='12'>
-        <LogoMobile data={data} />
+        <Logo data={data} />
       </Box>
  
     </Box>

@@ -12,7 +12,7 @@ export default function Logo({ data }) {
   return (
     <LinkBox>
       <LinkOverlay href='/'>
-        <Box display='flex' alignItems='center'>
+        <Box display='flex' alignItems='center' maxW={{ base: '180px', xl: 'auto' }}>
 
           {
             data?.attributes.pageColor?.includes('Dark') ?
