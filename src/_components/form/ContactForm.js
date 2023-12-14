@@ -2,9 +2,7 @@
 import { Box, Button, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import InputFloat from './input/inputFloat';
-import SelectWrapper from './input/SelectWrapper';
-import BodyMedium from '../typography/BodyMedium';
-
+import { sendGTMEvent } from '@next/third-parties/google'
 
 export default function ContactForm() {
 
@@ -16,7 +14,6 @@ export default function ContactForm() {
     !formSubmit ? setFormSubmit(true) : setFormSubmit(false)
 
     const data = {
-      companyType: e.target.companyType.value,
       firstName: e.target.firstName.value,
       lastName: e.target.lastName.value,
       company: e.target.company.value,
@@ -42,6 +39,10 @@ export default function ContactForm() {
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
     const result = await response.json();
+
+    if (data.email && data.phone) {
+      sendGTMEvent({ event: 'contact_form_lead', value: 'form_submit' })
+    }
         
   }
 
