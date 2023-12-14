@@ -47,10 +47,11 @@ export default function MobileNavDrawer({ data }) {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent background='neutral.4' maxW={{ base: '84%', lg: '440px' }} px='4'>
+        <DrawerContent background='neutral.4' maxW={{ base: '84%', lg: '440px' }}>
             <DrawerCloseButton color='neutral.90' fontSize='lg' mt='8' mr='6' />
           <DrawerBody 
             className='mobileDrawerBody'
+            p='6'
             pb='8'
           >
 

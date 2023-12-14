@@ -2,11 +2,9 @@
 import { Box, Button, Link } from '@chakra-ui/react';
 import FooterLink from './FooterLink';
 import Logo from '@/_components/brand/Logo';
-import TitleSmall from '@/_components/typography/TitleSmall';
 import ContentContainer from '../containers/ContentContainer';
-import TitleMedium from '@/_components/typography/TitleMedium';
-import LabelLarge from '@/_components/typography/LabelLarge';
 import LabelMedium from '@/_components/typography/LabelMedium';
+import BodyMedium from '@/_components/typography/BodyMedium';
 // import Link from 'next/link';
 
 
@@ -19,7 +17,7 @@ export default function Footer({ data }) {
 
     <Box 
       background={data?.attributes.pageColor + '.background'}
-      pt='16' pb='12'
+      pt='20' pb='16'
     >
       <ContentContainer>
 
@@ -32,7 +30,7 @@ export default function Footer({ data }) {
 
             <Box display='flex' flexWrap='wrap'>
 
-              <Box mr={{ base: '0', sm: '16', md: '24' }} mb='12'>
+              <Box mr={{ base: '0', sm: '16', md: '24' }} mb='16'>
                 <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>Shippers</LabelMedium>      
                 <Box mt='6' >
                   <FooterLink href='/service/refrigerated' label='Refrigerated' data={data} />
@@ -62,6 +60,41 @@ export default function Footer({ data }) {
                   <FooterLink href='/page/careers' label='Careers' data={data} />
                 </Box>
               </Box>
+            </Box>
+
+            <Box display='flex' flexWrap='wrap' alignItems='center'>
+              <Box mr='8' opacity='0.72' >
+                <BodyMedium color={data?.attributes.pageColor + '.on-surface'} thin>© 2023 Unlimited Logistics. All Rights Reserved.</BodyMedium>
+              </Box>
+              <Link 
+                href='/page/privacy-policy' 
+                color={data?.attributes.pageColor + '.on-surface'} 
+                opacity='0.80' 
+                fontWeight='300'
+                mr='8'
+                _hover={{
+                  color: data?.attributes.pageColor + '.on-surface-bright'
+                }}
+              >Privacy Policy</Link>
+              <Link 
+                href='/Unlimited-Logistics-LLC-EULA.pdf' 
+                color={data?.attributes.pageColor + '.on-surface'} 
+                opacity='0.80' 
+                fontWeight='300'
+                mr='8'
+                _hover={{
+                  color: data?.attributes.pageColor + '.on-surface-bright'
+                }}
+              >EULA</Link>
+              <Link 
+                href='https://transparency-in-coverage.uhc.com/' 
+                color={data?.attributes.pageColor + '.on-surface'} 
+                opacity='0.80' 
+                fontWeight='300'
+                _hover={{
+                  color: data?.attributes.pageColor + '.on-surface-bright'
+                }}
+              >TIC UHC</Link>
             </Box>
 
           </Box>

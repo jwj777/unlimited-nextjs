@@ -48,12 +48,18 @@ export default function FooterLink({ href, children, label, data }) {
         onMouseLeave={() => handleMouseLeave()}
       > 
         <Box>
-          <Link href={href} variant='noDeco' color={data?.attributes.pageColor + '.on-surface'}>
-      
-              <BodyMedium color={data?.attributes.pageColor + '.on-surface'}>
-                {label}
-              </BodyMedium>
-      
+          <Link 
+            href={href} 
+            variant={data?.attributes.pageColor + 'Nav'}
+            color={data?.attributes.pageColor + '.on-surface'}
+            _hover={{
+              color: data?.attributes.pageColor + '.on-surface-bright',
+              textDecor: 'underline'
+            }}
+          >
+            <BodyMedium color={data?.attributes.pageColor + '.on-surface'}>
+              {label}
+            </BodyMedium>
           </Link>
         </Box>
       </Box>

@@ -12,7 +12,7 @@ export default function HeaderMobile({ data }) {
     <Box
       display='flex' 
       alignItems='center'
-      height='80px'
+      height='88px'
       py='0' 
       px={{ base: '2', md: '4', lg: '8' }}
     >

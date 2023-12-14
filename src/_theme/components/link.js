@@ -3,7 +3,7 @@ import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
 
 const sm = defineStyle({
   field: {
-    fontSize: '0.9rem',
+    fontSize: '0.9rem !important',
   }
 })
 
@@ -141,7 +141,6 @@ const listXl = defineStyle ({
   },
 })
 
-
 const basicGray = defineStyle ({
   color: 'neutral.60',
   textDecoration: 'underline',
@@ -150,7 +149,6 @@ const basicGray = defineStyle ({
     textDecoration: 'underline',
   },
 })
-
 
 export const Link = defineStyleConfig({
   variants: { 
