@@ -16,8 +16,6 @@ export default function PageContainer({ data, children, contentType, noHero }) {
         : <HeroHeader data={data} contentType={contentType} />
       }
       
-      
-
         {children}
 
       <Footer data={data} />

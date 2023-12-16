@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    {
+      "source": "/flatbed/",
+      "destination": "/service/flatbed"
+    }
+  ]
+}
