@@ -38,7 +38,11 @@ export default function HeroImage({ data }) {
             style={imageStyle}
           /> */}
           <Image 
-            src={'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + data.attributes.heroImage.primaryImage.data.attributes.hash + data.attributes.heroImage.primaryImage.data.attributes.ext}
+            src={
+              'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
+              data.attributes.heroImage.primaryImage.data.attributes.hash + 
+              data.attributes.heroImage.primaryImage.data.attributes.ext
+            }
             width={1400}
             height={640}
             alt=""

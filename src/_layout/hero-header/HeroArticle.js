@@ -48,7 +48,11 @@ export default function HeroArticle({ data }) {
           <ContentContainer>
             <Box borderRadius="2rem" overflow='hidden' maxH='560px'>
               <Image 
-                src={data?.attributes.heroImage.primaryImage.data.attributes.url}
+                src={
+                  'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
+                  data.attributes.heroImage.primaryImage.data.attributes.hash + 
+                  data.attributes.heroImage.primaryImage.data.attributes.ext
+                }
                 width={1400}
                 height={560}
                 alt=""
