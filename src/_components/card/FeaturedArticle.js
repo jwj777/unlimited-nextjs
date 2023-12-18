@@ -1,5 +1,5 @@
-import { Box, Link, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Image, Link, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
+// import Image from "next/image";
 import TitleMedium from "../typography/TitleMedium";
 import TitleSmall from "../typography/TitleSmall";
 import BodyMedium from "../typography/BodyMedium";
@@ -56,7 +56,11 @@ export default function FeaturedArticle({ data, color }) {
             {
               data.attributes.heroImage.primaryImage ?
               <Image
-                src={data.attributes.heroImage.primaryImage.data.attributes.url}
+                src={
+                  'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
+                  data.attributes.heroImage.primaryImage.data.attributes.hash + 
+                  data.attributes.heroImage.primaryImage.data.attributes.ext
+                }
                 width={1400}
                 height={600}
                 alt=""

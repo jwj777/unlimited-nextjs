@@ -56,7 +56,7 @@ export default function Footer({ data }) {
                 <Box mt='6'>
                   <FooterLink href='/page/about' label='About' data={data} />
                   <FooterLink href='/page/resources' label='Resources' data={data} />
-                  <FooterLink href='/page/meet-the-team' label='Meet The Team' data={data} />
+                  {/* <FooterLink href='/page/meet-the-team' label='Meet The Team' data={data} /> */}
                   <FooterLink href='/page/careers' label='Careers' data={data} />
                 </Box>
               </Box>

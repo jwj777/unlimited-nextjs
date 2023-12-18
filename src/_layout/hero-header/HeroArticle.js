@@ -52,8 +52,9 @@ export default function HeroArticle({ data }) {
                   'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
                   data.attributes.heroImage.primaryImage.data.attributes.hash + 
                   data.attributes.heroImage.primaryImage.data.attributes.ext
-                }
-                width={1400}
+                } 
+                objectFit={'cover'}
+                width={1440}
                 height={560}
                 alt=""
               />

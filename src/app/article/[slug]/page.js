@@ -29,7 +29,7 @@ export default async function Article({params}) {
   return (
     <main>
       <PageContainer data={data} contentType={contentType}>
-        <Box className='articleContent'>
+        <Box className='articleContent' mt='12'>
         
           {
             data?.attributes.Sections[0] ?

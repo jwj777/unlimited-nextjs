@@ -16,14 +16,27 @@ export default function ServiceCard({ service, color }) {
           <Box mx='4'>
           
             <Box display='flex' flexDirection='column'>
-              <Box height={{ base: '280px', md: '264px', lg: '264px', xl: '280px' }} overflow='hidden' borderTopEndRadius='1rem' borderTopLeftRadius='1rem' position={'relative'}>
+              <Box 
+                height={{ base: '280px', md: '264px', lg: '264px', xl: '232px' }} 
+                overflow='hidden' 
+                borderTopEndRadius='1rem' 
+                borderTopLeftRadius='1rem' 
+                position={'relative'}
+              >
                 {
                   service.attributes.heroImage.primaryImage.data ?
                 <Image
-                  src={service.attributes.heroImage.primaryImage.data.attributes.formats.medium.url}
+                  // src={service.attributes.heroImage.primaryImage.data.attributes.formats.medium.url}
+                  src={
+                    'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
+                    service.attributes.heroImage.primaryImage.data.attributes.hash + 
+                    service.attributes.heroImage.primaryImage.data.attributes.ext
+                  }
                   alt=""
-                  fill
-                  sizes="(max-width: 768px 100%, max-width: 1200px 46%, 31%)"
+                  objectFit='cover'
+                  width='1080px'
+                  height='420px'
+                  // sizes="(max-width: 768px 100%, max-width: 1200px 46%, 31%)"
                 /> 
                 : null
               }

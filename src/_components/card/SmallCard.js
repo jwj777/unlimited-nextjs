@@ -1,11 +1,12 @@
-import { Box } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Image } from "@chakra-ui/react";
+// import Image from "next/image";
 import TitleMedium from "../typography/TitleMedium";
 import TitleSmall from "../typography/TitleSmall";
 
 export default function SmallCard({ data, color }) {
 
-  // console.log('SmallCard')
+  console.log('SmallCard')
+  console.log(data.Image)
 
   return(
     
@@ -20,9 +21,14 @@ export default function SmallCard({ data, color }) {
         {
           data.Image.data ?
           <Image
-            src={data.Image.data.attributes.url}
+            src={
+              'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
+              data.Image.data.attributes.hash + 
+              data.Image.data.attributes.ext
+            }
             width={480}
             height={360}
+            objectFit='cover'
             alt=""
           /> : null
         }
