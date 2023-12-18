@@ -1,11 +1,11 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import BodyXl from "../../typography/BodyXl";
 import ContentContainer from "@/_layout/containers/ContentContainer";
 import HeadlineSmall from "../../typography/HeadlineSmall";
 import LabelMedium from "../../typography/LabelMedium";
 import SectionPadding from "@/_layout/containers/SectionPadding";
 import DisplaySmall from "../../typography/DisplaySmall";
-import Image from "next/image";
+// import Image from "next/image";
 import BodyLarge from "../../typography/BodyLarge";
 
 
@@ -57,10 +57,8 @@ export default function TwoColumnsImage({ data }) {
               <Image
                 src={data.Image.data.attributes.url}
                 alt=""
-                // fill
                 width={520}
                 height={520}
-                // sizes="(max-width: 768px 520px, max-width: 1200px 420px, 720px)"
               />
             </Box>
 

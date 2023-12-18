@@ -18,9 +18,11 @@ export default async function Contact() {
   return (
     <main>
       <PageContainer data={data}>
+        <Box className='renderTest'></Box>
         <ContentColor data={data}>
+        <Box className='renderTest2'></Box>
           <ContentContainer>
-
+          <Box className='renderTest3'></Box>
           <Box display='flex' flexWrap='wrap' alignItems='flex-start' pb='32' mt='12'>
 
             <Box 
