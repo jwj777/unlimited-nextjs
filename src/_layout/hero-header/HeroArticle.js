@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Image } from "@chakra-ui/react";
 import ContentContainer from "../containers/ContentContainer";
 import DisplaySuper from "@/_components/typography/DisplaySuper";
 import HeadlineMedium from "@/_components/typography/HeadlineMedium";
@@ -6,7 +6,6 @@ import HeadlineSmall from "@/_components/typography/HeadlineSmall";
 import BodyXl from "@/_components/typography/BodyXl";
 import LabelMedium from "@/_components/typography/LabelMedium";
 import DisplayLarge from "@/_components/typography/DisplayLarge";
-import Image from "next/image";
 
 
 export default function HeroArticle({ data }) {

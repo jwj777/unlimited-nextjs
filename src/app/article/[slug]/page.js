@@ -4,6 +4,17 @@ import PageContainer from '@/_layout/PageContainer'
 import Sections from '@/_components/sections/Sections'
 
 
+export async function generateMetadata({ params, searchParams }, parent) {
+
+  const slug = params.slug
+  let articleMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?filters[slug][$eq]=${slug}`).then((res) => res.json())
+ 
+  return {
+    title: articleMeta.data[0].attributes?.Headline,
+  }
+
+}
+
 export default async function Article({params}) {
 
   const articles = await getArticlesBySlug(params);
