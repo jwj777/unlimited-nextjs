@@ -10,8 +10,8 @@ import TextCard from "../card/TextCard";
 
 export default function TextCardList({ data }) {
 
-  console.log('TextCardList')
-  console.log(data)
+  // console.log('TextCardList')
+  // console.log(data)
 
   return (
 

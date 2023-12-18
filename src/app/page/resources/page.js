@@ -83,7 +83,7 @@ async function getArticles() {
       throw new Error('Failed to fetch data');
     }
 
-    console.log('getArticles')
+    // console.log('getArticles')
     // console.log(response)
 
     const article = await response.json();

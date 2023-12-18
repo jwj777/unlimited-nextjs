@@ -10,8 +10,8 @@ import LtlTextCard from "./LtlTextCard";
 
 export default function LtlServiceTypes({ data }) {
 
-  console.log('LTL Service Types')
-  console.log(data)
+  // console.log('LTL Service Types')
+  // console.log(data)
 
   return (
 

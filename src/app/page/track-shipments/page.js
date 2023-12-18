@@ -17,8 +17,8 @@ export default async function Contact() {
   const pagedata = await getPageData();
   const data = pagedata?.[0];
 
-  console.log('Contact')
-  console.log(data)
+  // console.log('Contact')
+  // console.log(data)
   
   return (
     <main>
