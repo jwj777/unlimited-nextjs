@@ -1,9 +1,9 @@
 'use client'
 import { Box, Button, Text } from '@chakra-ui/react';
 import { useState } from 'react';
-import InputFloat from './input/inputFloat';
-import SelectWrapper from './input/SelectWrapper';
-import BodyMedium from '../typography/BodyMedium';
+import InputFloat from '../input/inputFloat';
+import SelectWrapper from '../input/SelectWrapper';
+import BodyMedium from '../../typography/BodyMedium';
 
 
 export default function Resume() {

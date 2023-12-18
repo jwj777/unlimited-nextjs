@@ -1,6 +1,6 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import ContentContainer from "../containers/ContentContainer";
-import Image from "next/image";
+// import Image from "next/image";
 
 
 export default function HeroImage({ data }) {
@@ -30,6 +30,13 @@ export default function HeroImage({ data }) {
     >
       <ContentContainer>
         <Box borderRadius={{ base: '1rem', md: "2rem" }} overflow='hidden' position='relative' maxH={{ base: '300px', sm: '340px', md: imageStyle.height }}>
+          {/* <Image 
+            src={data.attributes.heroImage.primaryImage.data.attributes.url}
+            width={1400}
+            height={640}
+            alt=""
+            style={imageStyle}
+          /> */}
           <Image 
             src={data.attributes.heroImage.primaryImage.data.attributes.url}
             width={1400}
