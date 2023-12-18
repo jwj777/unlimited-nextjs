@@ -77,6 +77,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/about',
+        destination: '/page/about',
+        permanent: true,
+      },
+      {
         source: '/meet-the-team',
         destination: '/page/about',
         permanent: true,
