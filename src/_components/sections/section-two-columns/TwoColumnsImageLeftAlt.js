@@ -1,11 +1,11 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import BodyXl from "../../typography/BodyXl";
 import ContentContainer from "@/_layout/containers/ContentContainer";
 import HeadlineSmall from "../../typography/HeadlineSmall";
 import LabelMedium from "../../typography/LabelMedium";
 import SectionPadding from "@/_layout/containers/SectionPadding";
 import DisplaySmall from "../../typography/DisplaySmall";
-import Image from "next/image";
+// import Image from "next/image";
 import BodyLarge from "../../typography/BodyLarge";
 import HeadlineLarge from "@/_components/typography/HeadlineLarge";
 import BodyMedium from "@/_components/typography/BodyMedium";
@@ -42,7 +42,12 @@ export default function TwoColumnsImageLeftAlt({ data }) {
                   mb={{ base: '12', md: '0' }}
                 >
                   <Image
-                    src={data.Image.data.attributes.formats.medium.url}
+                    // src={data.Image.data.attributes.formats.medium.url}
+                    src={
+                      'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
+                      data.Image.data.attributes.hash + 
+                      data.Image.data.attributes.ext
+                    }
                     alt=""
                     width={520}
                     height={340}

@@ -55,7 +55,12 @@ export default function TwoColumnsImage({ data }) {
               borderRadius='1.5rem' 
             >
               <Image
-                src={data.Image.data.attributes.url}
+                // src={data.Image.data.attributes.url}
+                src={
+                  'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
+                  data.Image.data.attributes.hash + 
+                  data.Image.data.attributes.ext
+                }
                 alt=""
                 width={520}
                 height={520}
