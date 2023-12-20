@@ -110,6 +110,11 @@ module.exports = {
         source: '/job-listings',
         destination: '/page/careers',
         permanent: true,
+      }, 
+      {
+        source: '/privacy-policy',
+        destination: '/page/privacy-policy',
+        permanent: true,
       },     
       {
         source: '/joining-the-ranks-of-kansas-citys-fastest-growing-companies',

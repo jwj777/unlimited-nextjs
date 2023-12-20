@@ -12,9 +12,17 @@ import ContentContainer from '@/_layout/containers/ContentContainer';
 import HeadlineSmall from '@/_components/typography/HeadlineSmall';
 import BodyMedium from '@/_components/typography/BodyMedium';
 
-export const metadata = {
-  title: 'Freight Broker and Logistics Careers',
+export async function generateMetadata({ params, searchParams }, parent) {
+
+  const slug = params.slug
+  let pageMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=careers&populate=*`).then((res) => res.json())
+
+  return {
+    title: pageMeta.data[0].attributes?.seoPageTitle,
+  }
+  
 }
+
 
 export default async function Careers() {
 
@@ -62,7 +70,7 @@ export default async function Careers() {
                               }}
                             >
                               <Box as='span' flex='1' textAlign='left'>
-                                <Box mb='-6px'>
+                                <Box mb='1'>
                                   <HeadlineSmall>{job?.attributes.Title}</HeadlineSmall>
                                 </Box>
                                 <BodyMedium text={job?.attributes.Department}></BodyMedium>

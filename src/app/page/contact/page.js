@@ -7,6 +7,16 @@ import BodyLarge from '@/_components/typography/BodyLarge';
 import Badges from '@/_components/sections/single-sections/Badges';
 
 
+export async function generateMetadata({ params, searchParams }, parent) {
+  const slug = params.slug
+  let pageMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=contact&populate=*`).then((res) => res.json())
+
+  return {
+    title: pageMeta.data[0].attributes?.seoPageTitle,
+  }
+}
+
+
 export default async function Contact() {
 
   const pagedata = await getPageData();
