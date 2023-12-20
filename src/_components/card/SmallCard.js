@@ -5,8 +5,8 @@ import TitleSmall from "../typography/TitleSmall";
 
 export default function SmallCard({ data, color }) {
 
-  console.log('SmallCard')
-  console.log(data.Image)
+  // console.log('SmallCard')
+  // console.log(data.Image)
 
   return(
     
