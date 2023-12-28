@@ -13,6 +13,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   return {
     title: serviceMeta.data[0].attributes?.seoPageTitle,
   }
+  
 }
 
 

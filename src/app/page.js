@@ -6,7 +6,7 @@ import SectionTwoColumns from '@/_components/sections/section-two-columns/TwoCol
 import Badges from '@/_components/sections/single-sections/Badges'
 
 export const metadata = {
-  title: 'Kansas City\'s Top Logistics Compaay - Refrigerated Experts',
+  title: 'Kansas City\'s Top Logistics Company - Refrigerated Experts',
   description: 'We offer a complete range of logistics services, proprietary software, and industry leading customer service.',
 }
 
