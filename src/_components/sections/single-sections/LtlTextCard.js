@@ -4,7 +4,7 @@ import TitleLarge from "../typography/TitleLarge";
 
 export default function LtlTextCard({ title, body, color }) {
 
-  console.log('LtlTextCard')
+  // console.log('LtlTextCard')
 
   return(
     

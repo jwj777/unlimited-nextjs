@@ -14,7 +14,7 @@ export default function Navbar({ data, contentType }) {
   : data?.attributes.pageColor && data?.attributes.pageColor?.includes('Dark') ? buttonColor = 'primaryDark' 
   : null
 
-  console.log(buttonColor)
+  // console.log(buttonColor)
 
   return (
     <Box display='flex' justifyContent='space-between' alignItems='center' width='100%'>

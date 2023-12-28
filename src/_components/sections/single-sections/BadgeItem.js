@@ -23,14 +23,14 @@ export default function BadgeItem({ imageUrl, size }) {
       alignItems='center'
       bg='neutral.100'
       p='6'
-      mb={{ base: '8', md: '0' }}
+      mb={{ base: '8', lg: '12', '2xl': '0' }}
       borderRadius='1.5rem'
     > 
       <Image
         src={imageUrl}
         width={width}
         height={height}
-        objectFit="contain"
+        // objectFit="contain"
         alt=""
       />
     </Box>

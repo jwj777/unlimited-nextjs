@@ -24,6 +24,7 @@ export default async function Contact() {
 
   // console.log('Contact')
   // console.log(data)
+  // test
   
   return (
     <main>
