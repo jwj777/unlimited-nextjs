@@ -123,7 +123,7 @@ export default async function Contact() {
 async function getPageData() {
   try {
     // const slug = params.slug;
-    const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=contact`, { next: { revalidate: 60 } });
+    const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=contact`, { next: { revalidate: 20 } });
     
     if (!response.ok) {
       throw new Error('Failed to fetch data');
