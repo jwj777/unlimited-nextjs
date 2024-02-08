@@ -1,5 +1,5 @@
 'use client'
-import { Box, Button, Text } from '@chakra-ui/react';
+import { Box, Button, Checkbox, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import InputFloat from './input/inputFloat';
 import { sendGTMEvent } from '@next/third-parties/google'
@@ -63,6 +63,9 @@ export default function ContactForm() {
                 <InputFloat label="Email" id={"email"} type={"email"} pattern={"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"} required={true} />
                 <InputFloat label="Phone" id={"phone"} type={"text"} required={true} />
               </Box>
+              <Checkbox mt='1' mb='2'>
+                <Text color='neutral.90' lineHeight='1.3rem' fontSize='lg' pt='2px' ml='2px'>Send me load details via text message</Text>
+              </Checkbox>
             </Box>
             <Button mt="8" size='lg' variant="primaryDark" type="submit">
               Let&apos;s Get Started
