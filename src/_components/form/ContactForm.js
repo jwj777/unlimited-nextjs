@@ -18,7 +18,8 @@ export default function ContactForm() {
       lastName: e.target.lastName.value,
       company: e.target.company.value,
       email: e.target.email.value,
-      phone: e.target.phone.value
+      phone: e.target.phone.value,
+      smsConsent: e.target.smsConsent.value,
     }
 
     // Send the data to the server in JSON format.
@@ -63,7 +64,7 @@ export default function ContactForm() {
                 <InputFloat label="Email" id={"email"} type={"email"} pattern={"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"} required={true} />
                 <InputFloat label="Phone" id={"phone"} type={"text"} required={true} />
               </Box>
-              <Checkbox mt='1' mb='2'>
+              <Checkbox id='smsConsent' mt='1' mb='2'>
                 <Text color='neutral.90' lineHeight='1.3rem' fontSize='lg' pt='2px' ml='2px'>Send me load details via text message</Text>
               </Checkbox>
             </Box>
