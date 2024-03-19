@@ -66,27 +66,23 @@ export default async function Contact() {
             >
 
               <Box mb='8'>
-                <Text color={data.attributes.pageColor + '.on-surface'} fontSize='lg' fontWeight='600'>Unlimited Logistics</Text>
+                <Text color={data.attributes.pageColor + '.on-surface'} fontSize='lg' fontWeight='600' mb='1'>Kansas City Office</Text>
                 <Text color={data.attributes.pageColor + '.on-surface'}>1800 W 91 Place</Text>
-                <Text color={data.attributes.pageColor + '.on-surface'}> Kansas City, MO 64114</Text>
-              </Box>
-
-
-              <Box>
-                <Box mb='2'>
+                <Text color={data.attributes.pageColor + '.on-surface'}>Kansas City, MO 64114</Text>
+                <Box mt='1'>
                   <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
                     <Text as='span' fontWeight='600' mr='2'>Phone:</Text> 
-                    <Link href="tel:19138514900" color='primary.90'>(913) 851-4900</Link>
+                    <Link href="tel:19138514900" color='primary.90' variant=''>(913) 851-4900</Link>
                     </Text>
                 </Box>
-                <Box>
+                <Box mt='1'>
                   <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
                   <Text as='span' fontWeight='600'>Fax:</Text> (913) 851-4902
                     </Text>
                 </Box>
               </Box>
 
-              <Box mt='8'>
+              <Box mt='8' mb='8'>
                 <Box mb='2'>
                   <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
                   <Text as='span' fontWeight='600'>Email:</Text> info@unlimitedlogistics.net
@@ -100,6 +96,14 @@ export default async function Contact() {
                     </Text>
                 </Box>
               </Box>
+
+              <Box mb='8'>
+                <Text color={data.attributes.pageColor + '.on-surface'} fontSize='lg' fontWeight='600' mb='1'>Arizona Office</Text>
+                <Text color={data.attributes.pageColor + '.on-surface'}>879 E Frontage Rd</Text>
+                <Text color={data.attributes.pageColor + '.on-surface'}>Rio Rico, Arizona 85648</Text>
+              </Box>
+
+
       
               
               

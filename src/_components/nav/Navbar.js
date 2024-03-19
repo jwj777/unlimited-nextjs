@@ -14,19 +14,26 @@ export default function Navbar({ data, contentType }) {
   : data?.attributes.pageColor && data?.attributes.pageColor?.includes('Dark') ? buttonColor = 'primaryDark' 
   : null
 
-  // console.log(buttonColor)
-
   return (
     <Box display='flex' justifyContent='space-between' alignItems='center' width='100%'>
 
       <Box display='flex' flex='2'>
         <NavShippers data={data} />
-        <NavCarriers data={data} />
         <Box mr='4' position='relative' bottom='1px' display='block'>
+          <Button variant={data?.attributes.pageColor + 'Nav'} size='lg'>
+            <Link href='/service/software' variant={'noDeco'}>Software</Link>
+          </Button>
+        </Box>       
+        <Box mr='4' position='relative' bottom='1px' display='block'>
+          <Button variant={data?.attributes.pageColor + 'Nav'} size='lg'>
+            <Link href='/page/carrier-setup' variant={'noDeco'}>Carriers</Link>
+          </Button>
+        </Box>
+        {/* <Box mr='4' position='relative' bottom='1px' display='block'>
           <Button variant={data?.attributes.pageColor + 'Nav'} size='lg'>
             <Link href='/page/resources' variant={'noDeco'}>Resources</Link>
           </Button>
-        </Box>
+        </Box> */}
         <NavCompany data={data} />
       </Box>
 

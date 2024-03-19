@@ -20,11 +20,11 @@ export default function SmallCardList({ data }) {
 
             <Box>
 
-              <Box mb='16'>
+              <Box mb='16' maxW='5xl'>
                 <Box mb='8'>
                   <LabelMedium color={data.color + '.on-surface'}>{data.Label}</LabelMedium>
                 </Box>
-                <Box>
+                <Box maxW='3xl'>
                   <HeadlineLarge color={data.color + '.on-surface'}>{data.Heading}</HeadlineLarge>
                 </Box>
                 <Box maxW='5xl'>

@@ -9,7 +9,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let pageMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=${slug}&populate=*`).then((res) => res.json())
 
   return {
-    title: pageMeta.data[0].attributes?.seoPageTitle,
+    title: pageMeta.data[0]?.attributes?.seoPageTitle,
   }
   
 }

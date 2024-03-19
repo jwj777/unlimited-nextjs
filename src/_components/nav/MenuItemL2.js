@@ -2,9 +2,7 @@
 'use client'
 import { Box, Link, MenuItem, Text, chakra, shouldForwardProp } from '@chakra-ui/react';
 import { useState } from 'react';
-
 import { motion, isValidMotionProp } from 'framer-motion';
-import TitleMedium from '../typography/TitleMedium';
 import TitleSmall from '../typography/TitleSmall';
 
 
@@ -16,6 +14,7 @@ export default function MenuItemL2({ href, children, label }) {
     labelColor: 'black',
     textColor: 'gray.500',
     border: '0px',
+    left: '0px'
     };
 
   const [navActive, setNavActive] = useState(initialValues)
@@ -23,10 +22,12 @@ export default function MenuItemL2({ href, children, label }) {
   const handleMouseEnter = () => {
     setNavActive({
       ...navActive,
-      labelColor: 'primary.70',
-      textColor: 'primary.70',
+      labelColor: 'primary.50',
+      textColor: 'primary.50',
       border: '1px',
-      display: 'block'
+      borderLeft: '3px',
+      display: 'block',
+      left: '8px'
     })
   }
 
@@ -36,7 +37,9 @@ export default function MenuItemL2({ href, children, label }) {
       labelColor: 'neutralVariant.10',
       textColor: 'neutralVariant.60',
       border: '0px',
-      display: 'none'
+      borderLeft: '0px',
+      display: 'none' ,
+      left: '0px'
     })
   }
   
@@ -47,11 +50,19 @@ export default function MenuItemL2({ href, children, label }) {
         display='flex'
         bg='none'
         mb='4'
+        ml='4'
         onMouseEnter={() => handleMouseEnter()}
         onMouseLeave={() => handleMouseLeave()}
+        pl={navActive['left']}
+        mr={'-' + navActive['left']}
+        transition='all 0.06s ease'
+        // borderLeft={navActive['borderLeft']}
+        border='3px'
+        borderColor='primary.50'
+
       > 
         <Box 
-          width='320px'
+          width='360px'
         >
           <Link href={href} variant='noDeco'>
             <Box mb='-2px'>

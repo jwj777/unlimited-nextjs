@@ -11,7 +11,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let serviceMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/services?filters[slug][$eq]=${slug}&populate[heroImage][populate]=*`).then((res) => res.json())
  
   return {
-    title: serviceMeta.data[0].attributes?.seoPageTitle,
+    title: serviceMeta.data[0]?.attributes?.seoPageTitle,
   }
   
 }
@@ -22,8 +22,8 @@ export default async function Service({params}) {
   const serviceBySlug = await getServiceBySlug(params);
   const data = serviceBySlug?.[0];
 
-  // console.log('service/slug')
-  // console.log(data)
+  console.log('service/slug')
+  console.log(data)
 
   return (
     <main>

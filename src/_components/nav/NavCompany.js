@@ -36,6 +36,7 @@ export default function NavCompany({ data }) {
         <Box pt='5' pb='2' px='6' display='flex'>
           <Box mr='4'>
             <MenuItemShort href='/page/about' label='About Us'></MenuItemShort>
+            <MenuItemShort href='/page/resources' label='Resources & Insights'></MenuItemShort>
             {/* <MenuItemL2 href='/page/team' label='Meet Our Team'></MenuItemL2> */}
             <MenuItemShort href='/page/careers' label='Careers'></MenuItemShort>
           </Box>
