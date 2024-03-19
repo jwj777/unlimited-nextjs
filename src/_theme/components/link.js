@@ -119,6 +119,7 @@ const primaryLightButton = primaryWhiteButton
 
 const primaryDarkButton = defineStyle({
   color: 'primary.90',
+  bg: 'primary.40',
   borderRadius: '10rem',
   py: '14px',
   px: '24px',

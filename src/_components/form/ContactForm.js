@@ -65,7 +65,7 @@ export default function ContactForm() {
                 <InputFloat label="Phone" id={"phone"} type={"text"} required={true} />
               </Box>
               <Checkbox id='smsConsent' mt='1' mb='2'>
-                <Text color='neutral.90' lineHeight='1.3rem' fontSize='lg' pt='2px' ml='2px'>Send me load details via text message</Text>
+                <Text color='neutral.90' lineHeight='1.3rem' fontSize='lg' pt='2px' ml='2px'>For Shippers - Receive Text Message Updates About Loads</Text>
               </Checkbox>
             </Box>
             <Button mt="8" size='lg' variant="primaryDark" type="submit">
