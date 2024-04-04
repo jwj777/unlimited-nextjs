@@ -16,8 +16,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
   }
 }
 
-
-
 export default async function Resources({params}) {
 
   /* resource page data */
