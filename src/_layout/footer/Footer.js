@@ -42,22 +42,11 @@ export default function Footer({ data }) {
               </Box>
 
               <Box mr='24' mb='12'>
-  
-                <Box mb='4'>
-                  <Link href='/page/carrier-setup' variant='neutralDarkLink' size='xl'>Carrier Setup</Link>
-                </Box>
-                <Box mb='4'>
-                  <Link href='/page/software' variant='neutralDarkLink' size='xl'>Software</Link>
-                </Box>
-                <Box mb='4'>
-                  <Link href='/page/about' variant='neutralDarkLink' size='xl'>Our Company</Link>
-                </Box>
-                <Box mb='4'>
-                  <Link href='/page/resources' variant='neutralDarkLink' size='xl'>Resources</Link>
-                </Box>
-                <Box>
-                  <Link href='/service/software' variant='neutralDarkLink' size='xl'>Careers</Link>
-                </Box>
+                <FooterLink href='/page/carrier-setup' label='Carrier Setup' data={data} />
+                <FooterLink href='/service/software' label='Software' data={data} />
+                <FooterLink href='/page/about' label='About' data={data} />
+                <FooterLink href='/page/resources' label='Resources' data={data} />
+                <FooterLink href='/page/careers' label='Careers' data={data} />
               </Box>
 
               {/* <Box>
