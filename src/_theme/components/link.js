@@ -15,19 +15,19 @@ const md = defineStyle({
 
 const lg = defineStyle({
   field: {
-    fontSize: '1.5rem',
+    fontSize: '1.2rem',
   }
 })
 
 const xl = defineStyle({
   field: {
-    fontSize: '2rem',
+    fontSize: '1.4rem',
   }
 })
 
 const xxl = defineStyle({
   field: {
-    fontSize: '2.6rem',
+    fontSize: '1.6rem',
   }
 })
 
@@ -102,6 +102,18 @@ const neutralDarkButton = defineStyle({
   }
 })
 
+const neutralDarkLink = defineStyle({
+  bg: 'none',
+  color: 'neutral.90',
+  borderRadius: '10rem',
+  py: '14px',
+  px: '24px',
+    _hover: {
+    color: 'neutral.100',
+    textDecor: 'underline',
+  }
+})
+
 const primaryWhiteButton = defineStyle({
   bg: 'primary.40',
   color: 'primary.95',
@@ -161,6 +173,7 @@ export const Link = defineStyleConfig({
     neutralLightButton, 
     neutralWhiteButton,
     neutralDarkButton,
+    neutralDarkLink,
     primaryLightButton,
     primaryWhiteButton,
     primaryDarkButton,

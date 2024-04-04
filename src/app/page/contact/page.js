@@ -5,8 +5,6 @@ import ContentContainer from '@/_layout/containers/ContentContainer';
 import ContactForm from '@/_components/form/ContactForm';
 import BodyLarge from '@/_components/typography/BodyLarge';
 import Badges from '@/_components/sections/single-sections/Badges';
-import HeadlineLarge from '@/_components/typography/HeadlineLarge';
-import HeadlineSmall from '@/_components/typography/HeadlineSmall';
 import TitleLarge from '@/_components/typography/TitleLarge';
 
 

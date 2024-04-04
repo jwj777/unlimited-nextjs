@@ -42,24 +42,32 @@ export default function Footer({ data }) {
               </Box>
 
               <Box mr='24' mb='12'>
-                <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>Carriers</LabelMedium>      
-                <Box mt='6'>
-                  <FooterLink href='/service/fuel-card-program' label='Fuel Card Program' data={data} />
-                  <FooterLink href='/service/factoring' label='Factoring Services' data={data} />
-                  {/* <FooterLink href='/service/dispatch-services' label='Dispatch Services' data={data} /> */}
   
+                <Box mb='4'>
+                  <Link href='/page/carrier-setup' variant='neutralDarkLink' size='xl'>Carrier Setup</Link>
+                </Box>
+                <Box mb='4'>
+                  <Link href='/page/software' variant='neutralDarkLink' size='xl'>Software</Link>
+                </Box>
+                <Box mb='4'>
+                  <Link href='/page/about' variant='neutralDarkLink' size='xl'>Our Company</Link>
+                </Box>
+                <Box mb='4'>
+                  <Link href='/page/resources' variant='neutralDarkLink' size='xl'>Resources</Link>
+                </Box>
+                <Box>
+                  <Link href='/service/software' variant='neutralDarkLink' size='xl'>Careers</Link>
                 </Box>
               </Box>
 
-              <Box>
+              {/* <Box>
                 <LabelMedium color={data?.attributes.pageColor + '.on-surface'}>Our Company</LabelMedium>      
                 <Box mt='6'>
                   <FooterLink href='/page/about' label='About' data={data} />
                   <FooterLink href='/page/resources' label='Resources' data={data} />
-                  {/* <FooterLink href='/page/meet-the-team' label='Meet The Team' data={data} /> */}
                   <FooterLink href='/page/careers' label='Careers' data={data} />
                 </Box>
-              </Box>
+              </Box> */}
             </Box>
 
             <Box display='flex' flexWrap='wrap' alignItems='center'>
