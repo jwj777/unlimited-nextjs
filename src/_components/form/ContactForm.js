@@ -75,10 +75,12 @@ export default function ContactForm() {
           </form>
         </Box> :
         <Box pt='8' pb='12'>
+
           <Text fontSize='3xl' mb='6' fontWeight='500' color={'primary.90'}>Thank you for contacting us!</Text>
           
           <Text fontSize='2xl' fontWeight='500' color={'primary.90'}>We have received your information and 
           will review your message and respond as quickly as possible.</Text>
+          
         </Box>
         }
       </Box> 
