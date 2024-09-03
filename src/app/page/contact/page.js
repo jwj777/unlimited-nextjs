@@ -106,12 +106,6 @@ export default async function Contact() {
                       </Text>
                   </Box>
           
-
-                  <Box>
-                    <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
-                    <Text as='span' fontWeight='600'>Billing:</Text> billing@unlimitedlogistics.com
-                      </Text>
-                  </Box>
                 </Box>
 
                 <Box mb='8'>
