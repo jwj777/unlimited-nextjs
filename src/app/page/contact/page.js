@@ -128,7 +128,6 @@ export default async function Contact() {
 
           </Box>
 
-
           <Badges data={data} paddingSize='md' />
 
 
