@@ -1,11 +1,11 @@
 'use client'
 import { Box, Button, Select, Text } from '@chakra-ui/react';
 import { useState } from 'react';
-import InputFloat from './input/inputFloat';
 import SelectWrapper from './input/SelectWrapper';
-import LabelMedium from '../typography/LabelMedium';
 import BodyMedium from '../typography/BodyMedium';
 import { useRouter } from 'next/navigation'
+import HeadlineSmall from '../typography/HeadlineSmall';
+import BodyLarge from '../typography/BodyLarge';
 
 
 export default function CarrierSetupSelect({ data }) {
@@ -20,7 +20,8 @@ export default function CarrierSetupSelect({ data }) {
     !formSubmit ? setFormSubmit(true) : setFormSubmit(false)
 
     const data = {
-      salesRep: e.target.salesRep.value,
+      // salesRep: e.target.salesRep.value,
+      salesRep: 'Website',
     }
 
     let baseUrl = 'https://mycarrierpackets.com/76c4b62a-b3ac-40c4-9f31-733d77ee6e09/Carrier/Intellivite/'
@@ -41,8 +42,9 @@ export default function CarrierSetupSelect({ data }) {
       maxW='4xl'
     >
       <Box>
+        <BodyLarge>Become an Unlimited Logistics Carrier Today</BodyLarge>
         <form onSubmit={handleSubmit}>
-          <Box>
+          {/* <Box>
             <Box maxW='md'>
               <Box mb='2'>
                 <BodyMedium color={data.attributes.pageColor + '.on-surface'}>Select Your Sales Representative</BodyMedium>
@@ -80,9 +82,9 @@ export default function CarrierSetupSelect({ data }) {
                 <option value="zachm">Zach McCoppin</option>
               </SelectWrapper>
             </Box>
-          </Box>
-          <Button mt="8" size='lg' variant="primaryDark" type="submit">
-            Let&apos;s Get Started
+          </Box> */}
+          <Button mt="6" size='lg' variant="primaryDark" type="submit">
+            Carrier Setup
           </Button>
         </form>
       </Box>
