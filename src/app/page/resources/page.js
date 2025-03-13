@@ -61,6 +61,7 @@ export default async function Resources({params}) {
                 })
               }
 
+
               <Box display='flex' flexWrap='wrap' justifyContent='space-between' alignItems='stretch'>
                 {
                   data.map((article, index) => {
@@ -72,6 +73,7 @@ export default async function Resources({params}) {
                   })
                 }
               </Box>
+
 
             </Box>
           </ContentContainer>
