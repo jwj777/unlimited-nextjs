@@ -38,6 +38,7 @@ export default function ArticleCard({ data, color }) {
                 {data.attributes.Headline}
               </DisplayMedium>
             </Box>
+
             {
               data.attributes.Subheading ?
                 <Box maxW='6xl'> 
@@ -47,6 +48,7 @@ export default function ArticleCard({ data, color }) {
                 </Box>
               : null
             }
+            
           </Box>
 
           <Box 

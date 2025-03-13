@@ -24,11 +24,6 @@ export default async function Resources({params}) {
 
   /* articles */
   const resources = await getPageData();
-
-  // console.log('Resources')
-  // console.log(resources[0])
-  // console.log('Resources - Articles')
-  // console.log(data)
   
   return (
     <main>
