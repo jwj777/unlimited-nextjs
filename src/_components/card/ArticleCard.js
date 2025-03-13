@@ -1,11 +1,6 @@
-import { Box, Image, Link, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
-// import Image from "next/image";
-import TitleMedium from "../typography/TitleMedium";
-import TitleSmall from "../typography/TitleSmall";
-import BodyMedium from "../typography/BodyMedium";
-import DisplaySuper from "../typography/DisplaySuper";
+import { Box, Image, Link, LinkBox, LinkOverlay } from "@chakra-ui/react";
+// import Image from "next/image"
 import DisplayMedium from "../typography/DisplayMedium";
-import HeadlineSmall from "../typography/HeadlineSmall";
 import BodyLarge from "../typography/BodyLarge";
 import LabelMedium from "../typography/LabelMedium";
 
@@ -48,7 +43,7 @@ export default function ArticleCard({ data, color }) {
                 </Box>
               : null
             }
-            
+
           </Box>
 
           <Box 
@@ -60,7 +55,6 @@ export default function ArticleCard({ data, color }) {
             {
               data.attributes.heroImage.primaryImage ?
               <Image
-                // src={data.attributes.heroImage.primaryImage.data.attributes.url}
                 src={
                   'https://unlimited-logistics-media.s3.us-east-2.amazonaws.com/' + 
                   data.attributes.heroImage.primaryImage.data.attributes.hash + 
