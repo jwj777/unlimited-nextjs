@@ -102,16 +102,10 @@ export default async function Contact() {
                 <Box mt='8' mb='8'>
                   <Box mb='2'>
                     <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
-                    <Text as='span' fontWeight='600'>Email:</Text> info@unlimitedlogistics.net
+                    <Text as='span' fontWeight='600'>Email:</Text> info@unlimitedlogistics.com
                       </Text>
                   </Box>
           
-
-                  <Box>
-                    <Text color={data.attributes.pageColor + '.on-surface'} fontWeight='300'>
-                    <Text as='span' fontWeight='600'>Billing:</Text> billing@unlimitedlogistics.net
-                      </Text>
-                  </Box>
                 </Box>
 
                 <Box mb='8'>
@@ -127,7 +121,6 @@ export default async function Contact() {
             </Box>
 
           </Box>
-
 
           <Badges data={data} paddingSize='md' />
 

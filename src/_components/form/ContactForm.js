@@ -65,8 +65,9 @@ export default function ContactForm() {
                 <InputFloat label="Phone" id={"phone"} type={"text"} required={true} />
               </Box>
               <Checkbox id='smsConsent' mt='1' mb='2'>
-                <Text color='neutral.90' lineHeight='1.3rem' fontSize='lg' pt='2px' ml='2px'>For Shippers - Receive Text Message Updates About Loads</Text>
+                <Text color='neutral.90' lineHeight='1.3rem' fontSize='lg' pt='2px' ml='2px'>{'Opt-In to Receive SMS Text Messages'}</Text>
               </Checkbox>
+              <Text color='neutral.70' lineHeight='1.3rem' fontSize='md' pt='6px' ml='2px'>{'At any point Reply "STOP" to stop receiving text messages.'}</Text>
             </Box>
             <Button mt="8" size='lg' variant="primaryDark" type="submit">
               Let&apos;s Get Started
@@ -74,10 +75,12 @@ export default function ContactForm() {
           </form>
         </Box> :
         <Box pt='8' pb='12'>
+
           <Text fontSize='3xl' mb='6' fontWeight='500' color={'primary.90'}>Thank you for contacting us!</Text>
           
           <Text fontSize='2xl' fontWeight='500' color={'primary.90'}>We have received your information and 
           will review your message and respond as quickly as possible.</Text>
+          
         </Box>
         }
       </Box> 
