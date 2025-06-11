@@ -1,5 +1,4 @@
 import { Box, Image, Link, LinkBox, LinkOverlay } from "@chakra-ui/react";
-// import Image from "next/image"
 import DisplayMedium from "../typography/DisplayMedium";
 import BodyLarge from "../typography/BodyLarge";
 import LabelMedium from "../typography/LabelMedium";
