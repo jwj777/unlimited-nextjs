@@ -9,7 +9,7 @@ import FeaturedArticle from '@/_components/card/FeaturedArticle';
 
 export async function generateMetadata({ params, searchParams }, parent) {
   const slug = params.slug
-  let pageMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=resources&populate=*`).then((res) => res.json())
+  let pageMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=resources-data&populate=*`).then((res) => res.json())
 
   return {
     title: pageMeta.data[0].attributes?.seoPageTitle,
@@ -111,7 +111,7 @@ async function getArticles() {
 
 async function getPageData() {
   try {
-    const url = `https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=resources`;
+    const url = `https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=resources-data`;
     console.log('[getPageData] Fetching:', url);
 
     const response = await fetch(url, { next: { revalidate: 20 } });
