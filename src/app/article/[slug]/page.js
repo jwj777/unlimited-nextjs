@@ -23,7 +23,7 @@ export default async function Article({params}) {
   const contentType = 'article'
   data.attributes.pageColor = 'neutralWhite'
 
-  // console.log('Articles')
+  console.log('Articles data ', data)
   
 
   return (
