@@ -24,7 +24,6 @@ export default async function Article({params}) {
   data.attributes.pageColor = 'neutralWhite'
 
   // console.log('Articles')
-  // console.log(data) 
   
 
   return (
