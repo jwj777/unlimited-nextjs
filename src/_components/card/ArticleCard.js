@@ -46,7 +46,7 @@ export default function ArticleCard({ data, color }) {
           </Box>
 
           <Box 
-            maxW={{ base: '768px', md: '800px' }}
+            maxW={{ base: '768px', md: '798px' }}
             maxH={{ base: '440px', md: '400px' }}
             borderRadius={{ base: '1.5rem', md: '2rem' }}
             overflow='hidden'
