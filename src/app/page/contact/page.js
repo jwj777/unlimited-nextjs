@@ -10,7 +10,7 @@ import TitleLarge from '@/_components/typography/TitleLarge';
 
 export async function generateMetadata({ params, searchParams }, parent) {
   const slug = params.slug
-  let pageMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/general-pages?filters[slug][$eq]=contact-data&populate=*`).then((res) => res.json())
+  let pageMeta = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=contact-data&populate=*`).then((res) => res.json())
 
   return {
     title: pageMeta.data[0].attributes?.seoPageTitle,
