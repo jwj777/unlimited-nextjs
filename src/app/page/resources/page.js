@@ -86,40 +86,49 @@ export default async function Resources({params}) {
 
 async function getArticles() {
   try {
-    const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?populate[heroImage][populate]=*&populate[Sections][populate]=*`, { 
-      next: { revalidate: 60 }
-    });
-    
+    const url = `https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?populate[heroImage][populate]=*&populate[Sections][populate]=*`;
+    console.log('[getArticles] Fetching:', url);
+
+    const response = await fetch(url, { next: { revalidate: 60 } });
+    console.log('[getArticles] Response status:', response.status);
+
     if (!response.ok) {
-      throw new Error('Failed to fetch data');
+      const text = await response.text();
+      console.error('[getArticles] Fetch error text:', text);
+      throw new Error('Failed to fetch articles');
     }
 
-    // console.log('getArticles')
-    // console.log(response)
+    const json = await response.json();
+    console.log('[getArticles] Fetched articles:', json?.data?.length ?? 0);
 
-    const article = await response.json();
-
-    return article?.data;
+    return json?.data;
   } catch (error) {
-    console.error('Error fetching service data:', error);
-    throw new Error('Failed to fetch data');
+    console.error('[getArticles] Caught error:', error);
+    throw new Error('Failed to fetch articles');
   }
 }
 
 
 async function getPageData() {
   try {
-    const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=resources`, { next: { revalidate: 20 } });
-    
+    const url = `https://unlimited-strapi-h4fgb.ondigitalocean.app/api/basic-pages?filters[slug][$eq]=resources`;
+    console.log('[getPageData] Fetching:', url);
+
+    const response = await fetch(url, { next: { revalidate: 20 } });
+    console.log('[getPageData] Response status:', response.status);
+
     if (!response.ok) {
-      throw new Error('Failed to fetch data');
+      const text = await response.text();
+      console.error('[getPageData] Fetch error text:', text);
+      throw new Error('Failed to fetch page data');
     }
 
-    const resources = await response.json();
+    const json = await response.json();
+    console.log('[getPageData] Fetched resources page:', json?.data?.[0]?.attributes?.Headline);
 
-    return resources?.data;
+    return json?.data;
   } catch (error) {
-    console.error('Error fetching service data:', error);
-    throw new Error('Failed to fetch data');
+    console.error('[getPageData] Caught error:', error);
+    throw new Error('Failed to fetch page data');
   }
 }
