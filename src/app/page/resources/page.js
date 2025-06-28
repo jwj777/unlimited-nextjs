@@ -16,11 +16,14 @@ export async function generateMetadata({ params, searchParams }, parent) {
   }
 }
 
+
 export default async function Resources({params}) {
 
   /* resource page data */
   const articles = await getArticles(params);
   const data = articles;
+
+  const sortedArticles = [...data].sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt));
 
   console.log("Insights Articles ", data)
 
@@ -49,7 +52,7 @@ export default async function Resources({params}) {
               </Box>
 
               {
-                data?.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt)).map((article, index) => {
+                sortedArticles?.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt)).map((article, index) => {
                   return(
                     index == '0' ?
                     <FeaturedArticle key={index} data={article} color={resources[0]?.attributes.pageColor} />
@@ -61,7 +64,7 @@ export default async function Resources({params}) {
 
               <Box display='flex' flexWrap='wrap' justifyContent='space-between' alignItems='stretch'>
                 {
-                  data.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt)).map((article, index) => {
+                  sortedArticles.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt)).map((article, index) => {
                     return(
                       index > 0 ?
                       <ArticleCard key={index} data={article} color={resources[0]?.attributes.pageColor} />
@@ -83,8 +86,7 @@ export default async function Resources({params}) {
 
 async function getArticles() {
   try {
-    const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?populate[heroImage][populate]=*
-    &populate[Sections][populate]=*`, { 
+    const response = await fetch(`https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles?populate[heroImage][populate]=*&populate[Sections][populate]=*`, { 
       next: { revalidate: 60 }
     });
     
