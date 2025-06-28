@@ -64,7 +64,9 @@ export default function FeaturedArticle({ data, color }) {
                 width={1400}
                 height={600}
                 alt=""
-                // sizes="(max-width: 768px) 100%, 280px"
+                style={{
+                  objectFit: 'cover'
+                }}
               /> : null
             }
           </Box>

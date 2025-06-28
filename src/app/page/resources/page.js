@@ -22,6 +22,8 @@ export default async function Resources({params}) {
   const articles = await getArticles(params);
   const data = articles;
 
+  console.log("Insights Articles ", data)
+
   /* articles */
   const resources = await getPageData();
   
@@ -47,7 +49,7 @@ export default async function Resources({params}) {
               </Box>
 
               {
-                data?.map((article, index) => {
+                data?.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt)).map((article, index) => {
                   return(
                     index == '0' ?
                     <FeaturedArticle key={index} data={article} color={resources[0]?.attributes.pageColor} />
@@ -59,7 +61,7 @@ export default async function Resources({params}) {
 
               <Box display='flex' flexWrap='wrap' justifyContent='space-between' alignItems='stretch'>
                 {
-                  data.map((article, index) => {
+                  data.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt)).map((article, index) => {
                     return(
                       index > 0 ?
                       <ArticleCard key={index} data={article} color={resources[0]?.attributes.pageColor} />
