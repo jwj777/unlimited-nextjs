@@ -24,8 +24,9 @@ export default async function Article({params}) {
   data.attributes.pageColor = 'neutralWhite'
 
   // console.log('Articles')
-  // console.log(data)
+  // console.log(data) 
   
+
   return (
     <main>
       <PageContainer data={data} contentType={contentType}>
@@ -43,6 +44,7 @@ export default async function Article({params}) {
   )
 }
 
+
 export async function generateStaticParams() {
   const articles = await fetch('https://unlimited-strapi-h4fgb.ondigitalocean.app/api/articles').then((res) => res.json())
 
@@ -50,6 +52,7 @@ export async function generateStaticParams() {
     slug: item.attributes.slug
   }))
 }
+
 
 async function getArticlesBySlug(params) {
   try {
