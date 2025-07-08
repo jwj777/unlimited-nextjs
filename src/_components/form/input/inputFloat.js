@@ -1,4 +1,4 @@
-import { FormErrorMessage, FormHelperText, FormLabel, Input, FormControl, Box } from "@chakra-ui/react";
+import { FormErrorMessage, FormHelperText, FormLabel, Input, FormControl, Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import LabelActive from "./LabelActive";
 
@@ -32,9 +32,7 @@ export default function InputFloat({ label, id, type, pattern, errorMsg, width, 
           bg={ colorType === 'dark' ? 'neutral.20' : 'neutral.100' }
           color={ colorType === 'dark' ? 'neutral.90' : 'neutral.10' }
           minLength="1"
-          // size={{ base: 'lg', sm: 'xl' }}
           py='28px'
-          // variant='lightInput'
           borderColor={ colorType === 'dark' ? 'neutral.40' : 'neutral.80' }
           width={inputWidth}
           pattern={pattern}
@@ -52,8 +50,8 @@ export default function InputFloat({ label, id, type, pattern, errorMsg, width, 
               fontWeight='400'
               position='absolute'
               bottom={{ 
-                base: '0.8rem', 
-                sm: '1.2rem', 
+                base: placeholder ? '3.4rem' :'1.1rem', 
+                sm: placeholder ? '2.5rem' : '1.0rem',
                 md: placeholder ? '2.6rem' : '1.05rem' 
               }}
               pl={{ base: '1rem', sm: '1.4rem' }}
@@ -67,8 +65,12 @@ export default function InputFloat({ label, id, type, pattern, errorMsg, width, 
         <FormHelperText>
           {
             placeholder && 
-            <Box ml='1rem' mb='0.5rem'>
-              {placeholder}
+            <Box ml='4px' mb='0.5rem'>
+              <Text
+                fontSize={{ base: '0.8rem', md: '1rem' }}
+              >
+                {placeholder}
+              </Text>
             </Box>
           }
         </FormHelperText>

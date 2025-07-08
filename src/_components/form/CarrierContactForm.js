@@ -49,13 +49,13 @@ export default function CarrierContactForm() {
       action="https://hooks.zapier.com/hooks/catch/8026392/u3f3mw8/" // Replace with your Zapier Webhook URL
       method="POST"
       onSubmit={handleSubmit}
-      bg='neutral.95'
-      mx="auto"
-      p='2rem'
-      px='2.5rem'
-      borderWidth={1}
+      bg={{ base: 'none', sm: 'neutral.95' }}
+      p={{ base: '2rem', sm: '2rem' }}
+      px={{ base: '1rem', sm: '1.5rem', md: '2.5rem'}}
+      borderWidth={{ base: '0', sm: 1}}
       borderColor='neutral.90'
       borderRadius="1.5rem"
+      // width={{ base: '100%', md: '600px' }}
     >
       {
         isSubmitted ? (
@@ -64,14 +64,15 @@ export default function CarrierContactForm() {
           </Box>
         ) : 
  
-        <Box>
+        <Box width='100%'>
+
           <Box mb='2rem'>
             <HeadlineSmall as="h2" size="lg" >
               Carrier Contact Form
             </HeadlineSmall>
           </Box>
 
-          <Stack width='600px' spacing='0'>
+          <Stack width={{ base: '100%', sm: '', md: '480px', lg: '600px' }} spacing='0'>
             <InputFloat
               label="Company Name"
               id="companyName"
