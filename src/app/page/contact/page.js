@@ -45,7 +45,7 @@ export default async function Contact() {
               mb='12'
               borderRadius='1.5rem'
               >
-              <Box mb='12' maxW='2xl'>
+              <Box mb='2rem' maxW='2xl'>
                 <BodyLarge 
                   color={data.attributes.pageColor + '.on-surface'} 
                   thin

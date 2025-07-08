@@ -4,6 +4,7 @@ import { Accordion } from "./components/Accordion";
 import { Button } from "./components/button";
 import { Input } from "./components/input";
 import { Link } from "./components/link";
+import { Checkbox } from "./components/Checkbox";
 
 const breakpoints = {
   sm: '388px',
@@ -20,6 +21,7 @@ const theme = extendTheme({
     Button, 
     Input, 
     Link,
+    Checkbox
   },
   
   fonts: {

@@ -42,7 +42,7 @@ export default function Hero({ data }) {
         <Box maxW='5xl'>
           <BodyXl color={data?.attributes.pageColor + '.on-surface'} thin>{data?.attributes.Subheading}</BodyXl>
         </Box>
-        {
+        {/* {
           data?.attributes.callToAction?.buttonType == 'contactShipper' ? 
           <Box mt='12'>
             <Button variant={buttonColor} size='lg'>
@@ -54,7 +54,7 @@ export default function Hero({ data }) {
           : data?.attributes.callToAction?.buttonType == 'contactCarrier' ?
           <CarrierSetupSelect data={data} />
           : null
-        }
+        } */}
       </ContentContainer>
     </Box>
     

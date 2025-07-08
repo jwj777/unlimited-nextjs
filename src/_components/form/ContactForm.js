@@ -47,6 +47,8 @@ export default function ContactForm() {
         
   }
 
+  let colorType = 'dark'
+
   return (
 
       <Box mr='0'>
@@ -55,14 +57,21 @@ export default function ContactForm() {
         <Box>
           <form onSubmit={handleSubmit}>
             <Box>
-              <Box display='flex' alignItems='center' flexDirection={{ base: 'column', md: 'row' }} required={true}>
-                <InputFloat width='96%' label="First Name" id={"firstName"} type={"text"} pattern={"^[A-Za-z]+$"} required={true} />
-                <InputFloat label="Last Name" id={"lastName"} type={"text"} pattern={"^[A-Za-z]+$"} required={true} />
+              <Box 
+                display='flex' 
+                alignItems='center' 
+                flexDirection={{ base: 'column', md: 'row' }} 
+                required={true} 
+                colorType={colorType}
+                gap='1.5rem'
+              >
+                <InputFloat label="First Name" id={"firstName"} type={"text"} pattern={"^[A-Za-z]+$"} required={true} colorType={colorType} />
+                <InputFloat label="Last Name" id={"lastName"} type={"text"} pattern={"^[A-Za-z]+$"} required={true} colorType={colorType} />
               </Box>
               <Box display='flex' flexDirection='column'>
-                <InputFloat label="Company Name" id={"company"} type={"text"} pattern={"^[A-Za-z0-9\s\-.,&()']+$"} required={true} />
-                <InputFloat label="Email" id={"email"} type={"email"} pattern={"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"} required={true} />
-                <InputFloat label="Phone" id={"phone"} type={"text"} required={true} />
+                <InputFloat label="Company Name" id={"company"} type={"text"} pattern={"^[A-Za-z0-9\s\-.,&()']+$"} required={true} colorType={colorType} />
+                <InputFloat label="Email" id={"email"} type={"email"} pattern={"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"} required={true} colorType={colorType} />
+                <InputFloat label="Phone" id={"phone"} type={"text"} required={true} colorType={colorType} />
               </Box>
               <Checkbox id='smsConsent' mt='1' mb='2'>
                 <Text color='neutral.90' lineHeight='1.3rem' fontSize='lg' pt='2px' ml='2px'>{'Opt-In to Receive SMS Text Messages'}</Text>

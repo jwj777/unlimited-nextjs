@@ -20,14 +20,14 @@ export default function BodyLarge({ text, color, children, thin }) {
         <Box 
           dangerouslySetInnerHTML={{ __html: text }} 
           className='on-surface'
-          fontSize={{ base: '1.1rem', sm: '1.2rem', md: '1.4rem' }}
-          lineHeight={{ base: '152%', md: '158%' }}
+          fontSize={{ base: '1.1rem', sm: '1.2rem', md: '1.35rem' }}
+          lineHeight={{ base: '150%', md: '154%' }}
           fontWeight={weight}
           color={color}
         ></Box> :
         <Box 
-          fontSize={{ base: '1.1rem', sm: '1.2rem', md: '1.4rem' }}
-          lineHeight={{ base: '152%', md: '158%' }}
+          fontSize={{ base: '1.1rem', sm: '1.2rem', md: '1.35rem' }}
+          lineHeight={{ base: '150%', md: '154%' }}
           color={color}
           fontWeight={weight}
         >{children}</Box>

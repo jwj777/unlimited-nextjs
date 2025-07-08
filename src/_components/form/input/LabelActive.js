@@ -1,22 +1,27 @@
 import { FormLabel} from "@chakra-ui/react";
 
-export default function LabelActive({ label, id }) {
+export default function LabelActive({ label, id, placeholder, colorType }) {
 
   return (
  
     <FormLabel 
       htmlFor={id} 
-      color='tertiary.60'
-      background='white'
+      color={ colorType === 'dark' ? 'tertiary.60' : 'tertiary.60' }
+      bg={ colorType === 'dark' ? 'neutral.20' : 'neutral.100' }
       fontWeight='500'
       fontSize={{ base: '0.75rem', sm: '0.85rem' }}
       ml='0.8rem'
       pt={{ base: '2px', sm: '3px' }}
       px='12px'
       position='absolute'
-      bottom={{ base: '2.4rem', sm: '3.3rem', md: '3.3rem' }}
+      bottom={{ 
+        base: '2.4rem', 
+        sm: '3.0rem',
+        md: placeholder ? '4.6rem' : '3.0rem' 
+      }}
       left={{ base: '-7px', sm: '0' }}
       borderRadius='4px'
+      zIndex='3'
       transitionDuration='0.3s'
       transitionTimingFunction='ease'
       animation='
