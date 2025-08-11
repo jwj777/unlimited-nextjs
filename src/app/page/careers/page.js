@@ -26,7 +26,8 @@ export default async function Careers() {
 
   /* resource page data */
   const jobs = await getJobs();
-  const data = jobs;
+
+  console.log("Jobs ", jobs)
 
   /* articles */
   let careers = await getPageData();
@@ -95,10 +96,13 @@ export default async function Careers() {
                       
                               <Box mt='12'>
                                 <Link 
-                                  href='https://tally.so/r/n97YZ1'
+                                  href={job.attributes.jobLink}
+                                  target='_blank'
                                   variant='primaryLightButton' 
                                   size='lg'
-                                >Apply For This Position</Link>
+                                >
+                                  Apply For This Position
+                                </Link>
                               </Box>
                             </AccordionPanel>
                           </Box>
