@@ -19,30 +19,26 @@ export default function ContactForm() {
       company: e.target.company.value,
       email: e.target.email.value,
       phone: e.target.phone.value,
-      smsConsent: e.target.smsConsent.value,
+      smsConsent: e.target.smsConsent.checked,
+      sourcePage: window.location.pathname,
     }
 
-    // Send the data to the server in JSON format.
-    const JSONdata = JSON.stringify(data);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-    // API endpoint where we send form data.
-    const endpoint = 'https://hooks.zapier.com/hooks/catch/8026392/3fi7xo8/';
+      if (!response.ok) throw new Error('Submission failed');
 
-    // Form the request for sending data to the server.
-    const options = {
-      method: 'POST',
-      body: JSONdata,
-    };
-
-    // Send the form data to our forms API on Vercel and get a response.
-    const response = await fetch(endpoint, options);
- 
-    // Get the response data from server as JSON.
-    // If server returns the name submitted, that means the form works.
-    const result = await response.json();
-
-    if (data.email && data.phone) {
-      sendGTMEvent({ event: 'contact_form_lead', value: 'form_submit' })
+      if (data.email && data.phone) {
+        sendGTMEvent({ event: 'contact_form_lead', value: 'form_submit' })
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setFormSubmit(false);
+      return;
     }
         
   }
